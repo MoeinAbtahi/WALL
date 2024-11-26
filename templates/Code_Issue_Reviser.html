@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Issue Reviser</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Code_Issue_Reviser.css') }}">
+    <link rel="icon" href="static/Wall-Logo.png" type="image/png">
+    <script>
+        let originalText = '';
+
+        window.onload = function() {
+            originalText = document.getElementById('prompt-text').value;
+            showSaveButtonIfResponseExists(); // Check for existing response on page load
+        };
+
+        function changeFont() {
+            var font = document.getElementById('font-selector').value;
+            document.getElementById('prompt-text').style.fontFamily = font;
+        }
+
+        function changeFontSize(delta) {
+            var fontSize = parseInt(document.getElementById('font-size').value);
+            fontSize += delta;
+            document.getElementById('font-size').value = fontSize;
+            document.getElementById('prompt-text').style.fontSize = fontSize + 'px';
+        }
+
+        function changeBackgroundColor() {
+            var color = document.getElementById('bg-color').value;
+            document.getElementById('prompt-text').style.backgroundColor = color;
+        }
+
+        function changeCodeColor() {
+            var color = document.getElementById('code-color').value;
+            document.getElementById('prompt-text').style.color = color;
+        }
+
+        function updateFileSelection() {
+            var form = document.getElementById('file-selection-form');
+            var selectedFile = document.getElementById('file-selector').value;
+            form.elements['file_selection'].value = selectedFile;
+            form.submit();
+        }
+
+        function checkForChanges() {
+            let currentText = document.getElementById('prompt-text').value;
+            if (currentText !== originalText) {
+                document.getElementById('save-prompt-btn').style.display = 'inline';
+            } else {
+                document.getElementById('save-prompt-btn').style.display = 'none';
+            }
+        }
+
+        function enableEditing() {
+            document.getElementById('prompt-text').readOnly = false;
+            document.getElementById('prompt-text').focus();
+        }
+
+        function changeApiFont() {
+            var font = document.getElementById('api-font-selector').value;
+            document.getElementById('api-response-text').style.fontFamily = font;
+        }
+
+        function changeApiFontSize(delta) {
+            var fontSize = parseInt(document.getElementById('api-font-size').value);
+            fontSize += delta;
+            document.getElementById('api-font-size').value = fontSize;
+            document.getElementById('api-response-text').style.fontSize = fontSize + 'px';
+        }
+
+        function changeApiBackgroundColor() {
+            var color = document.getElementById('api-bg-color').value;
+            document.getElementById('api-response-text').style.backgroundColor = color;
+        }
+
+        function changeApiCodeColor() {
+            var color = document.getElementById('api-code-color').value;
+            document.getElementById('api-response-text').style.color = color;
+        }
+
+        async function saveApiResponse() {
+            const selectedFile = document.getElementById('file-selector').value;
+            try {
+                const handler = await window.showSaveFilePicker({
+                    suggestedName: "Revised."+selectedFile,
+                    types: [] // Accept all file types by providing an empty array
+                });
+                const writable = await handler.createWritable();
+                await writable.write(document.getElementById('api-response-text').value);
+                await writable.close();
+                alert("Response saved successfully!");
+            } catch (e) {
+                alert("Save failed: " + e.message);
+            }
+        }
+
+        function showSaveButtonIfResponseExists() {
+            const responseText = document.getElementById('api-response-text').value.trim();
+            const saveButton = document.getElementById('save-prompt-btn');
+            if (responseText) {
+                saveButton.style.display = 'inline';
+            } else {
+                saveButton.style.display = 'none';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('csv_file').addEventListener('change', function(event) {
+                const file = event.target.files[0];
+                if (file) {
+                    document.getElementById('uploaded-file-name').innerText = 'Uploaded File: ' + file.name;
+                } else {
+                    document.getElementById('uploaded-file-name').innerText = '';
+                }
+            });
+
+            showSaveButtonIfResponseExists(); // Check for existing response on page load
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="{{ url_for('index') }}">
+            <img src="{{ url_for('static', filename='Wall-Logo.png') }}" alt="WALL Web Application" class="logo">
+            </a>
+            <h1>Code Issue Reviser</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('sonarqube') }}">Issue Extractor Tool</a></li>
+                <li><a href="{{ url_for('compare_files') }}">Code Compare Tool</a></li>
+                <!-- Add more links as needed -->
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="content">
+            <!-- Left Column for Upload CSV -->
+            <section class="left-column">
+            <div class="editor-controls">
+                <h2>Upload CSV File</h2>
+                <form action="{{ url_for('Code_Issue_Reviser') }}" method="post" id="csv-upload-form" enctype="multipart/form-data" class="form-upload">
+                    <div class="upload-wrapper">
+                        <label for="csv_file" class="upload-label">
+                            <div id="uploaded-file-name" class="uploaded-file-info"></div>
+                        </label>
+                        <input type="file" name="csv_file" id="csv_file" accept=".csv" required class="upload-input">
+                        <button type="submit" class="upload-button">Upload CSV</button>
+                    </div>
+                </form>
+            </div>
+
+            </section>
+
+            <!-- Right Column for File Selection -->
+            <section class="right-column">
+                <div class="editor-controls">
+                    <h2>Select a File</h2>
+                    <form id="file-selection-form" method="POST" class="form-selection">
+                        <label for="file-selector" class="selection-label">Available files in the uploaded CSV:</label>
+                        <select id="file-selector" name="file_selector" class="file-selector" onchange="updateFileSelection()">
+                            {% for file in files %}
+                            <option value="{{ file }}" {% if file == file_name %}selected{% endif %}>{{ file }}</option>
+                            {% endfor %}
+                        </select>
+                        <input type="hidden" name="file_selection" value="{{ file_name }}">
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    </div>
+    <div class="container2">
+        <div class="content">
+            <section class="left-column">
+                <form method="POST" id="api-form">
+                    <input type="hidden" name="file_name" value="{{ file_name }}">
+                    <!-- <label for="prompt-text">Prompt:</label> -->
+                    <div class="editor-controls">
+                    <h2>Prompt Based on the Selected File</h2>
+                    <textarea id="prompt-text" name="edited_prompt" rows="20" cols="100" oninput="checkForChanges()" readonly>{{ prompt }}</textarea>
+                    <button type="button" onclick="enableEditing()">Edit Prompt</button>
+                    
+
+                    </div>
+                    <div class="editor-controls">
+                            <br>
+                                        <!-- <label for="api-model">Select GPT Model:</label> -->
+                                <h2>Select GPT Model</h2>
+                                    <select id="api-model" name="api_model">
+                                        <option value="gpt-4o">GPT-4o</option>
+                                        <option value="gpt-4o-mini">GPT-4o Mini</option>
+                                        <option value="gpt-3.5-turbo">GPT-3.5 Turbo</option>
+                                    </select>
+                            <br>
+                            <button type="submit" form="api-form" name="send_to_api">Send to API</button>
+                    </div>
+
+                </form>
+
+                <div class="editor-controls">
+                    <h2>Prompt Controls</h2>
+                    <div class="control-group">
+                        <label for="font-selector">Font:</label>
+                        <select id="font-selector" name="font" onchange="changeFont()">
+                            <option value="Courier" {% if font == 'Courier' %}selected{% endif %}>Courier</option>
+                            <option value="Arial" {% if font == 'Arial' %}selected{% endif %}>Arial</option>
+                            <option value="Times New Roman" {% if font == 'Times New Roman' %}selected{% endif %}>Times New Roman</option>
+                        </select>
+                    </div>
+                    <div class="control-group">
+                        <label for="font-size">Font size:</label>
+                        <button type="button" onclick="changeFontSize(-1)">-</button>
+                        <button type="button" onclick="changeFontSize(1)">+</button>
+                        <input type="number" id="font-size" name="font_size" value="16" readonly>
+                    </div>
+                    <div class="control-group">
+                        <label for="bg-color">Background color:</label>
+                        <input type="color" id="bg-color" name="bg_color" onchange="changeBackgroundColor()">
+                    </div>
+                    <div class="control-group">
+                        <label for="code-color">Code color:</label>
+                        <input type="color" id="code-color" name="code_color" onchange="changeCodeColor()">
+                    </div>
+                </div>
+            </section>
+
+            <section class="right-column">
+            <div class="editor-controls">
+                <h2>OpenAI Response</h2>
+                <textarea id="api-response-text" name="api_response" rows="20" cols="100" readonly>{{ api_response }}</textarea>
+                <button type="button" id="save-prompt-btn" style="display:none;" onclick="saveApiResponse()">Save API Response</button>
+            </div>
+
+                <div class="api-response-controls">
+                    <h2>Response Controls</h2>
+                    <div class="control-group">
+                        <label for="api-font-selector">Font:</label>
+                        <select id="api-font-selector" name="api_font" onchange="changeApiFont()">
+                            <option value="Courier" {% if api_font == 'Courier' %}selected{% endif %}>Courier</option>
+                            <option value="Arial" {% if api_font == 'Arial' %}selected{% endif %}>Arial</option>
+                            <option value="Times New Roman" {% if api_font == 'Times New Roman' %}selected{% endif %}>Times New Roman</option>
+                        </select>
+                    </div>
+                    <div class="control-group">
+                        <label for="api-font-size">Font size:</label>
+                        <button type="button" onclick="changeApiFontSize(-1)">-</button>
+                        <button type="button" onclick="changeApiFontSize(1)">+</button>
+                        <input type="number" id="api-font-size" name="api_font_size" value="16" readonly>
+                    </div>
+                    <div class="control-group">
+                        <label for="api-bg-color">Background color:</label>
+                        <input type="color" id="api-bg-color" name="api_bg_color" onchange="changeApiBackgroundColor()">
+                    </div>
+                    <div class="control-group">
+                        <label for="api-code-color">Code color:</label>
+                        <input type="color" id="api-code-color" name="api_code_color" onchange="changeApiCodeColor()">
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <footer>
+    <p>&copy; 2024 WALL Ltd. All rights reserved.</p>
+    </footer>
+</body>
+</html>

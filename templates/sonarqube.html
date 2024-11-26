@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Issue Extractor Tool</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='sonarqube.css') }}">
+    <link rel="icon" href="static/Wall-Logo.png" type="image/png">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="{{ url_for('index') }}">
+            <img src="{{ url_for('static', filename='Wall-Logo.png') }}" alt="WALL Web Application" class="logo">
+            </a>
+            <h1>SonarQube Integrated Issue Extractor</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('Code_Issue_Reviser') }}">Code Issues Reviser</a></li>
+                <li><a href="{{ url_for('compare_files') }}">Code Compare Tool</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <form id="sonarqubeForm" action="/sonarqube" method="post" onsubmit="return validateForm()">
+                <div class="content">
+                <section class="left-column">
+                    <!-- SonarQube Server URL -->
+                    <div class="editor-controls">
+                        <h2>SonarQube Server URL</h2>
+                        <label for="sonar_url">Select or Enter the SonarQube Server URL</label>
+                        <select id="sonar_url" name="sonar_url" onchange="toggleManualInput('sonar_url', 'sonar_url_manual')">
+                            <option value="">Select a SonarQube URL from Presets or Enter Manually</option>
+                            {% for url in preset_sonar_urls %}
+                                <option value="{{ url }}">{{ url }}</option>
+                            {% endfor %}
+                            <option value="manual">Enter manually</option> <!-- New manual entry option -->
+                        </select>
+                        <input type="text" id="sonar_url_manual" name="sonar_url_manual" placeholder="eg. http://localhost:9000" style="display:none;">
+                    </div>
+
+                    <!-- API Token -->
+                    <div class="form-group">
+                        <div class="editor-controls">
+                        <h2>SonarQube API Token</h2>
+                        <label for="api_token">Select or Enter the SonarQube Project API Token</label>
+                        <select id="api_token" name="api_token" onchange="toggleManualInput('api_token', 'api_token_manual')">
+                            <option value="">Select a Project API Token from Presets or Enter Manually</option>
+                            {% for token in preset_api_tokens %}
+                                <option value="{{ token }}">{{ token }}</option>
+                            {% endfor %}
+                            <option value="manual">Enter manually</option> <!-- New manual entry option -->
+                        </select>
+                        <input type="text" id="api_token_manual" name="api_token_manual" placeholder="eg. sqp_..." style="display:none;">
+                    </div>
+
+                    <!-- Project Key -->
+                    <div class="form-group">
+                        <div class="editor-controls">
+                        <h2>SonarQube Project Key</h2>
+                        <label for="project_key">Select or Enter the SonarQube Project Key</label>
+                        <select id="project_key" name="project_key" onchange="toggleManualInput('project_key', 'project_key_manual')">
+                            <option value="">Select a Project Key from Presets or Enter Manually</option>
+                            {% for key in preset_project_keys %}
+                                <option value="{{ key }}">{{ key }}</option>
+                            {% endfor %}
+                            <option value="manual">Enter manually</option> 
+                        <<!-- New manual entry option -->
+                        </select>
+                        <input type="text" id="project_key_manual" name="project_key_manual" placeholder="eg. Project" style="display:none;">
+                    </div>
+                </div>
+                </section>
+                <section class="right-column">
+                    <div class="editor-controls">
+                    <h2>Project Location</h2>
+                        <label for="original_project_location">Select or Enter the Original Project Location on the System</label>
+                        <select id="original_project_location" name="original_project_location" onchange="toggleManualInput('original_project_location', 'original_project_location_manual')">
+                            <option value="">Select a Project Location from Presets or Enter Manually</option>
+                            {% for location in preset_project_locations %}
+                                <option value="{{ location }}">{{ location }}</option>
+                            {% endfor %}
+                            <option value="manual">Enter manually</option> <!-- New manual entry option -->
+                        </select>
+                        <input type="text" id="original_project_location_manual" name="original_project_location_manual" placeholder="eg. D:\Documents\Project" value="D:\Documents\Project" style="display:none;">
+                    </div>
+                
+                    <!-- Save Path -->
+                    <div class="form-group">
+                    <div class="editor-controls">
+                    <h2>CSV File Save Location</h2>
+                        <label for="save_path">Select or Enter the Save Location for CSV File on the System</label>
+                        <select id="save_path" name="save_path" onchange="toggleManualInput('save_path', 'save_path_manual')">
+                            <option value="">Select a Save Location for CSV File from Presets or Enter Manually</option>
+                            {% for path in preset_save_paths %}
+                                <option value="{{ path }}">{{ path }}</option>
+                            {% endfor %}
+                            <option value="manual">Enter manually</option> <!-- New manual entry option -->
+                        </select>
+                        <input type="text" id="save_path_manual" name="save_path_manual" placeholder="eg. C:\Users\...\Desktop\Extracted_CSV.csv" value="C:\Users\...\Desktop\Extracted_CSV.csv" style="display:none;">
+                    </div>
+                </div>
+                
+                <!-- Submit Button -->
+                    <div class="editor-controls">
+                    <h2>Save the File Containing All Issue Details</h2>
+                <button type="submit" id="extractButton">Extract the Issues</button>
+                </div>
+                 </section> 
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- Modal for Messages -->
+    <div id="messageModal" class="modal" role="dialog" aria-modal="true">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal()" onKeyDown="handleKeyDown(event)" aria-label="Close modal">×</button>
+            <p id="modalMessage"></p>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Function to toggle manual input field based on dropdown selection
+        function toggleManualInput(selectId, inputId) {
+            const selectElement = document.getElementById(selectId);
+            const inputElement = document.getElementById(inputId);
+
+            if (selectElement.value === 'manual') {
+                inputElement.style.display = 'block';  // Show manual input if "Enter manually" is selected
+            } else {
+                inputElement.style.display = 'none'; // Hide manual input for any other option
+                inputElement.value = ''; // Clear the manual input field
+            }
+        }
+
+        // Function to display the modal with a message
+        function showModal(message) {
+            document.getElementById('modalMessage').textContent = message;
+            document.getElementById('messageModal').style.display = 'block';
+        }
+
+        // Function to close the modal
+        function closeModal() {
+            document.getElementById('messageModal').style.display = 'none';
+        }
+
+        // Function to handle keydown events for the close button
+        function handleKeyDown(event) {
+            if (event.key === 'Enter' || event.key === ' ') {
+                closeModal();
+            }
+        }
+
+        // Function to validate the form before submission
+        function validateForm() {
+            const sonarUrlSelect = document.getElementById('sonar_url');
+            const sonarUrlManual = document.getElementById('sonar_url_manual');
+            const apiTokenSelect = document.getElementById('api_token');
+            const apiTokenManual = document.getElementById('api_token_manual');
+            const projectKeySelect = document.getElementById('project_key');
+            const projectKeyManual = document.getElementById('project_key_manual');
+            const originalProjectLocation = document.getElementById('original_project_location');
+            const savePath = document.getElementById('save_path');
+
+            // Check if all required fields are filled
+            if ((sonarUrlSelect.value === 'manual' && !sonarUrlManual.value) ||
+                (apiTokenSelect.value === 'manual' && !apiTokenManual.value) ||
+                (projectKeySelect.value === 'manual' && !projectKeyManual.value) ||
+                !originalProjectLocation.value ||
+                !savePath.value) {
+                showModal('Please fill in all required fields.');
+                return false; // Prevent form submission
+            }
+
+            showModal('The process is complete.');
+            return true; // Allow form submission
+        }
+    </script>
+</body>
+<footer>
+    <p>&copy; 2024 WALL Ltd. All rights reserved.</p>
+</footer>
+</html>

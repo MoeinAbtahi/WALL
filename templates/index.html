@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WALL</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <link rel="icon" href="static/Wall-Logo.png" type="image/png">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <!-- Website Logo -->
+            <a href="{{ url_for('index') }}">
+            <img src="{{ url_for('static', filename='Wall-Logo.png') }}" alt="WALL Web Application" class="logo">
+            </a>
+            <h1>WALL Code Quality Assurance Web Application</h1>
+        </div>
+        <!-- Main Navigation Menu -->
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('sonarqube') }}">Issue Extractor Tool</a></li>
+                <li><a href="{{ url_for('Code_Issue_Reviser') }}">Code Issues Reviser</a></li>
+                <li><a href="{{ url_for('compare_files') }}">Code Compare Tool</a></li>
+                <!-- Add more links as needed -->
+            </ul>
+        </nav>
+    </header>
+    
+    <main>    
+
+<section>
+    <div class="editor-controls">
+        <h2>Issue Extractor</h2>
+    <div class="content-block">
+        <p>Easily extract issues from your SonarQube projects and export them to a CSV file for further analysis.</p>
+        <a href="{{ url_for('sonarqube') }}">
+            <button>Open Issue Extractor</button>
+        </a>
+    </div>
+    </div>
+    
+</section>
+
+<section>
+    <div class="editor-controls">
+            <h2>Code Issue Reviser</h2>
+    <div class="content-block">
+        <p>Identify and resolve code issues within your project files using the Code Issue Reviser tool.</p>
+        <a href="{{ url_for('Code_Issue_Reviser') }}">
+            <button>Open Code Issue Reviser</button>
+        </a>
+    </div>
+
+    </div>
+</section>
+
+<section>
+    <div class="editor-controls">
+            <h2>Code Compare</h2>
+    <div class="content-block">
+        <p>Compare different versions of your code files to identify changes and spot inconsistencies.</p>
+        <a href="{{ url_for('compare_files') }}">
+            <button>Open Code Compare</button>
+        </a>
+    </div>
+    </div>
+
+</section>
+
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2024 WALL Ltd. All rights reserved.</p>
+    </footer>
+</body>
+</html>

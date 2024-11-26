@@ -1,0 +1,167 @@
+/* General Styles */
+body {
+    font-family: 'Futura', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #f5c518;
+    color: #333;
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.header-content img {
+    height: 60px;
+    max-width: 100%;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    color: #333;
+    margin: 0;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+section {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #f5c518;
+    border-bottom: 2px solid #f5c518;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #333;
+}
+
+.content-block {
+    margin: 20px 0;
+}
+
+form {
+    margin: 20px 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="number"], select, input[type="file"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #f5c518;
+    border: none;
+    border-radius: 4px;
+    color: #333;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px 0;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #e0b919;
+    transform: scale(1.05);
+}
+
+button:focus {
+    outline: none;
+}
+
+input[type="color"] {
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    width: 40px;
+    height: 25px;
+}
+
+select {
+    background-color: #f9f9f9;
+}
+
+select option {
+    padding: 10px;
+}
+
+footer {
+    background-color: #f5c518; /* Yellow background */
+    color: #333; /* Dark gray text */
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+}
+
+/* New styles for editor controls */
+.editor-controls{
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.editor-controls{
+    margin-top: 0;
+}

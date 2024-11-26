@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Compare Tool</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Code_Comparison.css') }}">
+    <link rel="icon" href="static/Wall-Logo.png" type="image/png">
+    <script>
+    // Function to change the font family of the original code textarea
+    function changeOriginalFont() {
+        const font = document.getElementById("original-font-selector").value;
+        document.getElementById("original-code").style.fontFamily = font;
+    }
+
+    // Function to adjust the font size of the original code textarea
+    function changeOriginalFontSize(change) {
+        const originalFontSizeInput = document.getElementById("original-font-size");
+        let fontSize = parseInt(originalFontSizeInput.value) + change;
+        if (fontSize < 8) fontSize = 8; // Minimum font size
+        originalFontSizeInput.value = fontSize;
+        document.getElementById("original-code").style.fontSize = fontSize + "px";
+    }
+
+    // Function to change the background color of the original code textarea
+    function changeOriginalBackgroundColor() {
+        const bgColor = document.getElementById("original-bg-color").value;
+        document.getElementById("original-code").style.backgroundColor = bgColor;
+    }
+
+    // Function to change the text color of the original code textarea
+    function changeOriginalCodeColor() {
+        const codeColor = document.getElementById("original-code-color").value;
+        document.getElementById("original-code").style.color = codeColor;
+    }
+
+    // Function to change the font family of the revised code textarea
+    function changeRevisedFont() {
+        const font = document.getElementById("revised-font-selector").value;
+        document.getElementById("revised-code").style.fontFamily = font;
+    }
+
+    // Function to adjust the font size of the revised code textarea
+    function changeRevisedFontSize(change) {
+        const revisedFontSizeInput = document.getElementById("revised-font-size");
+        let fontSize = parseInt(revisedFontSizeInput.value) + change;
+        if (fontSize < 8) fontSize = 8; // Minimum font size
+        revisedFontSizeInput.value = fontSize;
+        document.getElementById("revised-code").style.fontSize = fontSize + "px";
+    }
+
+    // Function to change the background color of the revised code textarea
+    function changeRevisedBackgroundColor() {
+        const bgColor = document.getElementById("revised-bg-color").value;
+        document.getElementById("revised-code").style.backgroundColor = bgColor;
+    }
+
+    // Function to change the text color of the revised code textarea
+    function changeRevisedCodeColor() {
+        const codeColor = document.getElementById("revised-code-color").value;
+        document.getElementById("revised-code").style.color = codeColor;
+    }
+    
+</script>
+
+</head>
+<body>
+<header>
+    <div class="header-content">
+        <a href="{{ url_for('index') }}">
+            <img src="{{ url_for('static', filename='Wall-Logo.png') }}" alt="WALL Web Application" class="logo">
+        </a>
+        <h1>Code Compare Tool</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('sonarqube') }}">Issue Extractor Tool</a></li>
+                <li><a href="{{ url_for('Code_Issue_Reviser') }}">Code Issues Reviser</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="container">
+    <div class="content">
+        <!-- Left Column for Upload CSV -->
+<section class="left-column">
+    <div class="editor-controls">
+        <h2>Upload CSV File</h2>
+        <form method="POST" enctype="multipart/form-data" class="file-selection">
+            <div class="upload-wrapper">
+                <input type="file" name="csv_file" required class="input-file">
+                <button type="submit" class="btn-upload">Upload CSV</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+
+        <!-- Right Column for File Selection -->
+        <section class="right-column">
+            <div class="editor-controls">
+                <h2>Select a File</h2>
+        <form method="POST" class="file-selection">
+            <label for="file-selector" class="selection-label">Available files in the uploaded CSV:</label>
+            <select name="file_selection" class="file-select" onchange="this.form.submit()">
+                <option value="">-- Select a file --</option>
+                {% for file in files %}
+                <option value="{{ file }}">{{ file }}</option>
+                {% endfor %}
+            </select>
+        </form>
+            </div>
+        </section>
+    </div>
+</div>
+
+<div class="container2">
+    <div class="content">
+        <!-- Left Column for Original Code -->
+        <section class="left-column">
+            <div class="editor-controls">
+                <h2>Original File Information: Name and Path</h2>
+                <div class="editor-controls">
+                    <div class="file-info"><strong>File Name:</strong> {{ original_file_name }}</div>
+                </div>
+                <div class="editor-controls">
+                    <div class="file-location"><strong>Location:</strong> {{ original_file_path }}</div>
+                </div>
+            </div>
+            <div class="editor-controls">
+                <h2>Original Code</h2>
+                <textarea id="original-code" name="original_code" rows="20" cols="100" readonly>{{ original_code | safe }}</textarea>
+            </div>
+
+            <div class="editor-controls">
+                <h2>Code Controls</h2>
+                <div class="control-group">
+                    <label for="original-font-selector">Font:</label>
+                    <select id="original-font-selector" name="original_font" onchange="changeOriginalFont()">
+                        <option value="Courier" {% if original_font == 'Courier' %}selected{% endif %}>Courier</option>
+                        <option value="Arial" {% if original_font == 'Arial' %}selected{% endif %}>Arial</option>
+                        <option value="Times New Roman" {% if original_font == 'Times New Roman' %}selected{% endif %}>Times New Roman</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label for="original-font-size">Font size:</label>
+                    <button type="button" onclick="changeOriginalFontSize(-1)">-</button>
+                    <button type="button" onclick="changeOriginalFontSize(1)">+</button>
+                    <input type="number" id="original-font-size" name="original_font_size" value="16" readonly>
+                </div>
+                <div class="control-group">
+                    <label for="original-bg-color">Background color:</label>
+                    <input type="color" id="original-bg-color" name="original_bg_color" onchange="changeOriginalBackgroundColor()">
+                </div>
+                <div class="control-group">
+                    <label for="original-code-color">Code color:</label>
+                    <input type="color" id="original-code-color" name="original_code_color" onchange="changeOriginalCodeColor()">
+                </div>
+            </div>
+        </section>
+
+        <!-- Right Column for Revised Code -->
+        <section class="right-column">
+            <div class="editor-controls">
+                <h2>Revised File Information: Name and Path</h2>
+                <div class="editor-controls">
+                    <div class="file-info"><strong>File Name:</strong> {{ revised_file_name }}</div>
+                </div>
+                <div class="editor-controls">
+                    <div class="file-location"><strong>File Location:</strong> {{ revised_file_path }}</div>
+                </div>
+                </div>
+            <div class="editor-controls">
+                <h2>Revised (Suggested) Code</h2>
+                <textarea id="revised-code" name="revised_code" rows="20" cols="100" readonly>{{ revised_code | safe }}</textarea>
+            </div>
+
+            <div class="editor-controls">
+                <h2>Revised Code Controls</h2>
+                <div class="control-group">
+                    <label for="revised-font-selector">Font:</label>
+                    <select id="revised-font-selector" name="revised_font" onchange="changeRevisedFont()">
+                        <option value="Courier" {% if revised_font == 'Courier' %}selected{% endif %}>Courier</option>
+                        <option value="Arial" {% if revised_font == 'Arial' %}selected{% endif %}>Arial</option>
+                        <option value="Times New Roman" {% if revised_font == 'Times New Roman' %}selected{% endif %}>Times New Roman</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label for="revised-font-size">Font size:</label>
+                    <button type="button" onclick="changeRevisedFontSize(-1)">-</button>
+                    <button type="button" onclick="changeRevisedFontSize(1)">+</button>
+                    <input type="number" id="revised-font-size" name="revised_font_size" value="16" readonly>
+                </div>
+                <div class="control-group">
+                    <label for="revised-bg-color">Background color:</label>
+                    <input type="color" id="revised-bg-color" name="revised_bg_color" onchange="changeRevisedBackgroundColor()">
+                </div>
+                <div class="control-group">
+                    <label for="revised-code-color">Code color:</label>
+                    <input type="color" id="revised-code-color" name="revised_code_color" onchange="changeRevisedCodeColor()">
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<div class="container-center">
+<section class="metrics-output">
+    <h2>Metrics</h2>
+    <div>
+        <p>Precision: {{ metrics['precision']|default(0)|round(2) }}</p>
+        <p>Recall: {{ metrics['recall']|default(0)|round(2) }}</p>
+        <p>F1-Score: {{ metrics['f1_score']|default(0)|round(2) }}</p>
+        <p>Exact Match: {{ metrics['exact_match']|default(0)|round(2) }}</p>
+        <p>BLEU Score: {{ metrics['bleu_score']|default(0)|round(2) }}</p>
+    </div>
+</section>
+</div>
+
+<div class="container-center">
+    <section class="diff-output">
+        <h2>Highlighted Differences</h2>
+        <div>{{ diff_output | safe }}</div>
+    </section>
+</div>
+
+</main>
+<footer>
+    <p>&copy; 2024 WALL Ltd. All rights reserved.</p>
+</footer>
+</body>
+</html>
