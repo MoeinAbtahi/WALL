@@ -215,7 +215,7 @@ The extracted data is saved as a CSV file in the following format:
 | D:/.../Dockerfile | Dockerfile | 1 | Replace `as` with upper case format `AS`. | CODE_SMELL |
 | D:/.../App.css    | App.css    | 30 | Remove this commented-out code.           | CODE_SMELL |
 
-![image](https://github.com/user-attachments/assets/dcf7d8e6-ffa4-47ba-9dcf-f9e72bd2c0b6)
+![image](https://github.com/user-attachments/assets/3a5de9d9-9630-4525-9a0f-d556e3f054de)
 
 ---
 
