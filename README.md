@@ -190,7 +190,7 @@ This route compares the original and revised versions of a file, calculating and
 ### **Home**
 - This page provides users with instructions on how to use MASQA, including descriptions of each action and step-by-step guidance for interacting with the tools.
 
-![Home](https://github.com/user-attachments/assets/9ac304c6-c6ce-477f-8f68-dadfb9defe38)
+![Home](https://github.com/user-attachments/assets/e13cad7d-28a8-443c-834a-9217c2af5013)
 
 ---
 
@@ -205,7 +205,7 @@ This route compares the original and revised versions of a file, calculating and
    - **Project Location**: Path to the original project files.
    - **Save Location**: Path to save the generated CSV file.
 
-![Issue Extractor Tool](https://github.com/user-attachments/assets/217cca1e-697d-4f46-a40a-3cec97dc6b86)
+![Issue Extractor Tool](https://github.com/user-attachments/assets/47134e8a-8bc6-47a2-8262-b6b65c268cef)
 
 #### **Output CSV Format**:
 The extracted data is saved as a CSV file in the following format:
@@ -215,7 +215,7 @@ The extracted data is saved as a CSV file in the following format:
 | D:/.../Dockerfile | Dockerfile | 1 | Replace `as` with upper case format `AS`. | CODE_SMELL |
 | D:/.../App.css    | App.css    | 30 | Remove this commented-out code.           | CODE_SMELL |
 
-![image](https://github.com/user-attachments/assets/679b253c-10fb-4d49-9058-38dae17a6165)
+![image](https://github.com/user-attachments/assets/dcf7d8e6-ffa4-47ba-9dcf-f9e72bd2c0b6)
 
 ---
 
@@ -274,8 +274,7 @@ The extracted data is saved as a CSV file in the following format:
 9. **Proceed to Code Compare Tool** *(Optional)*:
    - After organizing the files, proceed to the **Code Compare Tool** section to compare the original and revised versions for further validation.
 
-
-![Code Issues Reviser](https://github.com/user-attachments/assets/dd35b8eb-53b4-432b-9caf-e8b548448bde)
+![Code Issues Reviser](https://github.com/user-attachments/assets/c50ff09c-f967-4c83-aba3-07445820a0c4)
 
 ---
 
@@ -325,7 +324,7 @@ The extracted data is saved as a CSV file in the following format:
 
 The **Code Compare Tool** enables users to evaluate and compare the original and revised versions of their code for quality and improvements.
 
-![Code Compare Tool](https://github.com/user-attachments/assets/bf63c8de-c6c0-4666-944f-02525d8914f3)
+![Code Compare Tool](https://github.com/user-attachments/assets/d37124de-b5eb-43b8-9b64-3e8aec5ddc77)
 
 ---
 
