@@ -24,7 +24,134 @@ WALL/
 ```
 ### **Prerequisites**
 
-Before using the application, ensure the following setup steps are completed:
+# 1. SonarQube Installation and Usage Guide
+
+SonarQube is an open-source platform for continuous inspection of code quality, enabling developers to detect bugs, vulnerabilities, and code smells in their projects.
+
+---
+
+## Prerequisites
+
+Before installing SonarQube, ensure your system meets the following requirements:
+
+- **Operating System**: Windows, macOS, or Linux
+- **Java**: JDK 11 or higher (required to run SonarQube)
+- **Database**: 
+  - PostgreSQL 9.6–15
+  - MySQL 5.7/8.0
+  - Oracle 12c/19c/21c
+  - Microsoft SQL Server 2017/2019/2022
+- **Memory**: At least 2GB of free RAM
+- **Disk Space**: 1GB for SonarQube installation (additional space may be needed for the database)
+
+---
+
+## Installation
+
+Follow these steps to install SonarQube:
+
+### Step 1: Download SonarQube
+1. Visit the [SonarQube Download Page](https://www.sonarqube.org/downloads/).
+2. Download the latest **Community Edition** or your preferred edition.
+
+### Step 2: Install Java
+1. Download and install [JDK 11 or higher](https://jdk.java.net/).
+2. Verify the installation by running:
+   ```bash
+   java -version
+   ```
+
+### Step 3: Configure SonarQube
+1. Extract the downloaded SonarQube ZIP file.
+2. Navigate to the `sonarqube-x.x/bin/<OS>/` directory (replace `<OS>` with your system, e.g., `windows-x86-64` or `linux-x86-64`).
+3. Edit the `sonar.properties` file in the `conf` directory:
+   - Configure the database connection.
+   - Set any additional server properties as needed.
+
+### Step 4: Start SonarQube
+1. Open a terminal or command prompt.
+2. Navigate to the `bin/<OS>/` directory.
+3. Run the startup script:
+   - On Linux/macOS:
+     ```bash
+     ./sonar.sh start
+     ```
+   - On Windows:
+     ```cmd
+     StartSonar.bat
+     ```
+4. Check if SonarQube started successfully by visiting:  
+   [http://localhost:9000](http://localhost:9000)
+
+---
+
+## Using SonarQube
+
+### Step 1: Access the Dashboard
+1. Open your web browser and go to [http://localhost:9000](http://localhost:9000).
+2. Login using the default credentials:
+   - Username: `admin`
+   - Password: `admin`
+
+### Step 2: Change Default Password
+1. After logging in for the first time, you'll be prompted to change the default password.
+2. Update the password for enhanced security.
+
+### Step 3: Analyze a Project
+1. Create a new project in SonarQube by clicking **"Create Project"**.
+2. Provide a **project key** and **name**.
+3. Generate a token to authenticate the analysis.
+
+### Step 4: Configure Your Code for Analysis
+1. Download and install the SonarQube Scanner for your build system:
+   - **Maven**: Use the SonarQube Maven plugin.
+   - **Gradle**: Use the SonarQube Gradle plugin.
+   - **CLI**: Use the SonarQube Scanner CLI.
+2. Add the token and project details to the configuration file for your scanner (e.g., `sonar-project.properties` for CLI).
+
+### Example Configuration:
+```properties
+sonar.projectKey=your_project_key
+sonar.host.url=http://localhost:9000
+sonar.login=your_generated_token
+```
+
+3. Run the scanner to analyze your code.
+
+### Step 5: View Results
+1. Once the analysis is complete, view the results in the SonarQube dashboard.
+2. Inspect issues, bugs, and vulnerabilities, and prioritize fixes.
+
+---
+
+## Troubleshooting
+
+### Common Issues:
+1. **SonarQube Fails to Start**:  
+   - Check `logs/sonar.log` for detailed error messages.
+   - Ensure the database connection is properly configured.
+2. **Browser Access Issues**:  
+   - Verify that port `9000` is not blocked or used by another application.
+
+### Log Files:
+- Logs are located in the `logs` directory of the SonarQube installation:
+  - `sonar.log`: General logs
+  - `web.log`: Web server logs
+  - `ce.log`: Compute Engine logs
+  - `es.log`: Elasticsearch logs
+
+---
+
+## Additional Resources
+
+- [SonarQube Documentation](https://docs.sonarqube.org/)
+- [SonarQube Community](https://community.sonarsource.com/)
+
+---
+
+# 2. WALL Installation and Usage Guide
+
+Before using the WALL application, ensure the following setup steps are completed:
 
 1. **Install Python**:
    - Make sure Python is installed on your machine. You can download the latest version of Python from [python.org](https://www.python.org/downloads/).
