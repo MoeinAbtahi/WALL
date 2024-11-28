@@ -511,6 +511,8 @@ Where:
 - **Project API Token**: `sqp_b9bd769589a5525f4bfe6774ff71c9724b754565`
 - **Project Key**: `WALL`
 
+![Screenshot_28-11-2024_12758_localhost](https://github.com/user-attachments/assets/78446b44-a9d7-4a91-ad07-9012b7534c28)
+
 These credentials will be used in the **Issue Extraction** section of the WALL application.
 
 ## 3. Issue Extraction in WALL
@@ -569,6 +571,26 @@ With the original files, revised files, and CSV file, you can compare the revise
 ```python
 revised_directory = original_directory.replace("open-instruct-main", "open-instruct-main.Revised")
 ```
+After making the necessary changes, you can use the **Code Compare Tool** to compare the original files with the revised files and assess the quality of the revisions.
 
-After making this change, you can use the Code Compare Tool to compare the files and assess the quality of the revisions.
+### Example: Comparing `mbpp.py` with `Revised.mbpp.py`
+
+In the screenshot below, we compared `mbpp.py` with `Revised.mbpp.py`. The original file (`mbpp.py`) is located at:
+
+```plaintext
+C:/Users/100909323/Desktop/open-instruct-main/eval/mbpp/mbpp.py
+```
+
+While the revised file (`Revised.mbpp.py`) is located at:
+
+```plaintext
+C:/Users/100909323/Desktop/open-instruct-main.Revised/eval/mbpp/Revised.mbpp.py
+```
+
+![Screenshot of Code Comparison](https://github.com/user-attachments/assets/cf84146a-fe6f-4780-8ab1-b2bf31c66215)
+
+By using the **Code Compare Tool**, you can visualize the differences between the original and revised files, helping you evaluate the effectiveness of the revisions made by the WALL application.
+
+---
+
 
