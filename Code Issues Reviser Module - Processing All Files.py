@@ -151,7 +151,7 @@ def main():
     # Send the prompt to OpenAI's Chat API and get the response
     completion = openai.ChatCompletion.create(
     # Example for changing the model to GPT-4o
-    model="gpt-3.5 Turbo",  # Change this to gpt-4o for more advanced capabilities
+    model="gpt-3.5-turbo",  # Change this to gpt-4o for more advanced capabilities
     # Alternatively, you could use other models as well:
     # model="gpt-3.5-turbo-1106" for a different variant of GPT-3.5, if needed.
         temperature=0.0,
