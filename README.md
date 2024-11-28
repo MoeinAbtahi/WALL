@@ -478,8 +478,93 @@ The **Code Compare Tool** enables users to evaluate and compare the original and
 
 ---
 
+# Test Dataset and WALL Application Usage
 
+As shown in **Table II** of the paper, the results are based on the dataset from **Team Eagle Ltd.** ([https://www.team-eagle.ca/](https://www.team-eagle.ca/)). However, I tested the WALL application using the publicly available **open-instruct** GitHub repository ([https://github.com/allenai/open-instruct](https://github.com/allenai/open-instruct)). Below are the step-by-step instructions for using this test dataset with the WALL application.
 
+## 1. Clone the Repository
 
+First, clone the **open-instruct** repository using the following command:
 
+```bash
+git clone https://github.com/allenai/open-instruct.git
+```
+
+You can clone the repository to any location, but for this example, we will use the following path:
+
+```plaintext
+C:\Users\100909323\Desktop\open-instruct-main
+```
+
+## 2. Add the Project to SonarQube
+
+Next, install **SonarQube** locally and configure it to use the following server address: `http://localhost:9099/`. After that, create a project in SonarQube called **"WALL"** and add the project files using the following command:
+
+```bash
+sonar-scanner.bat -D"sonar.projectKey=WALL" -D"sonar.sources=." -D"sonar.host.url=http://localhost:9099" -D"sonar.token=sqp_b9bd769589a5525f4bfe6774ff71c9724b754565"
+```
+
+Where:
+- **Project API Token**: `sqp_b9bd769589a5525f4bfe6774ff71c9724b754565`
+- **Project Key**: `WALL`
+
+These credentials will be used in the **Issue Extraction** section of the WALL application.
+
+## 3. Issue Extraction in WALL
+
+Once you have your SonarQube credentials, you can extract the issues from SonarQube into a CSV file using the **Issue Extraction** section in the WALL application. Enter the following credentials manually:
+
+- **SonarQube Server URL**: `http://localhost:9099/`
+- **SonarQube API Token**: `sqp_b9bd769589a5525f4bfe6774ff71c9724b754565`
+- **SonarQube Project Key**: `WALL`
+- **Project Location**: `C:\Users\100909323\Desktop\open-instruct-main`
+- **CSV File Save Location**: `C:\Users\100909323\Desktop\open-instruct.Issues.csv`
+
+After running the extraction, the issues will be saved in the `open-instruct.Issues.csv` file, located in the `Test.Dataset` directory.
+
+![Screenshot of Issue Extraction](https://github.com/user-attachments/assets/27a66140-5a74-44b4-9830-5f8a76e96425)
+
+## 4. Code Issues Reviser in WALL
+
+Once the issues are extracted, we can proceed to use the **Code Issues Reviser** section.
+
+### 4.1 Code Issues Reviser in the WALL Application
+
+In this section, upload the `open-instruct.Issues.csv` file. You will see the files with issues, and for example, the original and revised versions of the `Dockerfile` using **GPT-4o** are shown below.
+
+![Screenshot of Dockerfile Revision](https://github.com/user-attachments/assets/889928c7-e49a-416c-bbb1-c4da213d8b4d)
+![Screenshot of Revised Dockerfile](https://github.com/user-attachments/assets/0c4d40d7-76f5-4339-a111-4dadb48d8e74)
+
+Once the revision is complete, save the revised `Dockerfile` manually.
+
+### 4.2 Code Issues Reviser Script for Revising All Files
+
+To revise all files at once, we used the Python script **Processing All Files.py**. In the script, update the following lines:
+
+- Line 127:
+  ```python
+  to_remove = r"C:\Users\100909323\Desktop\open-instruct-main"  # Path to the original project files
+  ```
+
+- Line 130:
+  ```python
+  to_add = r"C:\Users\100909323\Desktop\open-instruct-main.Revised"  # Path to save the revised files
+  ```
+
+- Define the GPT model (e.g., `gpt-3.5-turbo`) in Line 154:
+  ```python
+  model="gpt-3.5-turbo",  # Change this to gpt-4o for more advanced capabilities
+  ```
+
+Note that only 25 files with issues in the `open-instruct-main` project were revised. The revised files can be found in the `Test.Dataset/open-instruct-main.Revised` directory.
+
+## 5. Code Comparison Section in WALL
+
+With the original files, revised files, and CSV file, you can compare the revised files with the original files using the **Code Compare Tool**. To enable this, modify Line 451 of **app.py** as follows:
+
+```python
+revised_directory = original_directory.replace("open-instruct-main", "open-instruct-main.Revised")
+```
+
+After making this change, you can use the Code Compare Tool to compare the files and assess the quality of the revisions.
 
