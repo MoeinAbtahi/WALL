@@ -1,0 +1,425 @@
+file_Location,file_name,line,message,type
+C:/Users/100909323/Desktop/open-instruct-main/Dockerfile,Dockerfile,10,Remove cache after installing packages.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/Dockerfile,Dockerfile,85,"Complete the task associated to this ""TODO"" comment.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/Dockerfile,Dockerfile,89,"Complete the task associated to this ""TODO"" comment.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/decontamination/index.py,index.py,97,Refactor this function to reduce its Cognitive Complexity from 28 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/decontamination/index.py,index.py,124,idx is used before it is defined. Move the definition before.,BUG
+C:/Users/100909323/Desktop/open-instruct-main/decontamination/search.py,search.py,82,Refactor this function to reduce its Cognitive Complexity from 21 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/decontamination/search.py,search.py,212,Refactor this function to reduce its Cognitive Complexity from 64 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/MATH/minerva_utils.py,minerva_utils.py,132,"Define a constant instead of duplicating this literal ""\\boxed "" 5 times.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/MATH/minerva_utils.py,minerva_utils.py,134,Use `startswith` here.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/MATH/minerva_utils.py,minerva_utils.py,139,Use `startswith` here.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/MATH/minerva_utils.py,minerva_utils.py,175,Refactor this function to reduce its Cognitive Complexity from 28 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/MATH/minerva_utils.py,minerva_utils.py,233,"Define a constant instead of duplicating this literal ""\\sqrt"" 3 times.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/MATH/minerva_utils.py,minerva_utils.py,290,Merge this if statement with the enclosing one.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/MATH/run_eval.py,run_eval.py,27,Refactor this function to reduce its Cognitive Complexity from 77 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/MATH/run_eval.py,run_eval.py,32,Add replacement fields or use a normal string instead of an f-string.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/MATH/run_eval.py,run_eval.py,55,"Define a constant instead of duplicating this literal ""Problem:\n"" 5 times.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/MATH/run_eval.py,run_eval.py,106,Remove this if statement or edit its code blocks so that they're not all the same.,BUG
+C:/Users/100909323/Desktop/open-instruct-main/eval/MATH/run_eval.py,run_eval.py,107,"Define a constant instead of duplicating this literal ""\n\nSolution:\n"" 4 times.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/MATH/run_eval.py,run_eval.py,130,Remove this if statement or edit its code blocks so that they're not all the same.,BUG
+C:/Users/100909323/Desktop/open-instruct-main/eval/MATH/run_eval.py,run_eval.py,155,Add replacement fields or use a normal string instead of an f-string.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/MATH/run_eval.py,run_eval.py,198,Add replacement fields or use a normal string instead of an f-string.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/MATH/utilities.py,utilities.py,28,Use `startswith` here.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/MATH/utilities.py,utilities.py,31,Specify an exception class to catch or reraise the exception,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/alpaca_farm/run_eval.py,run_eval.py,13,Refactor this function to reduce its Cognitive Complexity from 49 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/alpaca_farm/run_eval.py,run_eval.py,116,"Replace the unused local variable ""annotations"" with ""_"".",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/alpaca_farm/run_eval.py,run_eval.py,138,Add replacement fields or use a normal string instead of an f-string.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/bbh/run_eval.py,run_eval.py,25,Refactor this function to reduce its Cognitive Complexity from 84 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/bbh/run_eval.py,run_eval.py,106,"Define a constant instead of duplicating this literal ""\n\nQ: "" 3 times.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/codex_humaneval/execution.py,execution.py,62,Catch a more specific exception or reraise the exception,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/codex_humaneval/execution.py,execution.py,153,Add logic to this except clause or eliminate it and rethrow the exception automatically.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/codex_humaneval/execution.py,execution.py,175,"Use the opposite operator (""!="") instead.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/codex_humaneval/run_eval.py,run_eval.py,20,Refactor this function to reduce its Cognitive Complexity from 59 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/codex_humaneval/run_eval.py,run_eval.py,188,Do not perform equality checks with floating point values.,BUG
+C:/Users/100909323/Desktop/open-instruct-main/eval/gsm/run_eval.py,run_eval.py,25,Refactor this function to reduce its Cognitive Complexity from 74 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/gsm/run_eval.py,run_eval.py,30,Add replacement fields or use a normal string instead of an f-string.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/gsm/run_eval.py,run_eval.py,62,"Define a constant instead of duplicating this literal ""Question: "" 4 times.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/gsm/run_eval.py,run_eval.py,149,prompts is used before it is defined. Move the definition before.,BUG
+C:/Users/100909323/Desktop/open-instruct-main/eval/gsm/run_eval.py,run_eval.py,154,Add replacement fields or use a normal string instead of an f-string.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/gsm/run_eval.py,run_eval.py,181,Add replacement fields or use a normal string instead of an f-string.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/ifeval/instructions.py,instructions.py,58,"Complete the task associated to this ""TODO"" comment.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/ifeval/instructions.py,instructions.py,132,"Complete the task associated to this ""TODO"" comment.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/ifeval/instructions.py,instructions.py,162,"Define a constant instead of duplicating this literal ""Unable to detect language for text %s due to %s"" 3 times.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/ifeval/instructions.py,instructions.py,275,"Replace this use of a reluctant quantifier with ""[^\]]*"".",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/ifeval/instructions.py,instructions.py,998,"Complete the task associated to this ""TODO"" comment.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/ifeval/instructions.py,instructions.py,1013,"Complete the task associated to this ""TODO"" comment.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/ifeval/instructions.py,instructions.py,1032,"Complete the task associated to this ""TODO"" comment.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/ifeval/instructions.py,instructions.py,1131,"Complete the task associated to this ""TODO"" comment.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/ifeval/instructions_registry.py,instructions_registry.py,42,"Complete the task associated to this ""TODO"" comment.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/ifeval/instructions_registry.py,instructions_registry.py,54,"Complete the task associated to this ""TODO"" comment.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/ifeval/instructions_registry.py,instructions_registry.py,60,"Complete the task associated to this ""TODO"" comment.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/ifeval/instructions_registry.py,instructions_registry.py,64,"Complete the task associated to this ""TODO"" comment.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/ifeval/instructions_registry.py,instructions_registry.py,82,"Complete the task associated to this ""TODO"" comment.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/ifeval/instructions_registry.py,instructions_registry.py,100,Change or remove duplicates of this key.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/ifeval/instructions_registry.py,instructions_registry.py,112,"Complete the task associated to this ""TODO"" comment.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/ifeval/instructions_registry.py,instructions_registry.py,123,"Complete the task associated to this ""TODO"" comment.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/ifeval/instructions_registry.py,instructions_registry.py,130,"Complete the task associated to this ""TODO"" comment.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/ifeval/run_eval.py,run_eval.py,216,Refactor this function to reduce its Cognitive Complexity from 42 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/ifeval/run_eval.py,run_eval.py,305,Add replacement fields or use a normal string instead of an f-string.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/ifeval/run_eval.py,run_eval.py,335,Add replacement fields or use a normal string instead of an f-string.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/mbpp/evaluation.py,evaluation.py,46,"Remove the unused local variable ""n_samples"".",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/mbpp/execution.py,execution.py,80,Catch a more specific exception or reraise the exception,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/mbpp/execution.py,execution.py,153,Add logic to this except clause or eliminate it and rethrow the exception automatically.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/mbpp/execution.py,execution.py,176,"Use the opposite operator (""!="") instead.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/mbpp/mbpp.py,mbpp.py,15,"Replace the type hint ""str"" with ""Optional[str]"" or don't assign ""None"" to ""DATASET_PATH""",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/mbpp/mbpp.py,mbpp.py,18,"Replace the type hint ""str"" with ""Optional[str]"" or don't assign ""None"" to ""DATASET_NAME""",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/mbpp/run_eval.py,run_eval.py,21,Refactor this function to reduce its Cognitive Complexity from 84 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/mbpp/run_eval.py,run_eval.py,33,Raise this exception or remove this useless statement.,BUG
+C:/Users/100909323/Desktop/open-instruct-main/eval/mbpp/run_eval.py,run_eval.py,188,Remove this if statement or edit its code blocks so that they're not all the same.,BUG
+C:/Users/100909323/Desktop/open-instruct-main/eval/mbpp/run_eval.py,run_eval.py,200,Do not perform equality checks with floating point values.,BUG
+C:/Users/100909323/Desktop/open-instruct-main/eval/mmlu/categories.py,categories.py,9,"Define a constant instead of duplicating this literal ""computer science"" 5 times.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/mmlu/run_eval.py,run_eval.py,46,Refactor this function to reduce its Cognitive Complexity from 19 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/mmlu/run_eval.py,run_eval.py,83,"Complete the task associated to this ""TODO"" comment.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/mmlu/run_eval.py,run_eval.py,101,"Define a constant instead of duplicating this literal ""Average accuracy {:.3f} - {}"" 4 times.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/mmlu/run_eval.py,run_eval.py,105,"Remove the unused function parameter ""engine"".",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/mmlu/run_eval.py,run_eval.py,105,"Remove the unused function parameter ""batch_size"".",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/mmlu/run_eval.py,run_eval.py,145,Refactor this function to reduce its Cognitive Complexity from 29 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/mmlu/run_eval.py,run_eval.py,169,"Define a constant instead of duplicating this literal ""_test.csv"" 3 times.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/mmlu/run_eval.py,run_eval.py,188,Add replacement fields or use a normal string instead of an f-string.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/mmlu/run_eval.py,run_eval.py,200,"Replace the unused local variable ""acc"" with ""_"".",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/templates.py,templates.py,6,"Define a constant instead of duplicating this literal ""<|system|>\n"" 3 times.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/templates.py,templates.py,8,"Define a constant instead of duplicating this literal ""<|user|>\n"" 3 times.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/templates.py,templates.py,10,"Define a constant instead of duplicating this literal ""<|assistant|>\n"" 6 times.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/templates.py,templates.py,20,"Remove the unused function parameter ""tokenizer"".",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/templates.py,templates.py,20,"Remove the unused function parameter ""add_bos"".",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/templates.py,templates.py,38,"Remove the unused function parameter ""tokenizer"".",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/templates.py,templates.py,69,"Remove the unused function parameter ""bos"".",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/templates.py,templates.py,69,"Remove the unused function parameter ""add_bos"".",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/templates.py,templates.py,69,"Remove the unused function parameter ""tokenizer"".",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/templates.py,templates.py,85,"Remove the unused function parameter ""bos"".",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/templates.py,templates.py,85,"Remove the unused function parameter ""add_bos"".",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/templates.py,templates.py,91,Remove this commented out code.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/toxigen/run_eval.py,run_eval.py,39,Refactor this function to reduce its Cognitive Complexity from 48 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/truthfulqa/metrics.py,metrics.py,14,"Rename function ""MC_calcs"" to match the regular expression ^[a-z_][a-z0-9_]*$.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/truthfulqa/metrics.py,metrics.py,52,Refactor this function to reduce its Cognitive Complexity from 16 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/truthfulqa/metrics.py,metrics.py,92,Add replacement fields or use a normal string instead of an f-string.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/truthfulqa/metrics.py,metrics.py,100,"Remove the unused local variable ""output_str"".",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/truthfulqa/run_eval.py,run_eval.py,44,"Remove the unused function parameter ""verbose"".",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/truthfulqa/run_eval.py,run_eval.py,69,"Remove the unused function parameter ""verbose"".",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/truthfulqa/run_eval.py,run_eval.py,99,"Remove the unused function parameter ""verbose"".",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/truthfulqa/run_eval.py,run_eval.py,99,Refactor this function to reduce its Cognitive Complexity from 29 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/truthfulqa/run_eval.py,run_eval.py,107,"Define a constant instead of duplicating this literal ""References missing for {0}!"" 4 times.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/truthfulqa/run_eval.py,run_eval.py,161,Replace this expression; used as a condition it will always be constant.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/truthfulqa/run_eval.py,run_eval.py,271,Refactor this function to reduce its Cognitive Complexity from 75 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/truthfulqa/utilities.py,utilities.py,11,"Do not use ""inplace=True"" when modifying a dataframe.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/truthfulqa/utilities.py,utilities.py,43,Define a constant instead of duplicating this literal '\n\nQ: ' 3 times.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/truthfulqa/utilities.py,utilities.py,128,Merge this if statement with the enclosing one.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/tydiqa/run_eval.py,run_eval.py,45,Refactor this function to reduce its Cognitive Complexity from 115 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/utils.py,utils.py,70,Refactor this function to reduce its Cognitive Complexity from 24 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/utils.py,utils.py,125,Remove this commented out code.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/utils.py,utils.py,178,Refactor this function to reduce its Cognitive Complexity from 26 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/utils.py,utils.py,266,"Complete the task associated to this ""TODO"" comment.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/utils.py,utils.py,327,Specify an exception class to catch or reraise the exception,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/utils.py,utils.py,376,Refactor this function to reduce its Cognitive Complexity from 30 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/utils.py,utils.py,424,Add replacement fields or use a normal string instead of an f-string.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/utils.py,utils.py,433,Add replacement fields or use a normal string instead of an f-string.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/utils.py,utils.py,443,Refactor this function to reduce its Cognitive Complexity from 30 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/utils.py,utils.py,491,Add replacement fields or use a normal string instead of an f-string.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/utils.py,utils.py,500,Add replacement fields or use a normal string instead of an f-string.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/utils.py,utils.py,516,Rename this variable; it shadows a builtin.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/utils.py,utils.py,540,"Define a constant instead of duplicating this literal ""results.json"" 3 times.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/utils.py,utils.py,578,Add replacement fields or use a normal string instead of an f-string.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/xstest/classify_refusal.py,classify_refusal.py,10,Add replacement fields or use a normal string instead of an f-string.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/xstest/run_eval.py,run_eval.py,26,Refactor this function to reduce its Cognitive Complexity from 59 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/xstest/run_eval.py,run_eval.py,111,Add replacement fields or use a normal string instead of an f-string.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/xstest/run_eval.py,run_eval.py,148,"Add a parameter to the parent lambda function and use variable ""label"" as its default value; The value of ""label"" might change at the next loop iteration.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/xstest/run_eval.py,run_eval.py,155,"Add a parameter to the parent lambda function and use variable ""label"" as its default value; The value of ""label"" might change at the next loop iteration.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/eval/xstest/run_eval.py,run_eval.py,156,"Add a parameter to the parent lambda function and use variable ""label"" as its default value; The value of ""label"" might change at the next loop iteration.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/human_eval/app.py,app.py,19,"Don't disclose ""Flask"" secret keys.",VULNERABILITY
+C:/Users/100909323/Desktop/open-instruct-main/human_eval/app.py,app.py,150,Refactor this function to reduce its Cognitive Complexity from 16 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/human_eval/app.py,app.py,194,Refactor this function to reduce its Cognitive Complexity from 31 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/human_eval/app.py,app.py,287,"Remove the unused local variable ""instance_id"".",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/human_eval/app.py,app.py,400,"Revoke and change this password, as it is compromised.",VULNERABILITY
+C:/Users/100909323/Desktop/open-instruct-main/human_eval/compute_metrics.py,compute_metrics.py,6,Refactor this function to reduce its Cognitive Complexity from 16 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/human_eval/compute_metrics.py,compute_metrics.py,43,Remove this commented out code.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/human_eval/compute_metrics.py,compute_metrics.py,52,Refactor this function to reduce its Cognitive Complexity from 31 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/human_eval/static/app.js,app.js,17,"Extract the assignment of ""insert_after_selector"" from this expression.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/human_eval/static/app.js,app.js,17,"Add the ""let"", ""const"" or ""var"" keyword to this declaration of ""insert_after_selector"" to make it explicit.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/human_eval/static/app.js,app.js,18,"Extract the assignment of ""timeout"" from this expression.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/human_eval/static/app.js,app.js,18,"Add the ""let"", ""const"" or ""var"" keyword to this declaration of ""timeout"" to make it explicit.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/human_eval/static/app.js,app.js,28,"Unexpected var, use let or const instead.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/human_eval/static/app.js,app.js,29,"Unexpected var, use let or const instead.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/human_eval/static/app.js,app.js,33,"Unexpected var, use let or const instead.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/human_eval/static/app.js,app.js,35,"Unexpected var, use let or const instead.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/human_eval/static/app.js,app.js,48,"Add the ""let"", ""const"" or ""var"" keyword to this declaration of ""completion_a"" to make it explicit.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/human_eval/static/app.js,app.js,49,"Add the ""let"", ""const"" or ""var"" keyword to this declaration of ""completion_b"" to make it explicit.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/human_eval/static/app.js,app.js,105,"Extract the assignment of ""insert_after_selector"" from this expression.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/human_eval/static/app.js,app.js,105,"Extract the assignment of ""timeout"" from this expression.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/human_eval/static/app.js,app.js,129,"Add the ""let"", ""const"" or ""var"" keyword to this declaration of ""timeoutput"" to make it explicit.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/human_eval/static/app.js,app.js,129,"Extract the assignment of ""insert_after_selector"" from this expression.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/human_eval/static/app.js,app.js,129,"Extract the assignment of ""timeoutput"" from this expression.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/human_eval/static/app.js,app.js,135,"Extract the assignment of ""timeoutput"" from this expression.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/human_eval/static/app.js,app.js,135,"Extract the assignment of ""insert_after_selector"" from this expression.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/human_eval/static/app.js,app.js,139,"Extract the assignment of ""insert_after_selector"" from this expression.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/human_eval/static/app.js,app.js,139,"Extract the assignment of ""timeoutput"" from this expression.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/human_eval/static/app.js,app.js,143,"Extract the assignment of ""insert_after_selector"" from this expression.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/human_eval/static/app.js,app.js,143,"Extract the assignment of ""timeoutput"" from this expression.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/human_eval/static/app.js,app.js,150,'event' is deprecated.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/human_eval/static/app.js,app.js,176,"Extract the assignment of ""insert_after_selector"" from this expression.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/human_eval/static/app.js,app.js,176,"Extract the assignment of ""timeout"" from this expression.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/human_eval/static/app.js,app.js,199,"Extract the assignment of ""insert_after_selector"" from this expression.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/human_eval/static/app.js,app.js,199,"Extract the assignment of ""timeoutput"" from this expression.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/human_eval/static/app.js,app.js,203,"Extract the assignment of ""insert_after_selector"" from this expression.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/human_eval/static/app.js,app.js,203,"Extract the assignment of ""timeoutput"" from this expression.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/human_eval/static/app.js,app.js,207,"Extract the assignment of ""timeoutput"" from this expression.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/human_eval/static/app.js,app.js,207,"Extract the assignment of ""insert_after_selector"" from this expression.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/human_eval/static/app.js,app.js,211,"Extract the assignment of ""timeoutput"" from this expression.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/human_eval/static/app.js,app.js,211,"Extract the assignment of ""insert_after_selector"" from this expression.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/human_eval/static/app.js,app.js,218,'event' is deprecated.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/human_eval/static/styles.css,styles.css,61,Remove this commented out code.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/human_eval/templates/index.html,index.html,2,"Add ""lang"" and/or ""xml:lang"" attributes to this ""<html>"" element",BUG
+C:/Users/100909323/Desktop/open-instruct-main/human_eval/templates/index.html,index.html,75,"Remove this deprecated ""xmp"" element.",BUG
+C:/Users/100909323/Desktop/open-instruct-main/human_eval/templates/index.html,index.html,98,"Remove this deprecated ""xmp"" element.",BUG
+C:/Users/100909323/Desktop/open-instruct-main/human_eval/templates/index.html,index.html,110,"Remove this deprecated ""xmp"" element.",BUG
+C:/Users/100909323/Desktop/open-instruct-main/human_eval/templates/login.html,login.html,2,"Add ""lang"" and/or ""xml:lang"" attributes to this ""<html>"" element",BUG
+C:/Users/100909323/Desktop/open-instruct-main/human_eval/templates/login.html,login.html,20,Remove this commented out code.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/mason.py,WALL:mason.py,132,Replace this generic exception class with a more specific one.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/mason.py,WALL:mason.py,148,Refactor this function to reduce its Cognitive Complexity from 17 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/mason.py,WALL:mason.py,363,Either remove or fill this block of code.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/__init__.py,__init__.py,1,Remove this commented out code.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/__init__.py,__init__.py,3,Remove this commented out code.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/dataset_processor.py,dataset_processor.py,65,Remove this commented out code.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/dataset_processor.py,dataset_processor.py,265,"Define a constant instead of duplicating this literal ""tmp.png"" 4 times.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/dataset_processor.py,dataset_processor.py,322,Refactor this function to reduce its Cognitive Complexity from 17 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/dataset_processor.py,dataset_processor.py,328,Extract this nested conditional expression into an independent statement.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/dataset_processor.py,dataset_processor.py,328,Replace this expression; used as a condition it will always be constant.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/dataset_processor.py,dataset_processor.py,331,Extract this nested conditional expression into an independent statement.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/dataset_processor.py,dataset_processor.py,331,Replace this expression; used as a condition it will always be constant.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/dataset_processor.py,dataset_processor.py,348,Add argument(s) corresponding to the message's replacement field(s).,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/dataset_processor.py,dataset_processor.py,351,Add missing parameters dataset.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/dataset_processor.py,dataset_processor.py,361,Add missing parameters bins.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/dataset_processor.py,dataset_processor.py,422,Add missing parameters dataset.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/dataset_processor.py,dataset_processor.py,425,Add missing parameters bins.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/dataset_processor.py,dataset_processor.py,484,Add missing parameters dataset.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/dataset_processor.py,dataset_processor.py,487,Add missing parameters bins.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/dataset_processor.py,dataset_processor.py,531,"Define a constant instead of duplicating this literal ""the dataset is empty"" 3 times.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/dpo_tune.py,dpo_tune.py,383,Refactor this function to reduce its Cognitive Complexity from 16 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/dpo_tune.py,dpo_tune.py,443,Merge this if statement with the enclosing one.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/dpo_tune.py,dpo_tune.py,471,Refactor this function to reduce its Cognitive Complexity from 217 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/dpo_tune.py,dpo_tune.py,528,Merge this if statement with the enclosing one.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/dpo_tune.py,dpo_tune.py,669,"Define a constant instead of duplicating this literal ""<pad>"" 3 times.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/dpo_tune.py,dpo_tune.py,886,Remove or correct this useless self-assignment.,BUG
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/dpo_tune.py,dpo_tune.py,1005,"Complete the task associated to this ""TODO"" comment.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/dpo_tune_cache.py,dpo_tune_cache.py,393,Refactor this function to reduce its Cognitive Complexity from 16 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/dpo_tune_cache.py,dpo_tune_cache.py,484,Refactor this function to reduce its Cognitive Complexity from 205 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/dpo_tune_cache.py,dpo_tune_cache.py,542,Merge this if statement with the enclosing one.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/dpo_tune_cache.py,dpo_tune_cache.py,676,"Define a constant instead of duplicating this literal ""<pad>"" 3 times.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/dpo_tune_cache.py,dpo_tune_cache.py,888,Remove or correct this useless self-assignment.,BUG
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/dpo_tune_cache.py,dpo_tune_cache.py,1025,"Complete the task associated to this ""TODO"" comment.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/dpo_utils.py,dpo_utils.py,174,"Remove the unused function parameter ""pad_value"".",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/dpo_utils.py,dpo_utils.py,283,Remove this assignment to local variable 'aux_loss'; the value is never used.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/finetune.py,finetune.py,355,Refactor this function to reduce its Cognitive Complexity from 16 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/finetune.py,finetune.py,382,Refactor this function to reduce its Cognitive Complexity from 17 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/finetune.py,finetune.py,455,Refactor this function to reduce its Cognitive Complexity from 185 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/finetune.py,finetune.py,512,Merge this if statement with the enclosing one.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/finetune.py,finetune.py,642,"Define a constant instead of duplicating this literal ""<pad>"" 3 times.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/finetune.py,finetune.py,832,Remove or correct this useless self-assignment.,BUG
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ground_truth_utils.py,ground_truth_utils.py,13,"Define a constant instead of duplicating this literal ""<|assistant|>\n"" 5 times.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ground_truth_utils.py,ground_truth_utils.py,63,"Either merge this branch with the identical one on line ""60"" or change one of the implementations.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ground_truth_utils.py,ground_truth_utils.py,88,"Either merge this branch with the identical one on line ""85"" or change one of the implementations.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ground_truth_utils.py,ground_truth_utils.py,96,"Complete the task associated to this ""TODO"" comment.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/if_functions.py,if_functions.py,31,"Rename this parameter ""N"" to match the regular expression ^[_a-z][a-z0-9_]*$.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/if_functions.py,if_functions.py,91,"Rename this parameter ""N"" to match the regular expression ^[_a-z][a-z0-9_]*$.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/if_functions.py,if_functions.py,146,"Rename this parameter ""N"" to match the regular expression ^[_a-z][a-z0-9_]*$.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/if_functions.py,if_functions.py,186,"Rename this parameter ""N"" to match the regular expression ^[_a-z][a-z0-9_]*$.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/if_functions.py,if_functions.py,219,"Rename this parameter ""N"" to match the regular expression ^[_a-z][a-z0-9_]*$.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/if_functions.py,if_functions.py,232,Replace this alternation with a character class.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/if_functions.py,if_functions.py,250,"Rename this parameter ""N"" to match the regular expression ^[_a-z][a-z0-9_]*$.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/if_functions.py,if_functions.py,302,"Rename this parameter ""N"" to match the regular expression ^[_a-z][a-z0-9_]*$.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/if_functions.py,if_functions.py,332,"Rename this parameter ""N"" to match the regular expression ^[_a-z][a-z0-9_]*$.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/if_functions.py,if_functions.py,350,"Return a value of type ""tuple[bool, str]"" instead of ""bool"" or update function ""verify_bullet_points"" type hint.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/if_functions.py,if_functions.py,352,"Return a value of type ""tuple[bool, str]"" instead of ""bool"" or update function ""verify_bullet_points"" type hint.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/if_functions.py,if_functions.py,376,"Rename this parameter ""N"" to match the regular expression ^[_a-z][a-z0-9_]*$.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/if_functions.py,if_functions.py,388,"Rename this parameter ""N"" to match the regular expression ^[_a-z][a-z0-9_]*$.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/if_functions.py,if_functions.py,450,"Rename this parameter ""N"" to match the regular expression ^[_a-z][a-z0-9_]*$.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/math_utils.py,math_utils.py,16,"Define a constant instead of duplicating this literal ""\\boxed "" 5 times.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/math_utils.py,math_utils.py,47,Use `startswith` here.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/math_utils.py,math_utils.py,52,Use `startswith` here.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/math_utils.py,math_utils.py,227,Refactor this function to reduce its Cognitive Complexity from 28 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/math_utils.py,math_utils.py,285,"Define a constant instead of duplicating this literal ""\\sqrt"" 3 times.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/math_utils.py,math_utils.py,342,Merge this if statement with the enclosing one.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/merge_lora.py,merge_lora.py,58,"Replace the unused local variable ""target"" with ""_"".",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/merge_lora.py,merge_lora.py,134,Remove this commented out code.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/online_dpo_vllm_thread.py,online_dpo_vllm_thread.py,80,"Replace the type hint ""str"" with ""Optional[str]"" or don't assign ""None"" to ""dataset_mixer""",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/online_dpo_vllm_thread.py,online_dpo_vllm_thread.py,82,"Replace the type hint ""list[str]"" with ""Optional[list[str]]"" or don't assign ""None"" to ""dataset_train_splits""",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/online_dpo_vllm_thread.py,online_dpo_vllm_thread.py,238,"Remove the unused function parameter ""model_config"".",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/online_dpo_vllm_thread.py,online_dpo_vllm_thread.py,288,"Rename this parameter ""response_ids_Q"" to match the regular expression ^[_a-z][a-z0-9_]*$.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/online_dpo_vllm_thread.py,online_dpo_vllm_thread.py,289,"Rename this parameter ""param_prompt_Q"" to match the regular expression ^[_a-z][a-z0-9_]*$.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/online_dpo_vllm_thread.py,online_dpo_vllm_thread.py,292,"Rename this parameter ""evaluation_Q"" to match the regular expression ^[_a-z][a-z0-9_]*$.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/online_dpo_vllm_thread.py,online_dpo_vllm_thread.py,333,"Rename this parameter ""param_prompt_Q"" to match the regular expression ^[_a-z][a-z0-9_]*$.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/online_dpo_vllm_thread.py,online_dpo_vllm_thread.py,342,Refactor this function to reduce its Cognitive Complexity from 139 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/online_dpo_vllm_thread.py,online_dpo_vllm_thread.py,514,Remove or refactor this statement; it has no side effects.,BUG
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/online_dpo_vllm_thread.py,online_dpo_vllm_thread.py,563,"Rename this local variable ""param_prompt_Q"" to match the regular expression ^[_a-z][a-z0-9_]*$.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/online_dpo_vllm_thread.py,online_dpo_vllm_thread.py,564,"Rename this local variable ""response_ids_Q"" to match the regular expression ^[_a-z][a-z0-9_]*$.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/online_dpo_vllm_thread.py,online_dpo_vllm_thread.py,565,"Rename this local variable ""evaluation_Q"" to match the regular expression ^[_a-z][a-z0-9_]*$.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/online_dpo_vllm_thread.py,online_dpo_vllm_thread.py,681,"Use the opposite operator ("">="") instead.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/online_dpo_vllm_thread.py,online_dpo_vllm_thread.py,769,"Use a ""numpy.random.Generator"" here instead of this legacy function.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread.py,ppo_vllm_thread.py,82,"Replace the type hint ""str"" with ""Optional[str]"" or don't assign ""None"" to ""dataset_mixer""",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread.py,ppo_vllm_thread.py,84,"Replace the type hint ""list[str]"" with ""Optional[list[str]]"" or don't assign ""None"" to ""dataset_train_splits""",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread.py,ppo_vllm_thread.py,202,"Replace the type hint ""str"" with ""Optional[str]"" or don't assign ""None"" to ""answer_extraction_model""",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread.py,ppo_vllm_thread.py,261,"Remove the unused function parameter ""model_config"".",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread.py,ppo_vllm_thread.py,311,"Rename this parameter ""response_ids_Q"" to match the regular expression ^[_a-z][a-z0-9_]*$.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread.py,ppo_vllm_thread.py,312,"Rename this parameter ""param_prompt_Q"" to match the regular expression ^[_a-z][a-z0-9_]*$.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread.py,ppo_vllm_thread.py,315,"Rename this parameter ""evaluation_Q"" to match the regular expression ^[_a-z][a-z0-9_]*$.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread.py,ppo_vllm_thread.py,357,"Rename this parameter ""param_prompt_Q"" to match the regular expression ^[_a-z][a-z0-9_]*$.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread.py,ppo_vllm_thread.py,423,Refactor this function to reduce its Cognitive Complexity from 128 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread.py,ppo_vllm_thread.py,617,Remove or refactor this statement; it has no side effects.,BUG
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread.py,ppo_vllm_thread.py,642,"Rename this local variable ""param_prompt_Q"" to match the regular expression ^[_a-z][a-z0-9_]*$.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread.py,ppo_vllm_thread.py,643,"Rename this local variable ""response_ids_Q"" to match the regular expression ^[_a-z][a-z0-9_]*$.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread.py,ppo_vllm_thread.py,644,"Rename this local variable ""evaluation_Q"" to match the regular expression ^[_a-z][a-z0-9_]*$.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread.py,ppo_vllm_thread.py,828,Do not perform equality checks with floating point values.,BUG
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread.py,ppo_vllm_thread.py,936,"Use a ""numpy.random.Generator"" here instead of this legacy function.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread_ray.py,ppo_vllm_thread_ray.py,116,"Replace the type hint ""str"" with ""Optional[str]"" or don't assign ""None"" to ""dataset_mixer""",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread_ray.py,ppo_vllm_thread_ray.py,118,"Replace the type hint ""list[str]"" with ""Optional[list[str]]"" or don't assign ""None"" to ""dataset_train_splits""",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread_ray.py,ppo_vllm_thread_ray.py,299,"Remove the unused function parameter ""model_config"".",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread_ray.py,ppo_vllm_thread_ray.py,301,Remove this commented out code.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread_ray.py,ppo_vllm_thread_ray.py,334,Merge this if statement with the enclosing one.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread_ray.py,ppo_vllm_thread_ray.py,344,"Remove the unused function parameter ""zpg"".",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread_ray.py,ppo_vllm_thread_ray.py,590,Remove this commented out code.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread_ray.py,ppo_vllm_thread_ray.py,627,Remove this commented out code.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread_ray.py,ppo_vllm_thread_ray.py,715,Refactor this function to reduce its Cognitive Complexity from 122 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread_ray.py,ppo_vllm_thread_ray.py,817,Remove this commented out code.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread_ray.py,ppo_vllm_thread_ray.py,835,"Rename this local variable ""param_prompt_Q"" to match the regular expression ^[_a-z][a-z0-9_]*$.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread_ray.py,ppo_vllm_thread_ray.py,836,"Rename this local variable ""response_ids_Q"" to match the regular expression ^[_a-z][a-z0-9_]*$.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread_ray.py,ppo_vllm_thread_ray.py,837,"Rename this local variable ""evaluation_Q"" to match the regular expression ^[_a-z][a-z0-9_]*$.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread_ray.py,ppo_vllm_thread_ray.py,848,"Rename this parameter ""response_ids_Q"" to match the regular expression ^[_a-z][a-z0-9_]*$.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread_ray.py,ppo_vllm_thread_ray.py,849,"Rename this parameter ""param_prompt_Q"" to match the regular expression ^[_a-z][a-z0-9_]*$.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread_ray.py,ppo_vllm_thread_ray.py,852,"Rename this parameter ""evaluation_Q"" to match the regular expression ^[_a-z][a-z0-9_]*$.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread_ray.py,ppo_vllm_thread_ray.py,861,"Replace the unused local variable ""unwrapped_model"" with ""_"".",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread_ray.py,ppo_vllm_thread_ray.py,933,Remove this commented out code.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread_ray.py,ppo_vllm_thread_ray.py,1111,Remove this commented out code.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread_ray.py,ppo_vllm_thread_ray.py,1146,"Use a ""numpy.random.Generator"" here instead of this legacy function.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread_ray.py,ppo_vllm_thread_ray.py,1185,Remove this commented out code.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread_ray.py,ppo_vllm_thread_ray.py,1196,Remove this commented out code.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread_ray.py,ppo_vllm_thread_ray.py,1206,Remove this commented out code.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread_ray.py,ppo_vllm_thread_ray.py,1215,Remove this commented out code.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread_ray.py,ppo_vllm_thread_ray.py,1247,Remove this commented out code.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread_ray.py,ppo_vllm_thread_ray.py,1494,Refactor this function to reduce its Cognitive Complexity from 32 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread_ray.py,ppo_vllm_thread_ray.py,1614,Remove this commented out code.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread_ray.py,ppo_vllm_thread_ray.py,1644,"Replace the unused loop index ""training_step"" with ""_"".",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread_ray_gtrl.py,ppo_vllm_thread_ray_gtrl.py,119,"Replace the type hint ""str"" with ""Optional[str]"" or don't assign ""None"" to ""dataset_mixer""",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread_ray_gtrl.py,ppo_vllm_thread_ray_gtrl.py,121,"Replace the type hint ""list[str]"" with ""Optional[list[str]]"" or don't assign ""None"" to ""dataset_train_splits""",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread_ray_gtrl.py,ppo_vllm_thread_ray_gtrl.py,241,"Replace the type hint ""str"" with ""Optional[str]"" or don't assign ""None"" to ""answer_extraction_model""",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread_ray_gtrl.py,ppo_vllm_thread_ray_gtrl.py,312,"Remove the unused function parameter ""model_config"".",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread_ray_gtrl.py,ppo_vllm_thread_ray_gtrl.py,314,Remove this commented out code.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread_ray_gtrl.py,ppo_vllm_thread_ray_gtrl.py,347,Merge this if statement with the enclosing one.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread_ray_gtrl.py,ppo_vllm_thread_ray_gtrl.py,357,"Remove the unused function parameter ""zpg"".",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread_ray_gtrl.py,ppo_vllm_thread_ray_gtrl.py,603,Remove this commented out code.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread_ray_gtrl.py,ppo_vllm_thread_ray_gtrl.py,642,Remove this commented out code.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread_ray_gtrl.py,ppo_vllm_thread_ray_gtrl.py,730,Refactor this function to reduce its Cognitive Complexity from 131 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread_ray_gtrl.py,ppo_vllm_thread_ray_gtrl.py,832,Remove this commented out code.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread_ray_gtrl.py,ppo_vllm_thread_ray_gtrl.py,851,"Rename this local variable ""param_prompt_Q"" to match the regular expression ^[_a-z][a-z0-9_]*$.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread_ray_gtrl.py,ppo_vllm_thread_ray_gtrl.py,852,"Rename this local variable ""response_ids_Q"" to match the regular expression ^[_a-z][a-z0-9_]*$.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread_ray_gtrl.py,ppo_vllm_thread_ray_gtrl.py,853,"Rename this local variable ""evaluation_Q"" to match the regular expression ^[_a-z][a-z0-9_]*$.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread_ray_gtrl.py,ppo_vllm_thread_ray_gtrl.py,864,"Rename this parameter ""response_ids_Q"" to match the regular expression ^[_a-z][a-z0-9_]*$.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread_ray_gtrl.py,ppo_vllm_thread_ray_gtrl.py,865,"Rename this parameter ""param_prompt_Q"" to match the regular expression ^[_a-z][a-z0-9_]*$.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread_ray_gtrl.py,ppo_vllm_thread_ray_gtrl.py,868,"Rename this parameter ""evaluation_Q"" to match the regular expression ^[_a-z][a-z0-9_]*$.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread_ray_gtrl.py,ppo_vllm_thread_ray_gtrl.py,877,"Replace the unused local variable ""unwrapped_model"" with ""_"".",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread_ray_gtrl.py,ppo_vllm_thread_ray_gtrl.py,959,Remove this commented out code.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread_ray_gtrl.py,ppo_vllm_thread_ray_gtrl.py,1095,Do not perform equality checks with floating point values.,BUG
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread_ray_gtrl.py,ppo_vllm_thread_ray_gtrl.py,1175,Remove this commented out code.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread_ray_gtrl.py,ppo_vllm_thread_ray_gtrl.py,1210,"Use a ""numpy.random.Generator"" here instead of this legacy function.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread_ray_gtrl.py,ppo_vllm_thread_ray_gtrl.py,1251,Remove this commented out code.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread_ray_gtrl.py,ppo_vllm_thread_ray_gtrl.py,1262,Remove this commented out code.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread_ray_gtrl.py,ppo_vllm_thread_ray_gtrl.py,1267,Remove this commented out code.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread_ray_gtrl.py,ppo_vllm_thread_ray_gtrl.py,1273,Remove this commented out code.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread_ray_gtrl.py,ppo_vllm_thread_ray_gtrl.py,1282,Remove this commented out code.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread_ray_gtrl.py,ppo_vllm_thread_ray_gtrl.py,1316,Remove this commented out code.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread_ray_gtrl.py,ppo_vllm_thread_ray_gtrl.py,1564,Refactor this function to reduce its Cognitive Complexity from 34 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread_ray_gtrl.py,ppo_vllm_thread_ray_gtrl.py,1694,Remove this commented out code.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/ppo_vllm_thread_ray_gtrl.py,ppo_vllm_thread_ray_gtrl.py,1724,"Replace the unused loop index ""training_step"" with ""_"".",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/rejection_sampling/api_generate.py,api_generate.py,42,Refactor this function to reduce its Cognitive Complexity from 18 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/rejection_sampling/generation.py,generation.py,53,"Replace the type hint ""list[str]"" with ""Optional[list[str]]"" or don't assign ""None"" to ""dataset_splits""",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/rejection_sampling/generation.py,generation.py,146,Refactor this function to reduce its Cognitive Complexity from 16 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/rejection_sampling/rejection_sampling.py,rejection_sampling.py,199,Remove this commented out code.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/rejection_sampling/rejection_sampling.py,rejection_sampling.py,233,"Use a ""numpy.random.Generator"" here instead of this legacy function.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/rejection_sampling/rejection_sampling.py,rejection_sampling.py,240,Refactor this function to reduce its Cognitive Complexity from 45 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/rejection_sampling/synthetic_preference_dataset.py,synthetic_preference_dataset.py,115,Refactor this function to reduce its Cognitive Complexity from 26 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/reward_modeling.py,reward_modeling.py,64,"Replace the type hint ""str"" with ""Optional[str]"" or don't assign ""None"" to ""dataset_mixer""",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/reward_modeling.py,reward_modeling.py,66,"Replace the type hint ""list[str]"" with ""Optional[list[str]]"" or don't assign ""None"" to ""dataset_train_splits""",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/reward_modeling.py,reward_modeling.py,163,"Remove the unused function parameter ""model_config"".",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/reward_modeling.py,reward_modeling.py,197,Refactor this function to reduce its Cognitive Complexity from 60 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/utils.py,utils.py,174,Refactor this function to reduce its Cognitive Complexity from 96 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/utils.py,utils.py,358,"Complete the task associated to this ""TODO"" comment.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/utils.py,utils.py,398,Refactor this function to reduce its Cognitive Complexity from 32 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/utils.py,utils.py,509,Refactor this function to reduce its Cognitive Complexity from 29 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/utils.py,utils.py,603,Rename this variable; it shadows a builtin.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/utils.py,utils.py,921,"Define a constant instead of duplicating this literal ""tmp.json"" 3 times.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/vllm_utils.py,vllm_utils.py,94,Remove this assignment to local variable 'world_size'; the value is never used.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/vllm_utils.py,vllm_utils.py,107,Remove this commented out code.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/vllm_utils.py,vllm_utils.py,121,Remove this commented out code.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/vllm_utils2.py,vllm_utils2.py,114,Remove this commented out code.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/vllm_utils2.py,vllm_utils2.py,125,"Complete the task associated to this ""TODO"" comment.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/open_instruct/vllm_utils2.py,vllm_utils2.py,150,"Rename this local variable ""RayWorkerWrapperPath"" to match the regular expression ^[_a-z][a-z0-9_]*$.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/quantize/quantize_autogptq_wikitext.py,quantize_autogptq_wikitext.py,68,"Replace the unused local variable ""testenc"" with ""_"".",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/add_metadata.py,add_metadata.py,44,"Define a constant instead of duplicating this literal ""metadata.json"" 3 times.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/convert_olmo_1124_weights_to_hf.py,convert_olmo_1124_weights_to_hf.py,59,Refactor this function to reduce its Cognitive Complexity from 16 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/convert_olmo_1124_weights_to_hf.py,convert_olmo_1124_weights_to_hf.py,108,"Complete the task associated to this ""TODO"" comment.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/convert_olmo_1124_weights_to_hf.py,convert_olmo_1124_weights_to_hf.py,109,"Complete the task associated to this ""TODO"" comment.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/convert_olmo_1124_weights_to_hf.py,convert_olmo_1124_weights_to_hf.py,145,"Complete the task associated to this ""TODO"" comment.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/create_ground_truth_data.py,create_ground_truth_data.py,168,"Define a constant instead of duplicating this literal ""\\boxed "" 3 times.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/data/get_statistics.py,get_statistics.py,32,"Define a constant instead of duplicating this literal ""philschmid/meta-llama-3-tokenizer"" 3 times.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/data/get_token_distribution.py,get_token_distribution.py,18,Refactor this function to reduce its Cognitive Complexity from 101 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/data/get_token_distribution.py,get_token_distribution.py,246,"Replace the unused local variable ""patches"" with ""_"".",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/data/get_token_distribution.py,get_token_distribution.py,367,"Replace the unused local variable ""fig"" with ""_"".",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/data/get_token_distribution.py,get_token_distribution.py,367,"Replace the unused local variable ""ax"" with ""_"".",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/data/preferences/helpsteer2_nvidia.py,helpsteer2_nvidia.py,33,Remove this commented out code.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/data/preferences/helpsteer2_nvidia.py,helpsteer2_nvidia.py,36,"Add a parameter to the parent lambda function and use variable ""weights"" as its default value; The value of ""weights"" might change at the next loop iteration.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/data/preferences/ultrafeedback_replications.py,ultrafeedback_replications.py,9,"Remove the unused local variable ""ex_url"".",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/data/preferences/ultrainteract.py,ultrainteract.py,58,"Define a constant instead of duplicating this literal ""hf_entity must be provided when push_to_hub is True"" 3 times.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/data/sft/open_assistant.py,open_assistant.py,10,Refactor this function to reduce its Cognitive Complexity from 36 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/data/sft/utils.py,utils.py,11,Refactor this function to reduce its Cognitive Complexity from 17 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/data/sft/utils.py,utils.py,128,"Define a constant instead of duplicating this literal ""README.md"" 4 times.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/data/sft_v1_v2/reformat_datasets.py,reformat_datasets.py,33,"Define a constant instead of duplicating this literal ""{output}"" 27 times.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/data/sft_v1_v2/reformat_datasets.py,reformat_datasets.py,168,"Define a constant instead of duplicating this literal ""Positive Examples"" 3 times.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/data/sft_v1_v2/reformat_datasets.py,reformat_datasets.py,464,Refactor this function to reduce its Cognitive Complexity from 17 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/data/sft_v1_v2/reformat_datasets.py,reformat_datasets.py,490,"Either merge this branch with the identical one on line ""486"" or change one of the implementations.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/data/sft_v1_v2/reformat_datasets.py,reformat_datasets.py,526,Refactor this function to reduce its Cognitive Complexity from 44 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/data/sft_v1_v2/reformat_datasets.py,reformat_datasets.py,614,"Use the opposite operator (""!="") instead.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/data/sft_v1_v2/resample_flan_v2.py,resample_flan_v2.py,63,Do not perform equality checks with floating point values.,BUG
+C:/Users/100909323/Desktop/open-instruct-main/scripts/data/sft_v1_v2/resample_flan_v2.py,resample_flan_v2.py,83,Add replacement fields or use a normal string instead of an f-string.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/eval_constraints/if_functions.py,if_functions.py,34,"Rename this parameter ""N"" to match the regular expression ^[_a-z][a-z0-9_]*$.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/eval_constraints/if_functions.py,if_functions.py,94,"Rename this parameter ""N"" to match the regular expression ^[_a-z][a-z0-9_]*$.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/eval_constraints/if_functions.py,if_functions.py,149,"Rename this parameter ""N"" to match the regular expression ^[_a-z][a-z0-9_]*$.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/eval_constraints/if_functions.py,if_functions.py,189,"Rename this parameter ""N"" to match the regular expression ^[_a-z][a-z0-9_]*$.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/eval_constraints/if_functions.py,if_functions.py,222,"Rename this parameter ""N"" to match the regular expression ^[_a-z][a-z0-9_]*$.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/eval_constraints/if_functions.py,if_functions.py,235,Replace this alternation with a character class.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/eval_constraints/if_functions.py,if_functions.py,253,"Rename this parameter ""N"" to match the regular expression ^[_a-z][a-z0-9_]*$.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/eval_constraints/if_functions.py,if_functions.py,305,"Rename this parameter ""N"" to match the regular expression ^[_a-z][a-z0-9_]*$.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/eval_constraints/if_functions.py,if_functions.py,335,"Rename this parameter ""N"" to match the regular expression ^[_a-z][a-z0-9_]*$.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/eval_constraints/if_functions.py,if_functions.py,353,"Return a value of type ""tuple[bool, str]"" instead of ""bool"" or update function ""verify_bullet_points"" type hint.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/eval_constraints/if_functions.py,if_functions.py,355,"Return a value of type ""tuple[bool, str]"" instead of ""bool"" or update function ""verify_bullet_points"" type hint.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/eval_constraints/if_functions.py,if_functions.py,379,"Rename this parameter ""N"" to match the regular expression ^[_a-z][a-z0-9_]*$.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/eval_constraints/if_functions.py,if_functions.py,391,"Rename this parameter ""N"" to match the regular expression ^[_a-z][a-z0-9_]*$.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/eval_constraints/if_functions.py,if_functions.py,405,"Remove the unused local variable ""json_object"".",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/eval_constraints/if_functions.py,if_functions.py,406,"Remove the unused local variable ""e"".",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/eval_constraints/if_functions.py,if_functions.py,453,"Rename this parameter ""N"" to match the regular expression ^[_a-z][a-z0-9_]*$.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/submit_dpo_job.py,submit_dpo_job.py,16,Refactor this function to reduce its Cognitive Complexity from 62 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/submit_dpo_job.py,submit_dpo_job.py,93,Remove this commented out code.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/submit_dpo_job.py,submit_dpo_job.py,232,Remove this commented out code.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/submit_dpo_job.py,submit_dpo_job.py,321,Add replacement fields or use a normal string instead of an f-string.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/submit_dpo_job.py,submit_dpo_job.py,379,Refactor this function to reduce its Cognitive Complexity from 20 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/submit_dpo_job.py,submit_dpo_job.py,417,Merge this if statement with the enclosing one.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/submit_eval_jobs.py,submit_eval_jobs.py,504,"Define a constant instead of duplicating this literal ""--model_name_or_path /model"" 4 times.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/submit_eval_jobs.py,submit_eval_jobs.py,505,"Define a constant instead of duplicating this literal ""--tokenizer_name_or_path /model"" 4 times.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/submit_eval_jobs.py,submit_eval_jobs.py,544,"Define a constant instead of duplicating this literal ""--chat_formatting_function eval.templates.create_prompt_with_tulu_chat_format"" 6 times.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/submit_eval_jobs.py,submit_eval_jobs.py,553,"Either merge this branch with the identical one on line ""548"" or change one of the implementations.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/submit_eval_jobs.py,submit_eval_jobs.py,610,"Define a constant instead of duplicating this literal ""configs/beaker_configs/auto_created"" 4 times.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/submit_eval_jobs.py,submit_eval_jobs.py,669,Add replacement fields or use a normal string instead of an f-string.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/submit_finetune_job.py,submit_finetune_job.py,15,Refactor this function to reduce its Cognitive Complexity from 58 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/submit_finetune_job.py,submit_finetune_job.py,78,Remove this commented out code.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/submit_finetune_job.py,submit_finetune_job.py,161,Add replacement fields or use a normal string instead of an f-string.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/submit_finetune_job.py,submit_finetune_job.py,190,Remove this commented out code.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/submit_finetune_job.py,submit_finetune_job.py,371,Refactor this function to reduce its Cognitive Complexity from 20 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/submit_finetune_job.py,submit_finetune_job.py,409,Merge this if statement with the enclosing one.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/synth_pref/annotate_preferences.py,annotate_preferences.py,62,Refactor this function to reduce its Cognitive Complexity from 53 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/synth_pref/create_annotation_mix.py,create_annotation_mix.py,67,"Add a parameter to the parent lambda function and use variable ""prompt"" as its default value; The value of ""prompt"" might change at the next loop iteration.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/synth_pref/create_annotation_mix.py,create_annotation_mix.py,153,Remove this commented out code.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/synth_pref/create_annotation_mix.py,create_annotation_mix.py,182,Remove this commented out code.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/synth_pref/parse_preferences.py,parse_preferences.py,77,Remove this unused function declaration.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/synth_pref/parse_preferences.py,parse_preferences.py,107,"Add a parameter to the parent lambda function and use variable ""aspect"" as its default value; The value of ""aspect"" might change at the next loop iteration.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/synth_pref/utils/model_configs.py,model_configs.py,63,"Define a constant instead of duplicating this literal ""allenai/tulu-2-7b"" 4 times.",CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/synth_pref/utils/model_configs.py,model_configs.py,63,Change or remove duplicates of this key.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/synth_pref/utils/ultrafeedback_template.py,ultrafeedback_template.py,246,Refactor this function to reduce its Cognitive Complexity from 33 to the 15 allowed.,CODE_SMELL
+C:/Users/100909323/Desktop/open-instruct-main/scripts/synth_pref/utils/ultrafeedback_template.py,ultrafeedback_template.py,259,"Define a constant instead of duplicating this literal r""\b\d+\b"" 3 times.",CODE_SMELL
