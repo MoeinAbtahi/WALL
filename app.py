@@ -408,55 +408,65 @@ def Code_Issue_Reviser():
 
 @app.route('/Code_Comparer', methods=['GET', 'POST'])
 def compare_files():
-    # Global variables to store CSV lines and other data related to the code comparison
     global csv_lines
-    original_file_path = ""  # Initialize original file path
-    revised_file_path = ""  # Initialize revised file path
-    original_code = ""  # Initialize original code content
-    revised_code = ""  # Initialize revised code content
-    original_file_name = ""  # Initialize original file name
-    revised_file_name = ""  # Initialize revised file name
-    diff_output = ""  # Initialize difference output
-    metrics = {}  # Initialize metrics dictionary
+     # Initialize variables to store file paths and contents
+    original_file_path = ""
+    revised_file_path = ""
+    original_code = ""
+    revised_code = ""
+    original_file_name = ""
+    revised_file_name = ""
+    diff_output = ""
+    metrics = {}
 
-    # Step 1: Handle CSV file upload if a file is provided in the request
     if request.method == 'POST':
-        csv_file = request.files.get('csv_file')  # Get the uploaded CSV file
+        # Handle CSV file upload
+        csv_file = request.files.get('csv_file')
         if csv_file:
-            # Save the uploaded CSV file to a specified location
+            # Save the uploaded CSV file to the designated folder
             csv_file_path = os.path.join(UPLOAD_FOLDER, csv_file.filename)
             csv_file.save(csv_file_path)
 
-            # Process the CSV file: Read and convert it into a list of lines
+            # Read the CSV file and store its contents
             with open(csv_file_path, 'r') as file:
                 csv_reader = csv.DictReader(file)
                 csv_lines = list(csv_reader)
 
-            # Redirect to avoid form resubmission on page refresh
+            # Redirect to the same page to display available files for comparison
             return redirect(url_for('compare_files'))
 
-        # Step 2: Handle file selection for comparison
-        selected_file_name = request.form.get('file_selection')  # Get the selected file name from the form
-        if selected_file_name and csv_lines:  # Proceed if a file is selected and CSV lines exist
+        selected_file_name = request.form.get('file_selection')
+        if selected_file_name and csv_lines:
             for line in csv_lines:
-                # Find the matching line for the selected file
+                # Find the selected file's data in the CSV lines
                 if line['file_name'] == selected_file_name:
-                    original_file_path = line['file_Location']  # Set the original file path
-                    original_file_name = line['file_name']  # Set the original file name
+                    original_file_path = line['file_Location']
+                    original_file_name = line['file_name']
 
-                    # Step 3: Generate the revised file path by modifying the original directory
+                    # Step 1: Adjust the path for the revised file
+                    # Adjust this line according to your folder structure if necessary.
+                    # This assumes the "open-instruct-main" directory needs to be replaced by "open-instruct-main.Revised" for the revised code.
                     original_directory = os.path.dirname(original_file_path)
-                    revised_file_name = f"{line['file_name']}"  # Set the revised file name
-                    revised_file_path = os.path.join(original_directory.replace("EIS", "EIS.Revised"), revised_file_name)
+                    # Adjust this line according to your folder structure if necessary. we cahnged it based on open-instruct-main Testdata folder
+                    revised_directory = original_directory.replace("open-instruct-main", "open-instruct-main.Revised")
+                    revised_file_name = f"Revised.{original_file_name}"
+                    revised_file_path = os.path.join(revised_directory, revised_file_name)
 
-                    # Step 4: Normalize file paths for different operating systems (Windows vs Unix)
+                    # Step 2: Normalize paths for different operating systems
+                    # Ensure file paths use the appropriate format (forward slashes for compatibility)
+                    original_file_path = original_file_path.replace("\\", "/")
                     revised_file_path = revised_file_path.replace("\\", "/")
 
-                    # Step 5: Read the contents of both the original and revised files
+                    # Step 3: Check if the revised file exists
+                    # If the revised file does not exist, print a message and proceed
+                    if not os.path.exists(revised_file_path):
+                        print(f"Revised file not found: {revised_file_path}")
+
+                    # Step 4: Read the contents of both original and revised files
                     original_code = read_file_contents(original_file_path)
                     revised_code = read_file_contents(revised_file_path)
 
-                    # Step 6: Generate the diff output by comparing the original and revised code
+                    # Step 5: Generate the diff output between the original and revised code
                     diff = difflib.unified_diff(
                         original_code.splitlines(),
                         revised_code.splitlines(),
@@ -464,16 +474,17 @@ def compare_files():
                         tofile=revised_file_name,
                         lineterm=''
                     )
-                    diff_output = highlight_differences(diff)  # Highlight the differences
+                    diff_output = highlight_differences(diff)
 
-                    # Step 7: Calculate metrics based on the original and revised code
+                    # Step 6: Calculate various metrics between the original and revised code
                     metrics = calculate_all_metrics(original_code.splitlines(), revised_code.splitlines())
-                    break  # Exit the loop once the correct file is found
+                    break
 
-    # Step 8: Get the list of unique file names from the CSV lines for file selection dropdown
+    # Step 7: List files available for selection (based on the CSV data)
+    # Create a list of unique file names from the CSV and sort them
     files = sorted(set(line.get('file_name') for line in csv_lines)) if csv_lines else []
 
-    # Step 9: Render the comparison results in the HTML template
+    # Return the results and render the template with relevant data
     return render_template('Code_Comparison.html', files=files, original_code=original_code,
                            revised_code=revised_code, original_file_name=original_file_name,
                            original_file_path=original_file_path, revised_file_name=revised_file_name,
