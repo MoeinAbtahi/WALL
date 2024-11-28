@@ -124,12 +124,12 @@ def save_response_to_file(content, file_location):
     # Saves the AI-generated response to a file in a revised directory.
     global file_name
     # Define the source directory to remove from the file path (e.g., the location of your original project)
-    # Example: to_remove = r"D:\Documents\Project\WALL"
+    # Example: to_remove = r"C:\Users\100909323\Desktop\open-instruct-main"
     to_remove = r"Please enter your project location here"  # Replace with the path where your original project files are located
 
     # Define the destination directory where the revised files will be saved
-    # Example: to_add = r"C:\Documents\Project\WALL.Revised"
-    to_add = r"Please specify the destination for the revised files here."  # Replace with the path where you want the revised files to be saved
+    # Example: to_add = r"C:\Users\100909323\Desktop\open-instruct-main.Revised"
+    to_add = r"Please specify the destination for the revised files here. ( Make sure .Revised is added to the address of the to_remove in line 128) "  # Replace with the path where you want the revised files to be saved
 
 
     # Adjust the file path for saving the revised file
