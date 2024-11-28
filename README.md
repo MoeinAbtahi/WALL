@@ -558,9 +558,9 @@ To revise all files at once, we used the Python script **Processing All Files.py
   ```python
   model="gpt-3.5-turbo",  # Change this to gpt-4o for more advanced capabilities
   ```
-![Screenshot 2024-11-28 131709](https://github.com/user-attachments/assets/44a2b047-a91c-4b5f-8225-0ec7888dbe78)
+![Screenshot 2024-11-28 131709](https://github.com/user-attachments/assets/21470398-1d66-409d-b457-9de7dd711bfd)
 
-*Note that only 25 files with issues in the `open-instruct-main` project were revised. The revised files can be found in the `Test.Dataset/open-instruct-main.Revised` directory.*
+***Note that only 25 files with issues in the `open-instruct-main` project were revised. The revised files can be found in the `Test.Dataset/open-instruct-main.Revised` directory.***
 
 ## 5. Code Comparison Section in WALL
 
