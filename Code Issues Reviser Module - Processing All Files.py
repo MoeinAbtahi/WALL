@@ -131,10 +131,12 @@ def save_response_to_file(content, file_location):
     # Example: to_add = r"C:\Users\100909323\Desktop\open-instruct-main.Revised"
     to_add = r"Please specify the destination for the revised files here. ( Make sure .Revised is added to the address of the to_remove in line 128) "  # Replace with the path where you want the revised files to be saved
 
-
     # Adjust the file path for saving the revised file
     Revised_location = to_add + file_location[len(to_remove):]
-    output_file_path = os.path.join(Revised_location, file_name)
+    
+    # Prepend "Revised." to the file name
+    revised_file_name = f"Revised.{file_name}"
+    output_file_path = os.path.join(Revised_location, revised_file_name)
     
     try:
         # Create directories as necessary and save the content to the output file
