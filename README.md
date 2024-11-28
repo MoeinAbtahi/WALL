@@ -7,13 +7,16 @@
 WALL/
 ├── Code Issues Reviser Module - Processing All Files.py
 ├── README.md
+├── Test.Dataset
+│   ├── open-instruct-main.Revised
+│   ├── open-instruct-main.zip
+│   └── open-instruct.Issues.csv
 ├── app.py
 ├── requirements.txt
 ├── static
 │   ├── Code_Comparison.css
 │   ├── Code_Issue_Reviser.css
-│   ├── MASQA-Logo.png
-│   ├── MASQA-Logo2.png
+│   ├── Wall-Logo.png
 │   ├── index.css
 │   └── sonarqube.css
 └── templates
@@ -555,8 +558,9 @@ To revise all files at once, we used the Python script **Processing All Files.py
   ```python
   model="gpt-3.5-turbo",  # Change this to gpt-4o for more advanced capabilities
   ```
+![Screenshot 2024-11-28 131709](https://github.com/user-attachments/assets/44a2b047-a91c-4b5f-8225-0ec7888dbe78)
 
-Note that only 25 files with issues in the `open-instruct-main` project were revised. The revised files can be found in the `Test.Dataset/open-instruct-main.Revised` directory.
+*Note that only 25 files with issues in the `open-instruct-main` project were revised. The revised files can be found in the `Test.Dataset/open-instruct-main.Revised` directory.*
 
 ## 5. Code Comparison Section in WALL
 
