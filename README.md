@@ -481,7 +481,7 @@ The **Code Compare Tool** enables users to evaluate and compare the original and
 
 ---
 
-# Test Dataset and WALL Application Usage
+# 3. Test Dataset and WALL Application Usage
 
 As shown in **Table II** of the paper, the results are based on the dataset from **Team Eagle Ltd.** ([https://www.team-eagle.ca/](https://www.team-eagle.ca/)). However, I tested the WALL application using the publicly available **open-instruct** GitHub repository ([https://github.com/allenai/open-instruct](https://github.com/allenai/open-instruct)). Below are the step-by-step instructions for using this test dataset with the WALL application.
 
