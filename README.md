@@ -51,10 +51,7 @@ Follow these steps to install SonarQube:
 ## Step 1: Download SonarQube
 
 1. **Access the Download Page**:  
-   Visit the [SonarQube Download Page](https://www.sonarqube.org/downloads/).
-
-2. **Download the Community Edition**:  
-   Download the latest **Community Edition** version. For example, this guide uses the [sonarqube-25.2.0.102705](https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-25.2.0.102705.zip) release, which has been successfully implemented in the WALL project.
+   Visit the [SonarQube Download Page](https://www.sonarqube.org/downloads/) to obtain the latest Community Edition. For example, the [sonarqube-25.2.0.102705](https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-25.2.0.102705.zip) release has been successfully installed and is actively used in the WALL project.
 
 ## Step 2: Install Java
 
@@ -65,12 +62,20 @@ Follow these steps to install SonarQube:
    Follow the installation instructions provided by the JDK installer.
 
 3. **Verify the Installation**:  
-   Open a terminal or command prompt and execute the following command:
+   After installing JDK 17, open a terminal or command prompt and run the following command to verify the installation:  
+
    ```bash
    java -version
-   ```
-   You should see the installed Java version details, confirming that the installation was successful.
+   ```  
 
+   If the installation was successful, you should see an output similar to the following:  
+
+   ```
+   java version "17.0.8" 2023-07-18 LTS
+   Java(TM) SE Runtime Environment (build 17.0.8+9-LTS-211)
+   Java HotSpot(TM) 64-Bit Server VM (build 17.0.8+9-LTS-211, mixed mode, sharing)
+   ```  
+   
 ---
 
 
