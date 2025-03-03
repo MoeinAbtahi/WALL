@@ -55,7 +55,7 @@ Follow these steps to install SonarQube:
 
 ### Step 1: Download SonarQube
 1. Visit the [SonarQube Download Page](https://www.sonarqube.org/downloads/).
-2. Download the latest **Community Edition** or your preferred edition.
+2. Download the latest **Community Edition** version. we used [sonarqube-25.2.0.102705](https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-25.2.0.102705.zip) version for WALL.
 
 ### Step 2: Install Java
 1. Download and install [JDK 11 or higher](https://jdk.java.net/).
