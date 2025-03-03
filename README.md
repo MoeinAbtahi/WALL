@@ -90,18 +90,6 @@ Follow these steps to install SonarQube:
      sonar.web.port=9090
      ```
    - Save the changes and close the file.
-4. **(Optional) Replace the `sonar.properties` File**  
-
-   Instead of manually modifying the `sonar.properties` file (Step 3), you can simply download a pre-configured version and replace the existing file:  
-
-   - **Download the pre-configured `sonar.properties` file** from the following link:  
-     [Download sonar.properties](https://raw.githubusercontent.com/MoeinAbtahi/WALL/main/sonar.properties) 
-
-   - **Replace the existing file**:  
-     - Navigate to the `sonarqube-x.x/conf/` directory.  
-     - Overwrite the existing `sonar.properties` file with the downloaded one.  
-
-   This step simplifies the configuration process and ensures proper settings are applied automatically.
 
 ### Step 3: Start SonarQube
 1. Open a terminal or command prompt.
