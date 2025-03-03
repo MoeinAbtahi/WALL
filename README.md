@@ -38,12 +38,7 @@ SonarQube is an open-source platform for continuous inspection of code quality, 
 Before installing SonarQube, ensure your system meets the following requirements:
 
 - **Operating System**: Windows, macOS, or Linux
-- **Java**: JDK 11 or higher (required to run SonarQube)
-- **Database**: 
-  - PostgreSQL 9.6–15
-  - MySQL 5.7/8.0
-  - Oracle 12c/19c/21c
-  - Microsoft SQL Server 2017/2019/2022
+- **Java**: JDK 17 or higher
 - **Memory**: At least 2GB of free RAM
 - **Disk Space**: 1GB for SonarQube installation (additional space may be needed for the database)
 
@@ -53,16 +48,31 @@ Before installing SonarQube, ensure your system meets the following requirements
 
 Follow these steps to install SonarQube:
 
-### Step 1: Download SonarQube
-1. Visit the [SonarQube Download Page](https://www.sonarqube.org/downloads/).
-2. Download the latest **Community Edition** version. we used [sonarqube-25.2.0.102705](https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-25.2.0.102705.zip) version for WALL.
+## Step 1: Download SonarQube
 
-### Step 2: Install Java
-1. Download and install [JDK 11 or higher](https://jdk.java.net/).
-2. Verify the installation by running:
+1. **Access the Download Page**:  
+   Visit the [SonarQube Download Page](https://www.sonarqube.org/downloads/).
+
+2. **Download the Community Edition**:  
+   Download the latest **Community Edition** version. For example, this guide uses the [sonarqube-25.2.0.102705](https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-25.2.0.102705.zip) release, which has been successfully implemented in the WALL project.
+
+## Step 2: Install Java
+
+1. **Download JDK 17**:  
+   Obtain the appropriate JDK 17 installer from [Oracle's official website](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html). This version has been confirmed as compatible with SonarQube based on the [SonarQube Scanner Environment Requirements](https://docs.sonarsource.com/sonarqube-server/10.8/analyzing-source-code/scanners/scanner-environment/general-requirements/).
+
+2. **Install JDK 17**:  
+   Follow the installation instructions provided by the JDK installer.
+
+3. **Verify the Installation**:  
+   Open a terminal or command prompt and execute the following command:
    ```bash
    java -version
    ```
+   You should see the installed Java version details, confirming that the installation was successful.
+
+---
+
 
 ### Step 3: Configure SonarQube
 1. Extract the downloaded SonarQube ZIP file.
