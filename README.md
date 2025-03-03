@@ -95,7 +95,7 @@ Follow these steps to install SonarQube:
    Instead of manually modifying the `sonar.properties` file (Step 3), you can simply download a pre-configured version and replace the existing file:  
 
    - **Download the pre-configured `sonar.properties` file** from the following link:  
-     👉 [Download `sonar.properties`](https://raw.githubusercontent.com/MoeinAbtahi/WALL/refs/heads/main/sonar.properties)  
+     [`sonar.properties`](blob:https://github.com/0d15f885-694d-4e98-a97e-4c5b5265065b)  
 
    - **Replace the existing file**:  
      - Navigate to the `sonarqube-x.x/conf/` directory.  
