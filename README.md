@@ -1,6 +1,6 @@
 # WALL: A Web Application for Automated Quality Assurance using Large Language Models
 
-**WALL** is a web-based tool designed to help developers improve software quality by resolving code issues, revising them using Large Language Models (LLMs), and comparing code versions. This application integrates with SonarQube to fetch unresolved issues and uses advanced AI models for automated code revision.
+**WALL** is a web-based tool designed to help developers improve software quality by resolving code issues, revising them using Large Language Models (LLMs), and comparing code versions. This application integrates with SonarQube to fetch the unresolved problems and uses advanced AI models for automated code revision.
 
 ## Project Structure
 ```bash
@@ -25,43 +25,19 @@ WALL/
     ├── index.html
     └── sonarqube.html
 ```
-### **Prerequisites**
-
-# 1. SonarQube Installation and Usage Guide
-
-SonarQube is an open-source platform for continuous inspection of code quality, enabling developers to detect bugs, vulnerabilities, and code smells in their projects.
-
----
 
 ## Prerequisites
 
 Before installing SonarQube, ensure your system meets the following requirements:
 
-- **Operating System**: Windows, macOS, or Linux
-- **Java**: JDK 17 or higher
-- **Memory**: At least 2GB of free RAM
-- **Disk Space**: 1GB for SonarQube installation (additional space may be needed for the database)
-
----
-
-## Installation
-
-Follow these steps to install SonarQube:
-
-## Step 1: Download SonarQube
-
-1. **Access the Download Page**:  
-   Visit the [SonarQube Download Page](https://www.sonarqube.org/downloads/) to obtain the latest Community Edition. For example, the [sonarqube-25.2.0.102705](https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-25.2.0.102705.zip) release has been successfully installed and is actively used in the WALL project.
-
-## Step 2: Install Java
-
-1. **Download JDK 17**:  
+-1. **Operating System**: Windows, macOS, or Linux
+-2. **Memory**: At least 2GB of free RAM
+-3. **Disk Space**: 1GB for SonarQube installation
+-4. **Java**:  
    Obtain the appropriate JDK 17 installer from [Oracle's official website](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html). This version has been confirmed as compatible with SonarQube based on the [SonarQube Scanner Environment Requirements](https://docs.sonarsource.com/sonarqube-server/10.8/analyzing-source-code/scanners/scanner-environment/general-requirements/).
-
-2. **Install JDK 17**:  
+**Install JDK 17**:  
    Follow the installation instructions provided by the JDK installer.
-
-3. **Verify the Installation**:  
+**Verify the Installation**:  
    After installing JDK 17, open a terminal or command prompt and run the following command to verify the installation:  
 
    ```bash
@@ -75,20 +51,50 @@ Follow these steps to install SonarQube:
    Java(TM) SE Runtime Environment (build 17.0.8+9-LTS-211)
    Java HotSpot(TM) 64-Bit Server VM (build 17.0.8+9-LTS-211, mixed mode, sharing)
    ```  
-   
+
+
 ---
 
+## SonarQube
 
-### Step 3: Configure SonarQube
-1. Extract the downloaded SonarQube ZIP file.
-2. Navigate to the `sonarqube-x.x/bin/<OS>/` directory (replace `<OS>` with your system, e.g., `windows-x86-64` or `linux-x86-64`).
-3. Edit the `sonar.properties` file in the `conf` directory:
-   - Configure the database connection.
-   - Set any additional server properties as needed.
+Follow these steps to install SonarQube:
 
-### Step 4: Start SonarQube
+## Step 1: Download SonarQube
+
+1. **Access the Download Page**:  
+   Visit the [SonarQube Download Page](https://www.sonarqube.org/downloads/) to obtain the latest Community Edition. For example, the [sonarqube-25.2.0.102705](https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-25.2.0.102705.zip) release has been successfully installed and is actively used in the WALL project.
+
+### Step 2: Extract and Configure SonarQube  
+
+1. **Extract the SonarQube ZIP File**:  
+   Unzip the downloaded SonarQube archive to your desired installation directory.  
+
+2. **Navigate to the Configuration Directory**:  
+   Open the `sonarqube-x.x/conf` directory and edit the `sonar.properties` file using a text editor.  
+   - For example, if you downloaded **SonarQube 25.2.0.102705** and are using Windows, navigate to `sonarqube-25.2.0.102705\conf`
+     Open `sonar.properties` with **Notepad** or any text editor of your choice.
+     
+3. **Modify the SonarQube Web Port**:  
+   - In `sonar.properties`, search for the setting:  
+     ```
+     sonar.web.port
+     ```
+   - Locate **line 111** (or search for the line that contains `#sonar.web.port=9000`).  
+   - Uncomment this line by removing the `#` and change the port from `9000` to `9090` (as `9090` is less commonly used).  
+   - Before modification:  
+     ```
+     #sonar.web.port=9000
+     ```
+   - After modification:  
+     ```
+     sonar.web.port=9090
+     ```
+   - Save the changes and close the file.
+
+### Step 3: Start SonarQube
 1. Open a terminal or command prompt.
-2. Navigate to the `bin/<OS>/` directory.
+2. Navigate to the `sonarqube-x.x/bin/<OS>/` directory, replacing `<OS>` with your operating system (e.g., `windows-x86-64` or `linux-x86-64`).  
+   For example, if you downloaded **SonarQube 25.2.0.102705** and are using Windows, go to `sonarqube-25.2.0.102705\bin\windows-x86-64`
 3. Run the startup script:
    - On Linux/macOS:
      ```bash
@@ -98,8 +104,12 @@ Follow these steps to install SonarQube:
      ```cmd
      StartSonar.bat
      ```
-4. Check if SonarQube started successfully by visiting:  
-   [http://localhost:9000](http://localhost:9000)
+    
+4. After seeing the **"SonarQube is operational"** message in the command prompt, verify that SonarQube has started successfully by opening the following URL in your web browser:  
+
+   [http://localhost:9099](http://localhost:9099)  
+
+   If the page loads correctly, SonarQube is running and ready for use.
 
 ---
 
