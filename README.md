@@ -34,9 +34,9 @@ Before installing SonarQube, ensure your system meets the following requirements
 2. **Memory**: At least 2GB of free RAM
 3. **Disk Space**: 1GB for SonarQube installation
 4. **Java**: Obtain the appropriate JDK 17 installer from [Oracle's official website](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html). This version has been confirmed as compatible with SonarQube based on the [SonarQube Scanner Environment Requirements](https://docs.sonarsource.com/sonarqube-server/10.8/analyzing-source-code/scanners/scanner-environment/general-requirements/).
-**Downlaod and Install JDK 17**:
+
    Download JDK 17 for your operating system and follow the installation instructions provided by the installer.
-**Verify the Installation**:  
+
    After installing JDK 17, open a terminal or command prompt and run the following command to verify the installation:  
 
    ```bash
@@ -50,10 +50,10 @@ Before installing SonarQube, ensure your system meets the following requirements
    Java(TM) SE Runtime Environment (build 17.0.8+9-LTS-211)
    Java HotSpot(TM) 64-Bit Server VM (build 17.0.8+9-LTS-211, mixed mode, sharing)
    ```
-5. **Node.js®**: Obtain the appropriate Node.js® installer from [Node.js®'s official website]([https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html](https://nodejs.org/en/download)).
-**Downlaod and Install Node.js®**:
+5. **Node.js®**: Obtain the appropriate Node.js installer from [Node.js's official website](https://nodejs.org/en/download).
+   
    Download Node.js® for your operating system and follow the installation instructions provided by the installer.
-**Verify the Installation**:  
+ 
    After installing Node.js®, open a terminal or command prompt and run the following command to verify the installation:  
 
    ```bash
