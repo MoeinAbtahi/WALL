@@ -30,10 +30,10 @@ WALL/
 
 Before installing SonarQube, ensure your system meets the following requirements:
 
--1. **Operating System**: Windows, macOS, or Linux
--2. **Memory**: At least 2GB of free RAM
--3. **Disk Space**: 1GB for SonarQube installation
--4. **Java**:  
+1. **Operating System**: Windows, macOS, or Linux
+2. **Memory**: At least 2GB of free RAM
+3. **Disk Space**: 1GB for SonarQube installation
+4. **Java**:  
    Obtain the appropriate JDK 17 installer from [Oracle's official website](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html). This version has been confirmed as compatible with SonarQube based on the [SonarQube Scanner Environment Requirements](https://docs.sonarsource.com/sonarqube-server/10.8/analyzing-source-code/scanners/scanner-environment/general-requirements/).
 **Install JDK 17**:  
    Follow the installation instructions provided by the JDK installer.
@@ -59,7 +59,7 @@ Before installing SonarQube, ensure your system meets the following requirements
 
 Follow these steps to install SonarQube:
 
-## Step 1: Download SonarQube
+### Step 1: Download SonarQube
 
 1. **Access the Download Page**:  
    Visit the [SonarQube Download Page](https://www.sonarqube.org/downloads/) to obtain the latest Community Edition. For example, the [sonarqube-25.2.0.102705](https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-25.2.0.102705.zip) release has been successfully installed and is actively used in the WALL project.
@@ -97,19 +97,18 @@ Follow these steps to install SonarQube:
    For example, if you downloaded **SonarQube 25.2.0.102705** and are using Windows, go to `sonarqube-25.2.0.102705\bin\windows-x86-64`.
 3. Run the startup script:
    - On Linux/macOS:
+     
      ```bash
      ./sonar.sh start
      ```
+     
    - On Windows:
+     
      ```cmd
      StartSonar.bat
      ```
-    
-4. After seeing the **"SonarQube is operational"** message in the command prompt, verify that SonarQube has started successfully by opening the following URL in your web browser:  
-
-   [http://localhost:9099](http://localhost:9099)  
-
-   If the page loads correctly, SonarQube is running and ready for use.
+      
+4. After seeing the **"SonarQube is operational"** message in the command prompt, verify that SonarQube has started successfully by opening the following URL in your web browser: [http://localhost:9099](http://localhost:9099). If the page loads correctly, SonarQube is running and ready for use.
 
 ---
 
