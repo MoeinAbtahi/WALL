@@ -508,11 +508,13 @@ Open this [URL](http://127.0.0.1:5000/) in your browser to access the WALL appli
 
 ### 3.4.1. **Home**
 
-This page provides users with instructions on how to use WALL, including descriptions of each action and step-by-step guidance for interacting with the tools.
-
 ![Home](https://github.com/user-attachments/assets/e13cad7d-28a8-443c-834a-9217c2af5013)
 
+This page provides users with instructions on how to use WALL, including descriptions of each action and step-by-step guidance for interacting with the tools.
+
 ### 3.4.2. **Issue Extractor Tool**
+
+![Issue Extractor Tool](https://github.com/user-attachments/assets/47134e8a-8bc6-47a2-8262-b6b65c268cef)
 
 This page allows users to fetch unresolved issues from SonarQube and save them as a CSV file for further processing.
 
@@ -523,8 +525,6 @@ Users can either **preset** or **manually enter** the following details:
    - **Project Key**: The unique identifier for the SonarQube project.
    - **Project Location**: Path to the original project files.
    - **Save Location**: Path to save the generated CSV file.
-
-![Issue Extractor Tool](https://github.com/user-attachments/assets/47134e8a-8bc6-47a2-8262-b6b65c268cef)
 
 **Output CSV Format**:
 The extracted data is saved as a CSV file in the following format:
@@ -540,7 +540,9 @@ The extracted data is saved as a CSV file in the following format:
 
 #### **Part 1: Interactive Revision**
 
-Allows users to upload the CSV file generated from the **Issue Extractor Tool** and interactively revise the code issues.
+![Code Issues Reviser](https://github.com/user-attachments/assets/c50ff09c-f967-4c83-aba3-07445820a0c4)
+
+This page allows users to upload the CSV file generated from the **Issue Extractor Tool** and interactively revise the code issues.
 
 **Steps**:
    - **Upload CSV File**: Users upload the CSV file generated in the **Issue Extractor Tool** section.
@@ -583,16 +585,13 @@ Allows users to upload the CSV file generated from the **Issue Extractor Tool** 
 
    - **Proceed to Code Compare Tool** *(Optional)*: After organizing the files, proceed to the **Code Compare Tool** section to compare the original and revised versions for further validation.
 
-   ![Code Issues Reviser](https://github.com/user-attachments/assets/c50ff09c-f967-4c83-aba3-07445820a0c4)
-
----
-
 #### **Part 2: Batch Processing**
 - **Purpose**: Enables users to revise all files in the CSV at once using the `Code Issues Reviser Module - Processing All Files.py` script.
 
 **Setup**:
 1. **Set Up OpenAI API Key**:
    - To enable the code revision feature, insert a valid OpenAI API key by modifying **Line 8** in the script:
+     
      ```python
          openai.api_key = 'your-openai-api-key'  # Insert your OpenAI API key here
      ```
@@ -600,18 +599,22 @@ Allows users to upload the CSV file generated from the **Issue Extractor Tool** 
 
 2. Open the Python script and adjust the following lines:
    - **Line 128**: Replace the placeholder with the path to your **original project files**:
+     
      ```python
      to_remove = r"Please enter your project location here"
      ```
+   
    - **Line 132**: Replace the placeholder with the **destination path** for saving the revised files:
      ```python
      to_add = r"Please specify the destination for the revised files here."
      ```
 3. **Select GPT Model**:
    - Change the model in **Line 154**:
+     
      ```python
      model="gpt-3.5 Turbo"
      ```
+     
    - For advanced capabilities, update this to another model listed on the OpenAI [Models Documentation](https://platform.openai.com/docs/models).
 
 4. Run the script to process and revise all files at once.
@@ -623,7 +626,6 @@ Allows users to upload the CSV file generated from the **Issue Extractor Tool** 
      - Example paths:
        - **Original Folder**: `D:\Documents\Project\WALL`
        - **Revised Folder**: `D:\Documents\Project\WALL.Revised`
----
 
 **Notes**
 - For batch processing, ensure the script’s paths and model settings are correctly updated.
