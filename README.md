@@ -68,39 +68,39 @@ Before installing SonarQube, ensure your system meets the following requirements
    
 6. **Python**: Obtain the appropriate Python installer from the [official Python website](https://www.python.org/downloads/).  
 
-Download Python for your operating system and follow the installation instructions provided by the installer.  
-
-After installing Python, open a terminal or command prompt and run the following command to verify the installation:  
-
-```bash
-python --version
-```  
-
-If the installation was successful, you should see an output similar to the following:  
-
-```
-Python 3.11.2
-```  
+    Download Python for your operating system and follow the installation instructions provided by the installer.  
+    
+    After installing Python, open a terminal or command prompt and run the following command to verify the installation:  
+    
+    ```bash
+    python --version
+    ```  
+    
+    If the installation was successful, you should see an output similar to the following:  
+    
+    ```
+    Python 3.11.2
+    ```  
 
 7. **Visual Studio Code (VS Code)**: Obtain the appropriate **VS Code** installer from the [official Visual Studio Code website](https://code.visualstudio.com/Download).  
 
-Download **VS Code** for your operating system and follow the installation instructions provided by the installer.  
-
-After installing VS Code, open a terminal or command prompt and run the following command to verify the installation:  
-
-```bash
-code --version
-```  
-
-If the installation was successful, you should see an output similar to the following:  
-
-```
-1.97.2
-e54c774e0add60467559eb0d1e229c6452cf8447
-x64
-```  
-
----
+    Download **VS Code** for your operating system and follow the installation instructions provided by the installer.  
+    
+    After installing VS Code, open a terminal or command prompt and run the following command to verify the installation:  
+    
+    ```bash
+    code --version
+    ```  
+    
+    If the installation was successful, you should see an output similar to the following:  
+    
+    ```
+    1.97.2
+    e54c774e0add60467559eb0d1e229c6452cf8447
+    x64
+    ```  
+    
+    ---
 
 ## SonarQube
 
