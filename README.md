@@ -451,7 +451,7 @@ Calculates evaluation metrics by comparing original and revised code lines.
   - Computes metrics like precision, recall, F1 score, BLEU, and ROUGE.  
   - Provides a detailed assessment of how closely the revised code matches the original.
 
-### **2.8. `/sonarqube` Route**  
+#### **2.8. `/sonarqube` Route**  
 
 This route handles fetching unresolved issues from SonarQube and saving them to a CSV file.  
 
@@ -463,7 +463,7 @@ This route handles fetching unresolved issues from SonarQube and saving them to 
 
 ---
 
-### **2.9. `/Code_Issue_Reviser` Route**  
+#### **2.9. `/Code_Issue_Reviser` Route**  
 
 This route facilitates the process of uploading a CSV file containing code issues, interacting with OpenAI’s API for revision, and updating the UI with results.  
 
@@ -475,7 +475,7 @@ This route facilitates the process of uploading a CSV file containing code issue
 
 ---
 
-### **3. `/Code_Comparer` Route**  
+#### **2.10 `/Code_Comparer` Route**  
 
 This route compares the original and revised versions of a file, providing visual differences and evaluation metrics to assess code improvements.  
 
