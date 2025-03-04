@@ -8,9 +8,12 @@ Before installing SonarQube, ensure your system meets the following requirements
 
 ## 1. **Operating System**: 
 Windows, macOS, or Linux
-## 2. **Memory**: At least 2GB of free RAM
-## 3. **Disk Space**: 1GB for SonarQube installation
-## 4. **Java**: Obtain the appropriate JDK 17 installer from [Oracle's official website](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html). This version has been confirmed as compatible with SonarQube based on the [SonarQube Scanner Environment Requirements](https://docs.sonarsource.com/sonarqube-server/10.8/analyzing-source-code/scanners/scanner-environment/general-requirements/).
+## 2. **Memory**: 
+At least 2GB of free RAM
+## 3. **Disk Space**: 
+1GB for SonarQube installation
+## 4. **Java**: 
+Obtain the appropriate JDK 17 installer from [Oracle's official website](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html). This version has been confirmed as compatible with SonarQube based on the [SonarQube Scanner Environment Requirements](https://docs.sonarsource.com/sonarqube-server/10.8/analyzing-source-code/scanners/scanner-environment/general-requirements/).
 
    Download JDK 17 for your operating system and follow the installation instructions provided by the installer.
 
