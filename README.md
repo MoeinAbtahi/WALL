@@ -94,7 +94,7 @@ Follow these steps to install SonarQube:
 ### Step 3: Start SonarQube
 1. Open a terminal or command prompt.
 2. Navigate to the `sonarqube-x.x/bin/<OS>/` directory, replacing `<OS>` with your operating system (e.g., `windows-x86-64` or `linux-x86-64`).  
-   For example, if you downloaded **SonarQube 25.2.0.102705** and are using Windows, go to `sonarqube-25.2.0.102705\bin\windows-x86-64`
+   For example, if you downloaded **SonarQube 25.2.0.102705** and are using Windows, go to `sonarqube-25.2.0.102705\bin\windows-x86-64`.
 3. Run the startup script:
    - On Linux/macOS:
      ```bash
@@ -140,7 +140,7 @@ Follow these steps to install SonarQube:
 ### Example Configuration:
 ```properties
 sonar.projectKey=your_project_key
-sonar.host.url=http://localhost:9000
+sonar.host.url=http://localhost:9090
 sonar.login=your_generated_token
 ```
 
@@ -159,7 +159,7 @@ sonar.login=your_generated_token
    - Check `logs/sonar.log` for detailed error messages.
    - Ensure the database connection is properly configured.
 2. **Browser Access Issues**:  
-   - Verify that port `9000` is not blocked or used by another application.
+   - Verify that port `9090` is not blocked or used by another application.
 
 ### Log Files:
 - Logs are located in the `logs` directory of the SonarQube installation:
