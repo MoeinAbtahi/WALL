@@ -102,7 +102,8 @@ Before installing SonarQube, ensure your system meets the following requirements
     
 8. ** Git**:
 
-     Download and install Git from the [official Git website](https://git-scm.com/downloads).  
+     Download and install Git from the [official Git website](https://git-scm.com/downloads).
+    
      After installing Git, open a terminal or command prompt and run the following command to verify the installation:   
 
      ```bash
@@ -115,19 +116,24 @@ Before installing SonarQube, ensure your system meets the following requirements
      git version 2.48.1.windows.1
      ```
 
-9. **OpenAI API Key**:  
+10. **OpenAI API Key**:  
 
     To use OpenAI’s API for applications like **WALL**, follow these steps:  
 
     Visit the [OpenAI playground website](https://platform.openai.com/playground/chat) and sign up.
+    
     OpenAI's API is **not free**. You need to add a payment method and buy API credits.
-    Visit the [billing page](https://platform.openai.com/account/billing) to check pricing and add funds.  
+    
+    Visit the [billing page](https://platform.openai.com/account/billing) to check pricing and add funds.
+     
     Go to the [API Keys page](https://platform.openai.com/api-keys).
+    
     Click on **Create new secret key** to generate a new key.
      
     ![image](https://github.com/user-attachments/assets/76c8ae49-a8c7-4fa2-8cb5-762d9f27a2a5)
 
-    Once generated, copy the API key.  
+    Once generated, copy the API key.
+    
     **Important:** Store it securely, as OpenAI won’t show it again.  
  
     ---
@@ -321,23 +327,26 @@ Before installing SonarQube, ensure your system meets the following requirements
 
 ### Step 1:  Clone WALL and Install Required Dependencies
 
-   - Open a terminal or command prompt, navigate to the directory where you want to clone the repository, and run:  
+1. **Clone the WALL Repository**  
+   Open a terminal or command prompt, navigate to the directory where you want to clone the repository, and run:  
 
    ```bash
    git clone https://github.com/MoeinAbtahi/WALL.git
    ```
-   
-   - Move into the newly cloned **WALL** directory:  
+
+2. **Navigate to the Cloned Repository**  
+   Move into the newly cloned **WALL** directory:  
 
    ```bash
    cd WALL
    ```
 
-   - Run the following command to install all necessary dependencies for the WALL application, as listed in the `requirements.txt` file:  
+3. **Install Required Dependencies**  
+   Run the following command to install all necessary dependencies for the WALL application, as listed in the `requirements.txt` file:  
 
    ```bash
    pip install -r requirements.txt
-   ```
+   ```  
 
 ### Application Overview
 
