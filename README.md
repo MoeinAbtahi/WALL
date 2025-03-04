@@ -2,14 +2,14 @@
 
 **WALL** is a web-based tool designed to help developers improve software quality by resolving code issues, revising them using Large Language Models (LLMs), and comparing code versions. This application integrates with SonarQube to fetch the unresolved problems and uses advanced AI models for automated code revision.
 
-## Prerequisites
+# Prerequisites
 
 Before installing SonarQube, ensure your system meets the following requirements:
 
-1. **Operating System**: Windows, macOS, or Linux
-2. **Memory**: At least 2GB of free RAM
-3. **Disk Space**: 1GB for SonarQube installation
-4. **Java**: Obtain the appropriate JDK 17 installer from [Oracle's official website](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html). This version has been confirmed as compatible with SonarQube based on the [SonarQube Scanner Environment Requirements](https://docs.sonarsource.com/sonarqube-server/10.8/analyzing-source-code/scanners/scanner-environment/general-requirements/).
+## 1. **Operating System**: Windows, macOS, or Linux
+## 2. **Memory**: At least 2GB of free RAM
+## 3. **Disk Space**: 1GB for SonarQube installation
+## 4. **Java**: Obtain the appropriate JDK 17 installer from [Oracle's official website](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html). This version has been confirmed as compatible with SonarQube based on the [SonarQube Scanner Environment Requirements](https://docs.sonarsource.com/sonarqube-server/10.8/analyzing-source-code/scanners/scanner-environment/general-requirements/).
 
    Download JDK 17 for your operating system and follow the installation instructions provided by the installer.
 
@@ -26,7 +26,7 @@ Before installing SonarQube, ensure your system meets the following requirements
    Java(TM) SE Runtime Environment (build 17.0.8+9-LTS-211)
    Java HotSpot(TM) 64-Bit Server VM (build 17.0.8+9-LTS-211, mixed mode, sharing)
    ```
-5. **Node.js®**: Obtain the appropriate Node.js installer from [Node.js's official website](https://nodejs.org/en/download).
+## 5. **Node.js®**: Obtain the appropriate Node.js installer from [Node.js's official website](https://nodejs.org/en/download).
    
    Download Node.js® for your operating system and follow the installation instructions provided by the installer.
  
@@ -42,81 +42,81 @@ Before installing SonarQube, ensure your system meets the following requirements
     v18.16.0
    ```
    
-6. **Python**: Obtain the appropriate Python installer from the [official Python website](https://www.python.org/downloads/).  
+## 6. **Python**: Obtain the appropriate Python installer from the [official Python website](https://www.python.org/downloads/).  
 
-    Download Python for your operating system and follow the installation instructions provided by the installer.  
+   Download Python for your operating system and follow the installation instructions provided by the installer.  
     
-    After installing Python, open a terminal or command prompt and run the following command to verify the installation:  
-    
-    ```bash
-    python --version
-    ```  
-    
-    If the installation was successful, you should see an output similar to the following:  
-    
-    ```
-    Python 3.12.9
-    ```  
-
-7. **Visual Studio Code (VS Code)**: Obtain the appropriate **VS Code** installer from the [official Visual Studio Code website](https://code.visualstudio.com/Download).  
-
-    Download **VS Code** for your operating system and follow the installation instructions provided by the installer.  
-    
-    After installing VS Code, open a terminal or command prompt and run the following command to verify the installation:  
-    
-    ```bash
-    code --version
-    ```  
-    
-    If the installation was successful, you should see an output similar to the following:  
-    
-    ```
-    1.97.2
-    e54c774e0add60467559eb0d1e229c6452cf8447
-    x64
-    ```
-    
-8. **Git**: Download and install Git from the [official Git website](https://git-scm.com/downloads).
-    
-     After installing Git, open a terminal or command prompt and run the following command to verify the installation:   
-
-     ```bash
-     git --version
-     ```
-
-    If the installation was successful, you should see an output similar to the following: 
-
-     ```
-     git version 2.48.1.windows.1
-     ```
-
-9. **OpenAI API Key**: To use OpenAI’s API for the **Code Issue Reviser** section in **WALL**, follow these steps: 
-
-    Visit the [OpenAI playground website](https://platform.openai.com/playground/chat) and sign up.
-    
-    OpenAI's API is **not free**. You need to add a payment method and buy API credits.
-    
-    Visit the [billing page](https://platform.openai.com/account/billing) to check pricing and add funds.
-     
-    Go to the [API Keys page](https://platform.openai.com/api-keys).
-    
-    Click on **Create new secret key** to generate a new key.
-     
-    ![image](https://github.com/user-attachments/assets/76c8ae49-a8c7-4fa2-8cb5-762d9f27a2a5)
-
-    Once generated, copy the API key.
-    
-    **Important:** Store it securely, as OpenAI won’t show it again.  
+   After installing Python, open a terminal or command prompt and run the following command to verify the installation:  
  
-    ---
+ ```bash
+ python --version
+ ```  
+ 
+ If the installation was successful, you should see an output similar to the following:  
+ 
+ ```
+ Python 3.12.9
+ ```  
 
-## SonarQube
+## 7. **Visual Studio Code (VS Code)**: Obtain the appropriate **VS Code** installer from the [official Visual Studio Code website](https://code.visualstudio.com/Download).  
 
-### Step 1: Download SonarQube
+ Download **VS Code** for your operating system and follow the installation instructions provided by the installer.  
+ 
+ After installing VS Code, open a terminal or command prompt and run the following command to verify the installation:  
+ 
+ ```bash
+ code --version
+ ```  
+ 
+ If the installation was successful, you should see an output similar to the following:  
+ 
+ ```
+ 1.97.2
+ e54c774e0add60467559eb0d1e229c6452cf8447
+ x64
+ ```
+    
+## 8. **Git**: Download and install Git from the [official Git website](https://git-scm.com/downloads).
+    
+  After installing Git, open a terminal or command prompt and run the following command to verify the installation:   
+
+  ```bash
+  git --version
+  ```
+
+ If the installation was successful, you should see an output similar to the following: 
+
+  ```
+  git version 2.48.1.windows.1
+  ```
+
+## 9. **OpenAI API Key**: To use OpenAI’s API for the **Code Issue Reviser** section in **WALL**, follow these steps: 
+
+ Visit the [OpenAI playground website](https://platform.openai.com/playground/chat) and sign up.
+ 
+ OpenAI's API is **not free**. You need to add a payment method and buy API credits.
+ 
+ Visit the [billing page](https://platform.openai.com/account/billing) to check pricing and add funds.
+  
+ Go to the [API Keys page](https://platform.openai.com/api-keys).
+ 
+ Click on **Create new secret key** to generate a new key.
+  
+ ![image](https://github.com/user-attachments/assets/76c8ae49-a8c7-4fa2-8cb5-762d9f27a2a5)
+
+ Once generated, copy the API key.
+ 
+ **Important:** Store it securely, as OpenAI won’t show it again.  
+
+ ---
+
+# SonarQube
+
+## Download SonarQube
 
    Visit the [SonarQube Download Page](https://www.sonarqube.org/downloads/) to obtain the latest Community Edition. For example, the [sonarqube-25.2.0.102705](https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-25.2.0.102705.zip) release has been successfully installed and is actively used in the WALL project.
 
-### Step 2: Extract and Configure SonarQube  
+## Extract and Configure SonarQube  
  
    Unzip the downloaded SonarQube archive to your desired installation directory.  
 
@@ -145,11 +145,11 @@ Before installing SonarQube, ensure your system meets the following requirements
      
    Save the changes and close the file.
      
-### Step 3:  Download SonarScanner CLI
+## Download SonarScanner CLI
 
    Visit [the SonarScanner](https://docs.sonarsource.com/sonarqube-server/10.8/analyzing-source-code/scanners/sonarscanner/) to obtain the latest SonarScanner. For example, the [sonar-scanner-cli-7.0.2.4839-windows-x64](https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-7.0.2.4839-windows-x64.zip?_gl=1*1x9i4t6*_gcl_aw*R0NMLjE3NDEwNTkyMDEuQ2p3S0NBaUF3NVctQmhBaEVpd0FwdjRnb093dEx6dVFkNnR0Sl9OcTlRQU1CajZpUmdZTWVlU0JRbDl0anBBcHQweXloTmt4NnJoRVNCb0N6ZVVRQXZEX0J3RQ..*_gcl_au*ODU4NDI5Mzk3LjE3NDEwMjcwMzc.*_ga*Njc3MzQwOTE0LjE3NDEwMjcwMzU.*_ga_9JZ0GZ5TC6*MTc0MTA1OTA4Mi4zLjEuMTc0MTA1OTIwNi41My4wLjA.) release has been successfully installed and is actively used in the WALL project.
 
-### Step 4: Extract and Configure SonarScanner CLI 
+## Extract and Configure SonarScanner CLI 
 
    Unzip the downloaded SonarQube archive to your desired installation directory.  
    
@@ -180,7 +180,7 @@ Before installing SonarQube, ensure your system meets the following requirements
      
    For other operating systems, refer to the following guide for detailed installation instructions: [How to Install SonarScanner CLI on Windows, Linux, and macOS](https://medium.com/novai-devops-101/how-to-install-sonarscanner-cli-client-on-windows-linux-and-macos-94b033f719c4).
 
-### Step 5: Start SonarQube
+## Start SonarQube
 
   Open a terminal or command prompt.
   Navigate to the `sonarqube-x.x/bin/<OS>/` directory, replacing `<OS>` with your operating system (e.g., `windows-x86-64` or `linux-x86-64`). For example, if you downloaded **SonarQube 25.2.0.102705** and are using Windows, go to `sonarqube-25.2.0.102705\bin\windows-x86-64`.
@@ -205,7 +205,7 @@ Before installing SonarQube, ensure your system meets the following requirements
  ![image](https://github.com/user-attachments/assets/0f4d5f90-e616-4d58-a083-08079e338093)
 
 
-### Step 6: Using SonarQube
+## Using SonarQube
 
 Open your web browser and go to [http://localhost:9099](http://localhost:9099).
 Login using the default credentials:
@@ -266,29 +266,29 @@ Once the analysis is complete, open [http://localhost:9090](http://localhost:909
 ![image](https://github.com/user-attachments/assets/db132b2e-9041-4d24-bee5-110c01e791a1)
 
 
-### Step 7: SonarQube Troubleshooting
+## SonarQube Troubleshooting
    
-   **SonarQube Fails to Start**:  
+### SonarQube Fails to Start**:  
       
-   - Check `sonarqube-x.x/logs/sonar.log` for detailed error messages.
-   - Verify that port `9099` is not blocked or used by another application.
+Check `sonarqube-x.x/logs/sonar.log` for detailed error messages.
+Verify that port `9099` is not blocked or used by another application.
     
-   **Log Files**:
+### Log Files**:
     
-   - Logs are located in the `logs` directory of the SonarQube installation:
+Logs are located in the `logs` directory of the SonarQube installation:
       - `sonar.log`: General logs
       - `web.log`: Web server logs
       - `ce.log`: Compute Engine logs
       - `es.log`: Elasticsearch logs
 
-   **Supporting Documents & Resources**:
+### Supporting Documents & Resources**:
 
-   - [SonarQube Documentation](https://docs.sonarqube.org/)
-   - [SonarQube Community](https://community.sonarsource.com/)
+[SonarQube Documentation](https://docs.sonarqube.org/)
+[SonarQube Community](https://community.sonarsource.com/)
 
 ---
 
-## WALL
+# WALL
 
 The application is designed to:  
 
@@ -306,7 +306,7 @@ The application is designed to:
    - Provides **metrics on accuracy, efficiency, readability, and compliance** with best practices. 
 
 
-### Step 1:  Clone WALL and Install Required Dependencies
+## Clone WALL and Install Required Dependencies
 
 Open a terminal or command prompt, navigate to the directory where you want to clone the repository, and run:  
 
@@ -326,9 +326,9 @@ Run the following command to install all necessary dependencies for the WALL app
    pip install -r requirements.txt
    ```
  
-### Step 2: Application Overview
+## Application Overview
 
-**Project Structure**:
+### **Project Structure**:
 
 ```bash
 WALL/
@@ -353,11 +353,11 @@ WALL/
     └── sonarqube.html
 ```
 
-**app.py**  
+### **app.py**  
 
 This section explains key functions in `app.py`.  
 
-#### 2.1. **get_all_issues(sonar_url, api_token, project_key)**  
+#### **get_all_issues(sonar_url, api_token, project_key)**  
 
 Fetches unresolved issues from a SonarQube project using the API.  
 
@@ -370,7 +370,7 @@ Fetches unresolved issues from a SonarQube project using the API.
   - Retrieves unresolved issues from SonarQube.  
   - Handles paginated responses to fetch all issues.
   
-#### 2.2. **modify_file_path(original_path, to_remove, to_add)**  
+#### **modify_file_path(original_path, to_remove, to_add)**  
 
 Modifies a file path by removing a prefix and adding a new segment.  
 
@@ -383,7 +383,7 @@ Modifies a file path by removing a prefix and adding a new segment.
   - Ensures compatibility across platforms by using forward slashes.  
   - Adjusts file paths for code revisions.  
 
-#### 2.3. **save_csv_file(issues, file_path, to_remove, to_add)**  
+#### **save_csv_file(issues, file_path, to_remove, to_add)**  
 
 Saves a list of code issues to a CSV file after modifying file paths.  
 
@@ -397,7 +397,7 @@ Saves a list of code issues to a CSV file after modifying file paths.
   - Organizes and saves issue data into a CSV file.  
   - Allows for file path customization before saving.  
 
-#### 2.4. **read_file_contents(file_path)**  
+#### **read_file_contents(file_path)**  
 
 Reads the contents of a file and returns them as a string, with each line numbered.  
 
@@ -407,7 +407,7 @@ Reads the contents of a file and returns them as a string, with each line number
 - **Description:**  
   - Reads and formats the file’s contents with line numbers for easier analysis.  
 
-#### 2.5. **generate_prompt(file_location, bug_lines, bug_messages, bug_types)**  
+#### **generate_prompt(file_location, bug_lines, bug_messages, bug_types)**  
 
 Generates a prompt for an AI model to fix code issues.  
 
@@ -421,7 +421,7 @@ Generates a prompt for an AI model to fix code issues.
   - Combines code with bug descriptions to create a structured AI prompt.  
   - Provides a few-shot example to guide the model’s revision.  
 
-#### 2.6. **highlight_differences(diff)**  
+#### **highlight_differences(diff)**  
 
 Highlights the differences between two versions of a file in HTML format.  
 
@@ -432,7 +432,7 @@ Highlights the differences between two versions of a file in HTML format.
   - Highlights added and removed lines in the code.  
   - Displays differences using color-coded HTML for easy comparison.  
 
-#### 2.7. **calculate_all_metrics(original_lines, revised_lines)**  
+#### **calculate_all_metrics(original_lines, revised_lines)**  
 
 Calculates evaluation metrics by comparing original and revised code lines.  
 
@@ -444,7 +444,7 @@ Calculates evaluation metrics by comparing original and revised code lines.
   - Computes metrics like precision, recall, F1 score, BLEU, and ROUGE.  
   - Provides a detailed assessment of how closely the revised code matches the original.
 
-#### **2.8. `/sonarqube` Route**  
+#### **`/sonarqube` Route**  
 
 This route handles fetching unresolved issues from SonarQube and saving them to a CSV file.  
 
@@ -454,7 +454,7 @@ This route handles fetching unresolved issues from SonarQube and saving them to 
   2. Retrieves unresolved issues from SonarQube based on the provided details.  
   3. Saves the fetched issues into a structured CSV file for further processing.  
 
-#### **2.9. `/Code_Issue_Reviser` Route**  
+#### **`/Code_Issue_Reviser` Route**  
 
 This route facilitates the process of uploading a CSV file containing code issues, interacting with OpenAI’s API for revision, and updating the UI with results.  
 
@@ -464,7 +464,7 @@ This route facilitates the process of uploading a CSV file containing code issue
   2. Extracts relevant issues and generates a structured prompt for OpenAI’s API.  
   3. Sends the prompt to OpenAI, retrieves the revised code, and updates the interface with improved code suggestions.  
 
-#### **2.10 `/Code_Comparer` Route**  
+#### **`/Code_Comparer` Route**  
 
 This route compares the original and revised versions of a file, providing visual differences and evaluation metrics to assess code improvements.  
 
@@ -477,7 +477,7 @@ This route compares the original and revised versions of a file, providing visua
      - Calculates precision, recall, F1 score, BLEU, and ROUGE scores.  
      - Provides a quantitative assessment of the similarity between the original and revised code versions.
 
-### Step 3: Running WALL
+## Running WALL
 
 Navigate to the root folder of **WALL**:  
 
@@ -497,21 +497,20 @@ After a short while, you will see a prompt indicating the local server where Fla
 
 Open this [URL](http://127.0.0.1:5000/) in your browser to access the WALL application.
 
-### Step 4: Pages in WALL
+## Pages in WALL
 
-1. **Home**
+### **Home**
 
-- This page provides users with instructions on how to use WALL, including descriptions of each action and step-by-step guidance for interacting with the tools.
+This page provides users with instructions on how to use WALL, including descriptions of each action and step-by-step guidance for interacting with the tools.
 
 ![Home](https://github.com/user-attachments/assets/e13cad7d-28a8-443c-834a-9217c2af5013)
 
----
+#### **Issue Extractor Tool**
 
-### **Issue Extractor Tool**
-- **Purpose**: This page allows users to fetch unresolved issues from SonarQube and save them as a CSV file for further processing.
+This page allows users to fetch unresolved issues from SonarQube and save them as a CSV file for further processing.
 
-#### **Steps**:
-1. Users can either **preset** or **manually enter** the following details:
+##### **Steps**:
+Users can either **preset** or **manually enter** the following details:
    - **SonarQube Server URL**: The address of the SonarQube server.
    - **Project API Token**: Authentication token for accessing SonarQube.
    - **Project Key**: The unique identifier for the SonarQube project.
@@ -520,7 +519,7 @@ Open this [URL](http://127.0.0.1:5000/) in your browser to access the WALL appli
 
 ![Issue Extractor Tool](https://github.com/user-attachments/assets/47134e8a-8bc6-47a2-8262-b6b65c268cef)
 
-#### **Output CSV Format**:
+##### **Output CSV Format**:
 The extracted data is saved as a CSV file in the following format:
 
 | **file_Location** | **file_name** | **line** | **message** | **type** |
@@ -530,14 +529,13 @@ The extracted data is saved as a CSV file in the following format:
 
 ![image](https://github.com/user-attachments/assets/3a5de9d9-9630-4525-9a0f-d556e3f054de)
 
----
-
 ### **Code Issues Reviser**
 
 #### **Part 1: Interactive Revision**
-- **Purpose**: Allows users to upload the CSV file generated from the **Issue Extractor Tool** and interactively revise the code issues.
 
-#### **Steps**:
+Allows users to upload the CSV file generated from the **Issue Extractor Tool** and interactively revise the code issues.
+
+**Steps**:
 
 1. **Upload CSV File**:
    - Users upload the CSV file generated in the **Issue Extractor Tool** section.
