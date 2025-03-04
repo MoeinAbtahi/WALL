@@ -49,7 +49,22 @@ Before installing SonarQube, ensure your system meets the following requirements
    java version "17.0.8" 2023-07-18 LTS
    Java(TM) SE Runtime Environment (build 17.0.8+9-LTS-211)
    Java HotSpot(TM) 64-Bit Server VM (build 17.0.8+9-LTS-211, mixed mode, sharing)
+   ```
+5. **Node.js®**: Obtain the appropriate Node.js® installer from [Node.js®'s official website]([https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html](https://nodejs.org/en/download)).
+**Downlaod and Install Node.js®**:
+   Download Node.js® for your operating system and follow the installation instructions provided by the installer.
+**Verify the Installation**:  
+   After installing Node.js®, open a terminal or command prompt and run the following command to verify the installation:  
+
+   ```bash
+   node --version
    ```  
+
+   If the installation was successful, you should see an output similar to the following:  
+
+   ```
+    v18.16.0
+   ```
 
 
 ---
@@ -60,7 +75,6 @@ Follow these steps to install SonarQube:
 
 ### Step 1: Download SonarQube
 
-1. **Access the Download Page**:  
    Visit the [SonarQube Download Page](https://www.sonarqube.org/downloads/) to obtain the latest Community Edition. For example, the [sonarqube-25.2.0.102705](https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-25.2.0.102705.zip) release has been successfully installed and is actively used in the WALL project.
 
 ### Step 2: Extract and Configure SonarQube  
@@ -73,24 +87,65 @@ Follow these steps to install SonarQube:
    - For example, if you downloaded **SonarQube 25.2.0.102705** and are using Windows, navigate to `sonarqube-25.2.0.102705\conf`
      Open `sonar.properties` with **Notepad** or any text editor of your choice.
      
-3. **Modify the SonarQube Web Port**:  
+3. **Modify the SonarQube Web Port**:
+   
    - In `sonar.properties`, search for the setting:  
      ```
      sonar.web.port
      ```
    - Locate **line 111** (or search for the line that contains `#sonar.web.port=9000`).  
-   - Uncomment this line by removing the `#` and change the port from `9000` to `9090` (as `9090` is less commonly used).  
-   - Before modification:  
+   - Uncomment this line by removing the `#` and change the port from `9000` to `9099` (as `9099` is less commonly used).  
+   - Before modification:
+       
      ```
      #sonar.web.port=9000
      ```
-   - After modification:  
+   - After modification:
+      
      ```
-     sonar.web.port=9090
+     sonar.web.port=9099
      ```
    - Save the changes and close the file.
+     
+### Step 3:  Download SonarScanner CLI
 
-### Step 3: Start SonarQube
+   Visit [the SonarScanner](https://docs.sonarsource.com/sonarqube-server/10.8/analyzing-source-code/scanners/sonarscanner/) to obtain the latest SonarScanner. For example, the [sonar-scanner-cli-7.0.2.4839-windows-x64](https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-7.0.2.4839-windows-x64.zip?_gl=1*1x9i4t6*_gcl_aw*R0NMLjE3NDEwNTkyMDEuQ2p3S0NBaUF3NVctQmhBaEVpd0FwdjRnb093dEx6dVFkNnR0Sl9OcTlRQU1CajZpUmdZTWVlU0JRbDl0anBBcHQweXloTmt4NnJoRVNCb0N6ZVVRQXZEX0J3RQ..*_gcl_au*ODU4NDI5Mzk3LjE3NDEwMjcwMzc.*_ga*Njc3MzQwOTE0LjE3NDEwMjcwMzU.*_ga_9JZ0GZ5TC6*MTc0MTA1OTA4Mi4zLjEuMTc0MTA1OTIwNi41My4wLjA.) release has been successfully installed and is actively used in the WALL project.
+
+### Step 4: Extract and Configure SonarScanner CLI 
+
+1. **Extract the SonarScanner CLI ZIP File**:  
+   Unzip the downloaded SonarQube archive to your desired installation directory.  
+
+2. **Add SonarScanner to Your System Path**:
+   For example, if you downloaded **sonar-scanner-7.0.2.4839-windows-x64** and are using Windows,
+   - Open the Start Menu and search for Environment Variables.
+   - Click on Edit the system environment variables.
+   - In the System Properties window, click on the Environment Variables button.
+   - Under System variables, find and select Path, then click Edit.
+   - Click New and add the path to your SonarScanner bin directory (e.g., C:\sonar-scanner-7.0.2.4839-windows-x64\bin).
+   - Click OK to save and exit the Environment Variables window.
+
+      ![image](https://github.com/user-attachments/assets/9adbd161-8d24-432d-bc10-ea20d922eb1d)
+
+    - Open a new Command Prompt and run:
+     
+     ```cmd
+     sonar-scanner -v
+     ```
+     If the installation was successful, you should see an output similar to the following:
+
+     ```
+        22:44:36.006 INFO  Scanner configuration file: C:\Users\100909323\Moein\SonarQube\sonar-scanner-7.0.2.4839-windows-x64\bin\..\conf\sonar-scanner.properties
+        22:44:36.012 INFO  Project root configuration file: NONE
+        22:44:36.026 INFO  SonarScanner CLI 7.0.2.4839
+        22:44:36.028 INFO  Java 17.0.13 Eclipse Adoptium (64-bit)
+        22:44:36.029 INFO  Windows 11 10.0 amd64
+    ```  
+
+
+
+          
+### Step 4: Start SonarQube
 1. Open a terminal or command prompt.
 2. Navigate to the `sonarqube-x.x/bin/<OS>/` directory, replacing `<OS>` with your operating system (e.g., `windows-x86-64` or `linux-x86-64`).  
    For example, if you downloaded **SonarQube 25.2.0.102705** and are using Windows, go to `sonarqube-25.2.0.102705\bin\windows-x86-64`.
@@ -107,50 +162,68 @@ Follow these steps to install SonarQube:
      StartSonar.bat
      ```
      
-     ![image](https://github.com/user-attachments/assets/2bec0c01-1a56-49ad-b4f9-c8b9907d88c4)
+![image](https://github.com/user-attachments/assets/2bec0c01-1a56-49ad-b4f9-c8b9907d88c4)
 
 4. After seeing the **"SonarQube is operational"** message in the command prompt, verify that SonarQube has started successfully by opening the following URL in your web browser: [http://localhost:9099](http://localhost:9099). If the page loads correctly, SonarQube is running and ready for use.
 
 ![image](https://github.com/user-attachments/assets/0f4d5f90-e616-4d58-a083-08079e338093)
 
----
 
-## Using SonarQube
+### Step 4: Using SonarQube
 
-### Step 1: Access the Dashboard
-1. Open your web browser and go to [http://localhost:9000](http://localhost:9000).
-2. Login using the default credentials:
+1. **Access the Dashboard**:
+   - Open your web browser and go to [http://localhost:9099](http://localhost:9099).
+   - Login using the default credentials:
+  
+   ```bash
    - Username: `admin`
    - Password: `admin`
+   ```
+   
+2. **Change Default Password**:
+   - After logging in for the first time, you will be prompted to change the default password.
+   - Update the password for enhanced security.
 
-### Step 2: Change Default Password
-1. After logging in for the first time, you'll be prompted to change the default password.
-2. Update the password for enhanced security.
+3. **Add and Analyze a Project**:
+   - Create a new project in SonarQube by clicking **"Create a local project"**.
 
-### Step 3: Analyze a Project
-1. Create a new project in SonarQube by clicking **"Create Project"**.
-2. Provide a **project key** and **name**.
-3. Generate a token to authenticate the analysis.
+![image](https://github.com/user-attachments/assets/df05c532-7271-4469-b8ed-9428f6d8c1d9)
 
-### Step 4: Configure Your Code for Analysis
-1. Download and install the SonarQube Scanner for your build system:
-   - **Maven**: Use the SonarQube Maven plugin.
-   - **Gradle**: Use the SonarQube Gradle plugin.
-   - **CLI**: Use the SonarQube Scanner CLI.
-2. Add the token and project details to the configuration file for your scanner (e.g., `sonar-project.properties` for CLI).
+   - Provide a **project display name ** and **project key**.
 
-### Example Configuration:
-```properties
-sonar.projectKey=your_project_key
-sonar.host.url=http://localhost:9090
-sonar.login=your_generated_token
-```
+![image](https://github.com/user-attachments/assets/f497919c-3e0a-451b-8ee1-20c0cff602ee)
 
-3. Run the scanner to analyze your code.
+   - Selet **Use the global setting** for the project baseline.
 
-### Step 5: View Results
-1. Once the analysis is complete, view the results in the SonarQube dashboard.
-2. Inspect issues, bugs, and vulnerabilities, and prioritize fixes.
+![image](https://github.com/user-attachments/assets/61e0a20d-c8b1-4011-b560-2c9ea47dfe7c)
+
+   - For the analysis method, choose **Locally**.
+
+![image](https://github.com/user-attachments/assets/994a2d52-be68-444c-ab76-7131f380d163)
+
+   - Select a token name and expiration date and generate a token to authenticate the analysis.
+
+![image](https://github.com/user-attachments/assets/48735916-10a4-4c20-bfcb-701e62e2a1c7)
+
+   - Click on **Maven, Gradle, .NET, or Others** (for other programming languages), then select your operating system to download the appropriate version.
+     For example, if you are using Windows, navigate to your project's folder, open a command prompt (`cmd`), and execute the following command:
+     
+     ```bash
+      sonar-scanner.bat -D"sonar.projectKey=open-instruct-main" -D"sonar.sources=." -D"sonar.host.url=http://localhost:9099" -D"sonar.token=sqp_aae99670a14a47375503d78c86e1ddf933780ea6"
+     
+     ```
+          
+1. ![image](https://github.com/user-attachments/assets/ba1fb05f-a4de-485d-9033-de08e6a48c81)
+
+2. ![image](https://github.com/user-attachments/assets/2457b01e-0147-46f5-88b5-4cd022c5435c)
+
+3. The time required to add a project to SonarQube varies based on the number of files in the project. For example, adding the **`open-instruct-main`** project takes approximately **1 minute**.
+
+![image](https://github.com/user-attachments/assets/8a3ede89-295f-4896-9aad-a11fddbd0059)
+
+2. **View Results**: 
+1. View the results in the SonarQube dashboard once the analysis is complete.
+2. Inspect issues, bugs, and vulnerabilities and prioritize fixes.
 
 ---
 
@@ -161,7 +234,7 @@ sonar.login=your_generated_token
    - Check `logs/sonar.log` for detailed error messages.
    - Ensure the database connection is properly configured.
 2. **Browser Access Issues**:  
-   - Verify that port `9090` is not blocked or used by another application.
+   - Verify that port `9099` is not blocked or used by another application.
 
 ### Log Files:
 - Logs are located in the `logs` directory of the SonarQube installation:
