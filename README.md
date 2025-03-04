@@ -295,7 +295,7 @@ Before installing SonarQube, ensure your system meets the following requirements
 
 ---
 
-## 2. WALL
+## WALL
 
 The application is designed to:  
 
