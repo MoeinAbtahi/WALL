@@ -221,33 +221,33 @@ Before installing SonarQube, ensure your system meets the following requirements
    ![image](https://github.com/user-attachments/assets/8a3ede89-295f-4896-9aad-a11fddbd0059)
 
 4. **Analyze a Project**:
-Once the analysis is complete, open [http://localhost:9090](http://localhost:9090) and:
-1. Click on your project name.
-2. Navigate through:
-   - **Issues:** Shows bugs, vulnerabilities, and code smells.
-   - **Security Hotspots:** Highlights security concerns.
-   - **Code Coverage:** Displays test coverage (if configured).
-   - **Duplications:** Identifies duplicate code sections.
-   - Etc.
+   Once the analysis is complete, open [http://localhost:9090](http://localhost:9090) and:
+   - Click on your project name.
+   - Navigate through:
+       - **Issues:** Shows bugs, vulnerabilities, and code smells.
+       - **Security Hotspots:** Highlights security concerns.
+       - **Code Coverage:** Displays test coverage (if configured).
+       - **Duplications:** Identifies duplicate code sections.
+       - Etc.
 
 5. **SonarQube Troubleshooting**:
    
-**SonarQube Fails to Start**:  
-
-   - Check `sonarqube-x.x/logs/sonar.log` for detailed error messages.
-   - Ensure the database connection is properly configured.
-     
-**Browser Access Issues**:  
-
-   - Verify that port `9099` is not blocked or used by another application.
-
-**Log Files**:
-
-- Logs are located in the `logs` directory of the SonarQube installation:
-  - `sonar.log`: General logs
-  - `web.log`: Web server logs
-  - `ce.log`: Compute Engine logs
-  - `es.log`: Elasticsearch logs
+    **SonarQube Fails to Start**:  
+    
+       - Check `sonarqube-x.x/logs/sonar.log` for detailed error messages.
+       - Ensure the database connection is properly configured.
+         
+    **Browser Access Issues**:  
+    
+       - Verify that port `9099` is not blocked or used by another application.
+    
+    **Log Files**:
+    
+    - Logs are located in the `logs` directory of the SonarQube installation:
+      - `sonar.log`: General logs
+      - `web.log`: Web server logs
+      - `ce.log`: Compute Engine logs
+      - `es.log`: Elasticsearch logs
 
 ---
 
