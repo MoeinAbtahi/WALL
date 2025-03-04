@@ -33,10 +33,9 @@ Before installing SonarQube, ensure your system meets the following requirements
 1. **Operating System**: Windows, macOS, or Linux
 2. **Memory**: At least 2GB of free RAM
 3. **Disk Space**: 1GB for SonarQube installation
-4. **Java**:  
-   Obtain the appropriate JDK 17 installer from [Oracle's official website](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html). This version has been confirmed as compatible with SonarQube based on the [SonarQube Scanner Environment Requirements](https://docs.sonarsource.com/sonarqube-server/10.8/analyzing-source-code/scanners/scanner-environment/general-requirements/).
-**Install JDK 17**:  
-   Follow the installation instructions provided by the JDK installer.
+4. **Java**: Obtain the appropriate JDK 17 installer from [Oracle's official website](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html). This version has been confirmed as compatible with SonarQube based on the [SonarQube Scanner Environment Requirements](https://docs.sonarsource.com/sonarqube-server/10.8/analyzing-source-code/scanners/scanner-environment/general-requirements/).
+**Downlaod and Install JDK 17**:
+   Download JDK 17 for your operating system and follow the installation instructions provided by the installer.
 **Verify the Installation**:  
    After installing JDK 17, open a terminal or command prompt and run the following command to verify the installation:  
 
@@ -107,8 +106,12 @@ Follow these steps to install SonarQube:
      ```cmd
      StartSonar.bat
      ```
-      
+     
+     ![image](https://github.com/user-attachments/assets/2bec0c01-1a56-49ad-b4f9-c8b9907d88c4)
+
 4. After seeing the **"SonarQube is operational"** message in the command prompt, verify that SonarQube has started successfully by opening the following URL in your web browser: [http://localhost:9099](http://localhost:9099). If the page loads correctly, SonarQube is running and ready for use.
+
+![image](https://github.com/user-attachments/assets/0f4d5f90-e616-4d58-a083-08079e338093)
 
 ---
 
