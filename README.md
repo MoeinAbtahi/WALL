@@ -184,16 +184,17 @@ Before installing SonarQube, ensure your system meets the following requirements
   Open a terminal or command prompt.
   Navigate to the `sonarqube-x.x/bin/<OS>/` directory, replacing `<OS>` with your operating system (e.g., `windows-x86-64` or `linux-x86-64`). For example, if you downloaded **SonarQube 25.2.0.102705** and are using Windows, go to `sonarqube-25.2.0.102705\bin\windows-x86-64`.
   Run the startup script:
-     On `Linux/macOS`:
+  
+   On `Linux/macOS`:
      
    ```bash
-        ./sonar.sh start
+   ./sonar.sh start
    ```
      
-    On `Windows`:
+   On `Windows`:
      
    ```cmd
-     StartSonar.bat
+   StartSonar.bat
    ```
      
  ![image](https://github.com/user-attachments/assets/2bec0c01-1a56-49ad-b4f9-c8b9907d88c4)
