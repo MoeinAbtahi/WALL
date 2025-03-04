@@ -2,17 +2,17 @@
 
 **WALL** is a web-based tool designed to help developers improve software quality by resolving code issues, revising them using Large Language Models (LLMs), and comparing code versions. This application integrates with SonarQube to fetch the unresolved problems and uses advanced AI models for automated code revision.
 
-# Prerequisites
+# 1. Prerequisites
 
 Before installing SonarQube, ensure your system meets the following requirements:
 
-## 1. **Operating System**: 
+## 1.1. **Operating System**
 Windows, macOS, or Linux
-## 2. **Memory**: 
+## 1.2. **Memory**
 At least 2GB of free RAM
-## 3. **Disk Space**: 
+## 1.3. **Disk Space** 
 1GB for SonarQube installation
-## 4. **Java**: 
+## 1.4. **Java** 
 Obtain the appropriate JDK 17 installer from [Oracle's official website](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html). This version has been confirmed as compatible with SonarQube based on the [SonarQube Scanner Environment Requirements](https://docs.sonarsource.com/sonarqube-server/10.8/analyzing-source-code/scanners/scanner-environment/general-requirements/).
 
    Download JDK 17 for your operating system and follow the installation instructions provided by the installer.
@@ -30,7 +30,7 @@ Obtain the appropriate JDK 17 installer from [Oracle's official website](https:/
    Java(TM) SE Runtime Environment (build 17.0.8+9-LTS-211)
    Java HotSpot(TM) 64-Bit Server VM (build 17.0.8+9-LTS-211, mixed mode, sharing)
    ```
-## 5. **Node.js®**: 
+## 1.5. **Node.js®** 
 Obtain the appropriate Node.js installer from [Node.js's official website](https://nodejs.org/en/download).
    
    Download Node.js® for your operating system and follow the installation instructions provided by the installer.
@@ -47,7 +47,7 @@ Obtain the appropriate Node.js installer from [Node.js's official website](https
     v18.16.0
    ```
    
-## 6. **Python**: 
+## 1.6. **Python** 
 Obtain the appropriate Python installer from the [official Python website](https://www.python.org/downloads/).  
 
    Download Python for your operating system and follow the installation instructions provided by the installer.  
@@ -64,7 +64,7 @@ Obtain the appropriate Python installer from the [official Python website](https
  Python 3.12.9
  ```  
 
-## 7. **Visual Studio Code (VS Code)**: 
+## 1.7. **Visual Studio Code (VS Code)** 
 Obtain the appropriate **VS Code** installer from the [official Visual Studio Code website](https://code.visualstudio.com/Download).  
 
  Download **VS Code** for your operating system and follow the installation instructions provided by the installer.  
@@ -83,7 +83,7 @@ Obtain the appropriate **VS Code** installer from the [official Visual Studio Co
  x64
  ```
     
-## 8. **Git**: 
+## 1.8. **Git** 
 Download and install Git from the [official Git website](https://git-scm.com/downloads).
     
   After installing Git, open a terminal or command prompt and run the following command to verify the installation:   
@@ -98,7 +98,7 @@ Download and install Git from the [official Git website](https://git-scm.com/dow
   git version 2.48.1.windows.1
   ```
 
-## 9. **OpenAI API Key**: 
+## 1.9. **OpenAI API Key** 
 To use OpenAI’s API for the **Code Issue Reviser** section in **WALL**, follow these steps: 
 
  Visit the [OpenAI playground website](https://platform.openai.com/playground/chat) and sign up.
@@ -119,24 +119,22 @@ To use OpenAI’s API for the **Code Issue Reviser** section in **WALL**, follow
 
  ---
 
-# SonarQube
+# 2. SonarQube
 
-## Download SonarQube
+## 2.1Download SonarQube
 
    Visit the [SonarQube Download Page](https://www.sonarqube.org/downloads/) to obtain the latest Community Edition. For example, the [sonarqube-25.2.0.102705](https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-25.2.0.102705.zip) release has been successfully installed and is actively used in the WALL project.
 
-## Extract and Configure SonarQube  
+## 2.2 Extract and Configure SonarQube  
  
    Unzip the downloaded SonarQube archive to your desired installation directory.  
 
-   Open the `sonarqube-x.x/conf` directory and edit the `sonar.properties` file using a text editor.
-   
-   - For example, if you downloaded **SonarQube 25.2.0.102705** and are using Windows, navigate to `sonarqube-25.2.0.102705\conf`, Open `sonar.properties` with **Notepad** or any text editor of your choice.
+   Open the `sonarqube-x.x/conf` directory and edit the `sonar.properties` file using a text editor. For example, if you downloaded **SonarQube 25.2.0.102705** and are using Windows, navigate to `sonarqube-25.2.0.102705\conf`, Open `sonar.properties` with **Notepad** or any text editor of your choice.
    In `sonar.properties`, search for the setting:
   
-     ```
-     sonar.web.port
-     ```
+  ```
+  sonar.web.port
+  ```
      
    Locate **line 111** (or search for the line that contains `#sonar.web.port=9000`).  
    Uncomment this line by removing the `#` and change the port from `9000` to `9099` (as `9099` is less commonly used).  
@@ -154,11 +152,11 @@ To use OpenAI’s API for the **Code Issue Reviser** section in **WALL**, follow
      
    Save the changes and close the file.
      
-## Download SonarScanner CLI
+## 2.3. Download SonarScanner CLI
 
    Visit [the SonarScanner](https://docs.sonarsource.com/sonarqube-server/10.8/analyzing-source-code/scanners/sonarscanner/) to obtain the latest SonarScanner. For example, the [sonar-scanner-cli-7.0.2.4839-windows-x64](https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-7.0.2.4839-windows-x64.zip?_gl=1*1x9i4t6*_gcl_aw*R0NMLjE3NDEwNTkyMDEuQ2p3S0NBaUF3NVctQmhBaEVpd0FwdjRnb093dEx6dVFkNnR0Sl9OcTlRQU1CajZpUmdZTWVlU0JRbDl0anBBcHQweXloTmt4NnJoRVNCb0N6ZVVRQXZEX0J3RQ..*_gcl_au*ODU4NDI5Mzk3LjE3NDEwMjcwMzc.*_ga*Njc3MzQwOTE0LjE3NDEwMjcwMzU.*_ga_9JZ0GZ5TC6*MTc0MTA1OTA4Mi4zLjEuMTc0MTA1OTIwNi41My4wLjA.) release has been successfully installed and is actively used in the WALL project.
 
-## Extract and Configure SonarScanner CLI 
+## 2.4. Extract and Configure SonarScanner CLI 
 
    Unzip the downloaded SonarQube archive to your desired installation directory.  
    
@@ -189,7 +187,7 @@ To use OpenAI’s API for the **Code Issue Reviser** section in **WALL**, follow
      
    For other operating systems, refer to the following guide for detailed installation instructions: [How to Install SonarScanner CLI on Windows, Linux, and macOS](https://medium.com/novai-devops-101/how-to-install-sonarscanner-cli-client-on-windows-linux-and-macos-94b033f719c4).
 
-## Start SonarQube
+## 2.5. Start SonarQube
 
   Open a terminal or command prompt.
   Navigate to the `sonarqube-x.x/bin/<OS>/` directory, replacing `<OS>` with your operating system (e.g., `windows-x86-64` or `linux-x86-64`). For example, if you downloaded **SonarQube 25.2.0.102705** and are using Windows, go to `sonarqube-25.2.0.102705\bin\windows-x86-64`.
@@ -214,7 +212,7 @@ To use OpenAI’s API for the **Code Issue Reviser** section in **WALL**, follow
  ![image](https://github.com/user-attachments/assets/0f4d5f90-e616-4d58-a083-08079e338093)
 
 
-## Using SonarQube
+## 2.6. Using SonarQube
 
 Open your web browser and go to [http://localhost:9099](http://localhost:9099).
 Login using the default credentials:
@@ -275,14 +273,14 @@ Once the analysis is complete, open [http://localhost:9090](http://localhost:909
 ![image](https://github.com/user-attachments/assets/db132b2e-9041-4d24-bee5-110c01e791a1)
 
 
-## SonarQube Troubleshooting
+## 2.7. SonarQube Troubleshooting
    
-### SonarQube Fails to Start**:  
+### 2.7.1. SonarQube Fails to Start
       
 Check `sonarqube-x.x/logs/sonar.log` for detailed error messages.
 Verify that port `9099` is not blocked or used by another application.
     
-### Log Files**:
+### 2.7.2. Log Files
     
 Logs are located in the `logs` directory of the SonarQube installation:
       - `sonar.log`: General logs
@@ -290,14 +288,14 @@ Logs are located in the `logs` directory of the SonarQube installation:
       - `ce.log`: Compute Engine logs
       - `es.log`: Elasticsearch logs
 
-### Supporting Documents & Resources**:
+## 2.8. Supporting Documents & Resources
 
 [SonarQube Documentation](https://docs.sonarqube.org/)
 [SonarQube Community](https://community.sonarsource.com/)
 
 ---
 
-# WALL
+# 3. WALL
 
 The application is designed to:  
 
@@ -315,7 +313,7 @@ The application is designed to:
    - Provides **metrics on accuracy, efficiency, readability, and compliance** with best practices. 
 
 
-## Clone WALL and Install Required Dependencies
+## 3.1. Clone WALL and Install Required Dependencies
 
 Open a terminal or command prompt, navigate to the directory where you want to clone the repository, and run:  
 
@@ -335,9 +333,9 @@ Run the following command to install all necessary dependencies for the WALL app
    pip install -r requirements.txt
    ```
  
-## Application Overview
+## 3.2. Application Overview
 
-### **Project Structure**:
+### 3.2.1. Project Structure**
 
 ```bash
 WALL/
@@ -362,7 +360,7 @@ WALL/
     └── sonarqube.html
 ```
 
-### **app.py**  
+### 3.2.2. **app.py**  
 
 This section explains key functions in `app.py`.  
 
@@ -486,7 +484,7 @@ This route compares the original and revised versions of a file, providing visua
      - Calculates precision, recall, F1 score, BLEU, and ROUGE scores.  
      - Provides a quantitative assessment of the similarity between the original and revised code versions.
 
-## Running WALL
+## 3.3. Running WALL
 
 Navigate to the root folder of **WALL**:  
 
@@ -506,9 +504,9 @@ After a short while, you will see a prompt indicating the local server where Fla
 
 Open this [URL](http://127.0.0.1:5000/) in your browser to access the WALL application.
 
-## Pages in WALL
+## 3.4. Pages in WALL
 
-### **Home**
+### 3.4.1. **Home**
 
 This page provides users with instructions on how to use WALL, including descriptions of each action and step-by-step guidance for interacting with the tools.
 
@@ -538,7 +536,7 @@ The extracted data is saved as a CSV file in the following format:
 
 ![image](https://github.com/user-attachments/assets/3a5de9d9-9630-4525-9a0f-d556e3f054de)
 
-### **Code Issues Reviser**
+### 3.4.2. **Code Issues Reviser**
 
 #### **Part 1: Interactive Revision**
 
