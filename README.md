@@ -2,30 +2,6 @@
 
 **WALL** is a web-based tool designed to help developers improve software quality by resolving code issues, revising them using Large Language Models (LLMs), and comparing code versions. This application integrates with SonarQube to fetch the unresolved problems and uses advanced AI models for automated code revision.
 
-## Project Structure
-```bash
-WALL/
-├── Code Issues Reviser Module - Processing All Files.py
-├── README.md
-├── Test.Dataset
-│   ├── open-instruct-main.Revised
-│   ├── open-instruct-main.zip
-│   └── open-instruct.Issues.csv
-├── app.py
-├── requirements.txt
-├── static
-│   ├── Code_Comparison.css
-│   ├── Code_Issue_Reviser.css
-│   ├── Wall-Logo.png
-│   ├── index.css
-│   └── sonarqube.css
-└── templates
-    ├── Code_Comparison.html
-    ├── Code_Issue_Reviser.html
-    ├── index.html
-    └── sonarqube.html
-```
-
 ## Prerequisites
 
 Before installing SonarQube, ensure your system meets the following requirements:
@@ -303,12 +279,12 @@ Before installing SonarQube, ensure your system meets the following requirements
 
 5. **SonarQube Troubleshooting**:
    
-    **SonarQube Fails to Start**:  
+    5.1. **SonarQube Fails to Start**:  
     
    - Check `sonarqube-x.x/logs/sonar.log` for detailed error messages.
    - Verify that port `9099` is not blocked or used by another application.
     
-    **Log Files**:
+    5.2. **Log Files**:
     
     - Logs are located in the `logs` directory of the SonarQube installation:
       - `sonar.log`: General logs
@@ -324,6 +300,22 @@ Before installing SonarQube, ensure your system meets the following requirements
 ---
 
 ## 2. WALL
+
+The application is designed to:  
+
+**Code Issue Detection & Analysis**  
+   - Fetches unresolved issues from **SonarQube** (e.g., code smells, security vulnerabilities, bugs).  
+   - Provides a structured **issue dashboard** for developers to review problems in their code.  
+
+**AI-Powered Code Revision**  
+   - Uses **LLMs (e.g., GPT-4o)** to suggest fixes for detected issues.  
+   - Supports **Few-Shot Prompt Learning (FSPL)** to improve issue detection and reasoning.  
+   - Allows manual review and refinement of AI-generated code suggestions.  
+
+**Code Comparison & Validation**  
+   - Compares the **original and AI-revised code** side by side.  
+   - Provides **metrics on accuracy, efficiency, readability, and compliance** with best practices. 
+
 
 ### Step 1:  Clone WALL and Install Required Dependencies
 
@@ -343,43 +335,65 @@ Before installing SonarQube, ensure your system meets the following requirements
 
    ```bash
    pip install -r requirements.txt
-   ```  
+   ```
+ 
+### Step 2: Application Overview
 
-### Application Overview
+1. **Project Structure**:
 
-The application is designed to:
+```bash
+WALL/
+├── Code Issues Reviser Module - Processing All Files.py
+├── README.md
+├── Test.Dataset
+│   ├── open-instruct-main.Revised
+│   ├── open-instruct-main.zip
+│   └── open-instruct.Issues.csv
+├── app.py
+├── requirements.txt
+├── static
+│   ├── Code_Comparison.css
+│   ├── Code_Issue_Reviser.css
+│   ├── Wall-Logo.png
+│   ├── index.css
+│   └── sonarqube.css
+└── templates
+    ├── Code_Comparison.html
+    ├── Code_Issue_Reviser.html
+    ├── index.html
+    └── sonarqube.html
+```
 
-1. Fetch unresolved code issues from SonarQube.
-2. Provide a platform for uploading and revising issues using AI models.
-3. Enable code comparison between original and revised versions with detailed metrics.
+   
+2. **`app.py`**
+   
+ Here is the explanation of Key Functions in the `app.py`.
 
-## Key Functions in App.py
-
-### 1. `get_all_issues(sonar_url, api_token, project_key)`
+2.1. `get_all_issues(sonar_url, api_token, project_key)`
 
 This function fetches unresolved issues from a SonarQube project using the API.
 
-#### Parameters:
-- **sonar_url** (str): The URL of the SonarQube server.
-- **api_token** (str): Authentication token for accessing the SonarQube API.
-- **project_key** (str): The SonarQube project key to retrieve issues from.
+Parameters:
+        - **sonar_url** (str): The URL of the SonarQube server.
+        - **api_token** (str): Authentication token for accessing the SonarQube API.
+        - **project_key** (str): The SonarQube project key to retrieve issues from.
 
-#### Description:
-- Retrieves unresolved issues from SonarQube.
-- Handles paginated responses to fetch all issues.
+Description:
+        - Retrieves unresolved issues from SonarQube.
+        - Handles paginated responses to fetch all issues.
 
-### 2. `modify_file_path(original_path, to_remove, to_add)`
+2.2. `modify_file_path(original_path, to_remove, to_add)`
 
 This function modifies a file path by removing a prefix and adding a new segment.
 
-#### Parameters:
-- **original_path** (str): The initial file path.
-- **to_remove** (str): A prefix to be removed.
-- **to_add** (str): A new prefix to be added.
+Parameters:
+        - **original_path** (str): The initial file path.
+        - **to_remove** (str): A prefix to be removed.
+        - **to_add** (str): A new prefix to be added.
 
-#### Description:
-- Ensures compatibility across platforms by using forward slashes.
-- Adjusts file paths for code revisions.
+Description:
+        - Ensures compatibility across platforms by using forward slashes.
+        - Adjusts file paths for code revisions.
 
 ### 3. `save_csv_file(issues, file_path, to_remove, to_add)`
 
