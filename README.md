@@ -71,8 +71,6 @@ Before installing SonarQube, ensure your system meets the following requirements
 
 ## SonarQube
 
-Follow these steps to install SonarQube:
-
 ### Step 1: Download SonarQube
 
    Visit the [SonarQube Download Page](https://www.sonarqube.org/downloads/) to obtain the latest Community Edition. For example, the [sonarqube-25.2.0.102705](https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-25.2.0.102705.zip) release has been successfully installed and is actively used in the WALL project.
@@ -140,11 +138,10 @@ Follow these steps to install SonarQube:
         22:44:36.026 INFO  SonarScanner CLI 7.0.2.4839
         22:44:36.028 INFO  Java 17.0.13 Eclipse Adoptium (64-bit)
         22:44:36.029 INFO  Windows 11 10.0 amd64
-    ```  
+    ```
+     
+   - For other operating systems, refer to the following guide for detailed installation instructions: [How to Install SonarScanner CLI on Windows, Linux, and macOS](https://medium.com/novai-devops-101/how-to-install-sonarscanner-cli-client-on-windows-linux-and-macos-94b033f719c4).
 
-
-
-          
 ### Step 4: Start SonarQube
 1. Open a terminal or command prompt.
 2. Navigate to the `sonarqube-x.x/bin/<OS>/` directory, replacing `<OS>` with your operating system (e.g., `windows-x86-64` or `linux-x86-64`).  
@@ -185,11 +182,11 @@ Follow these steps to install SonarQube:
    - Update the password for enhanced security.
 
 3. **Add and Analyze a Project**:
-   - Create a new project in SonarQube by clicking **"Create a local project"**.
+   - Create a new project in SonarQube by clicking **Create a local project**.
 
 ![image](https://github.com/user-attachments/assets/df05c532-7271-4469-b8ed-9428f6d8c1d9)
 
-   - Provide a **project display name ** and **project key**.
+   - Provide a **project display name** and **project key**.
 
 ![image](https://github.com/user-attachments/assets/f497919c-3e0a-451b-8ee1-20c0cff602ee)
 
@@ -201,12 +198,14 @@ Follow these steps to install SonarQube:
 
 ![image](https://github.com/user-attachments/assets/994a2d52-be68-444c-ab76-7131f380d163)
 
-   - Select a token name and expiration date and generate a token to authenticate the analysis.
+   - Select a **token name** and **expiration date**, then generate a token to authenticate the analysis process.
 
 ![image](https://github.com/user-attachments/assets/48735916-10a4-4c20-bfcb-701e62e2a1c7)
 
    - Click on **Maven, Gradle, .NET, or Others** (for other programming languages), then select your operating system to download the appropriate version.
-     For example, if you are using Windows, navigate to your project's folder, open a command prompt (`cmd`), and execute the following command:
+   - Copy the provided command and run it in the **terminal** or **command prompt**.
+   - Navigate to your project folder and execute the copied command.
+     **For example, if you are using Windows:** Open a **command prompt (cmd)**, navigate to your project folder, and run a command similar to this: 
      
      ```bash
       sonar-scanner.bat -D"sonar.projectKey=open-instruct-main" -D"sonar.sources=." -D"sonar.host.url=http://localhost:9099" -D"sonar.token=sqp_aae99670a14a47375503d78c86e1ddf933780ea6"
@@ -219,7 +218,7 @@ Follow these steps to install SonarQube:
 
 3. The time required to add a project to SonarQube varies based on the number of files in the project. For example, adding the **`open-instruct-main`** project takes approximately **1 minute**.
 
-![image](https://github.com/user-attachments/assets/8a3ede89-295f-4896-9aad-a11fddbd0059)
+   ![image](https://github.com/user-attachments/assets/8a3ede89-295f-4896-9aad-a11fddbd0059)
 
 2. **View Results**: 
 1. View the results in the SonarQube dashboard once the analysis is complete.
