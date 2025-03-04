@@ -65,7 +65,40 @@ Before installing SonarQube, ensure your system meets the following requirements
    ```
     v18.16.0
    ```
+   
+6. **Python**: Obtain the appropriate Python installer from the [official Python website](https://www.python.org/downloads/).  
 
+Download Python for your operating system and follow the installation instructions provided by the installer.  
+
+After installing Python, open a terminal or command prompt and run the following command to verify the installation:  
+
+```bash
+python --version
+```  
+
+If the installation was successful, you should see an output similar to the following:  
+
+```
+Python 3.11.2
+```  
+
+7. **Visual Studio Code (VS Code)**: Obtain the appropriate **VS Code** installer from the [official Visual Studio Code website](https://code.visualstudio.com/Download).  
+
+Download **VS Code** for your operating system and follow the installation instructions provided by the installer.  
+
+After installing VS Code, open a terminal or command prompt and run the following command to verify the installation:  
+
+```bash
+code --version
+```  
+
+If the installation was successful, you should see an output similar to the following:  
+
+```
+1.97.2
+e54c774e0add60467559eb0d1e229c6452cf8447
+x64
+```  
 
 ---
 
@@ -229,6 +262,8 @@ Before installing SonarQube, ensure your system meets the following requirements
        - **Code Coverage:** Displays test coverage (if configured).
        - **Duplications:** Identifies duplicate code sections.
        - Etc.
+     
+![image](https://github.com/user-attachments/assets/db132b2e-9041-4d24-bee5-110c01e791a1)
 
 5. **SonarQube Troubleshooting**:
    
@@ -252,35 +287,19 @@ Before installing SonarQube, ensure your system meets the following requirements
 
 ---
 
-# 2. WALL Installation and Usage Guide
+## 2. WALL Installation and Usage Guide
 
-Before using the WALL application, ensure the following setup steps are completed:
-
-1. **Install Python**:
-   - Make sure Python is installed on your machine. You can download the latest version of Python from [python.org](https://www.python.org/downloads/).
-
-2. **Install Required Dependencies**:
+ **Install Required Dependencies**:
    - Navigate to the project directory and run the following command to install the required libraries:
      ```bash
      pip install -r ./requirements.txt
      ```
-   - This will install all necessary dependencies for the application as listed in the `requirements.txt` file.
+   - This will install all necessary dependencies for the Wall application as listed in the `requirements.txt` file.
 
-3. **Verify Python and Pip Installation**:
-   - Ensure both Python and Pip are correctly installed by running the following commands:
-     ```bash
-     python --version
-     pip --version
-     ```
-   - If these commands return the respective version numbers, the installation is complete.
-
-4. **Check OpenAI API Access**:
+2. **OpenAI API **:
    - Confirm that you have a valid OpenAI API key to enable the code revision functionality.
 
-5. **Optional Tools**:
-   - Install a code editor like VS Code or PyCharm for better script editing and management.
-
-## Application Overview
+### Application Overview
 
 The application is designed to:
 
