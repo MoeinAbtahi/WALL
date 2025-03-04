@@ -242,10 +242,10 @@ Copy the provided command and run it in the **terminal** or **command prompt**.
 Navigate to your project folder and execute the copied command.
      - **For example, if you are using Windows:** Open a **command prompt (cmd)**, navigate to your project folder, and run a command similar to this: 
      
-     ```bash
+   ```bash
       sonar-scanner.bat -D"sonar.projectKey=open-instruct-main" -D"sonar.sources=." -D"sonar.host.url=http://localhost:9099" -D"sonar.token=sqp_aae99670a14a47375503d78c86e1ddf933780ea6"
      
-     ```
+   ```
           
 ![image](https://github.com/user-attachments/assets/ba1fb05f-a4de-485d-9033-de08e6a48c81)
 
@@ -266,25 +266,26 @@ Once the analysis is complete, open [http://localhost:9090](http://localhost:909
      
 ![image](https://github.com/user-attachments/assets/db132b2e-9041-4d24-bee5-110c01e791a1)
 
-**SonarQube Troubleshooting**:
+
+### Step 7: SonarQube Troubleshooting
    
    **SonarQube Fails to Start**:  
-   
-   Check `sonarqube-x.x/logs/sonar.log` for detailed error messages.
-   Verify that port `9099` is not blocked or used by another application.
+      
+   - Check `sonarqube-x.x/logs/sonar.log` for detailed error messages.
+   - Verify that port `9099` is not blocked or used by another application.
     
    **Log Files**:
     
-   Logs are located in the `logs` directory of the SonarQube installation:
+   - Logs are located in the `logs` directory of the SonarQube installation:
       - `sonar.log`: General logs
       - `web.log`: Web server logs
       - `ce.log`: Compute Engine logs
       - `es.log`: Elasticsearch logs
 
-**Supporting Documents & Resources**:
+   **Supporting Documents & Resources**:
 
-   [SonarQube Documentation](https://docs.sonarqube.org/)
-   [SonarQube Community](https://community.sonarsource.com/)
+   - [SonarQube Documentation](https://docs.sonarqube.org/)
+   - [SonarQube Community](https://community.sonarsource.com/)
 
 ---
 
