@@ -181,7 +181,7 @@ Before installing SonarQube, ensure your system meets the following requirements
    - After logging in for the first time, you will be prompted to change the default password.
    - Update the password for enhanced security.
 
-3. **Add and Analyze a Project**:
+3. **Add a Project**:
    - Create a new project in SonarQube by clicking **Create a local project**.
 
 ![image](https://github.com/user-attachments/assets/df05c532-7271-4469-b8ed-9428f6d8c1d9)
@@ -220,9 +220,15 @@ Before installing SonarQube, ensure your system meets the following requirements
 
    ![image](https://github.com/user-attachments/assets/8a3ede89-295f-4896-9aad-a11fddbd0059)
 
-2. **View Results**: 
-1. View the results in the SonarQube dashboard once the analysis is complete.
-2. Inspect issues, bugs, and vulnerabilities and prioritize fixes.
+4. **Analyze a Project**:
+Once the analysis is complete, open [http://localhost:9090](http://localhost:9090) and:
+1. Click on your project name.
+2. Navigate through:
+   - **Issues:** Shows bugs, vulnerabilities, and code smells.
+   - **Security Hotspots:** Highlights security concerns.
+   - **Code Coverage:** Displays test coverage (if configured).
+   - **Duplications:** Identifies duplicate code sections.
+   - Etc.
 
 ---
 
@@ -230,7 +236,7 @@ Before installing SonarQube, ensure your system meets the following requirements
 
 ### Common Issues:
 1. **SonarQube Fails to Start**:  
-   - Check `logs/sonar.log` for detailed error messages.
+   - Check `sonarqube-x.x/logs/sonar.log` for detailed error messages.
    - Ensure the database connection is properly configured.
 2. **Browser Access Issues**:  
    - Verify that port `9099` is not blocked or used by another application.
