@@ -121,11 +121,11 @@ To use OpenAI’s API for the **Code Issue Reviser** section in **WALL**, follow
 
 # 2. SonarQube
 
-## 2.1Download SonarQube
+## 2.1. Download SonarQube
 
    Visit the [SonarQube Download Page](https://www.sonarqube.org/downloads/) to obtain the latest Community Edition. For example, the [sonarqube-25.2.0.102705](https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-25.2.0.102705.zip) release has been successfully installed and is actively used in the WALL project.
 
-## 2.2 Extract and Configure SonarQube  
+## 2.2. Extract and Configure SonarQube  
  
    Unzip the downloaded SonarQube archive to your desired installation directory.  
 
@@ -335,7 +335,7 @@ Run the following command to install all necessary dependencies for the WALL app
  
 ## 3.2. Application Overview
 
-### 3.2.1. Project Structure**
+### 3.2.1. Project Structure
 
 ```bash
 WALL/
@@ -512,11 +512,11 @@ This page provides users with instructions on how to use WALL, including descrip
 
 ![Home](https://github.com/user-attachments/assets/e13cad7d-28a8-443c-834a-9217c2af5013)
 
-#### **Issue Extractor Tool**
+### 3.4.2. **Issue Extractor Tool**
 
 This page allows users to fetch unresolved issues from SonarQube and save them as a CSV file for further processing.
 
-##### **Steps**:
+**Steps**:
 Users can either **preset** or **manually enter** the following details:
    - **SonarQube Server URL**: The address of the SonarQube server.
    - **Project API Token**: Authentication token for accessing SonarQube.
@@ -526,7 +526,7 @@ Users can either **preset** or **manually enter** the following details:
 
 ![Issue Extractor Tool](https://github.com/user-attachments/assets/47134e8a-8bc6-47a2-8262-b6b65c268cef)
 
-##### **Output CSV Format**:
+**Output CSV Format**:
 The extracted data is saved as a CSV file in the following format:
 
 | **file_Location** | **file_name** | **line** | **message** | **type** |
@@ -536,7 +536,7 @@ The extracted data is saved as a CSV file in the following format:
 
 ![image](https://github.com/user-attachments/assets/3a5de9d9-9630-4525-9a0f-d556e3f054de)
 
-### 3.4.2. **Code Issues Reviser**
+### 3.4.3. **Code Issues Reviser**
 
 #### **Part 1: Interactive Revision**
 
@@ -604,7 +604,7 @@ Allows users to upload the CSV file generated from the **Issue Extractor Tool** 
 #### **Part 2: Batch Processing**
 - **Purpose**: Enables users to revise all files in the CSV at once using the `Code Issues Reviser Module - Processing All Files.py` script.
 
-#### **Setup**:
+**Setup**:
 1. **Set Up OpenAI API Key**:
    - To enable the code revision feature, insert a valid OpenAI API key by modifying **Line 8** in the script:
      ```python
@@ -639,19 +639,17 @@ Allows users to upload the CSV file generated from the **Issue Extractor Tool** 
        - **Revised Folder**: `D:\Documents\Project\WALL.Revised`
 ---
 
-### Notes
+**Notes**
 - For batch processing, ensure the script’s paths and model settings are correctly updated.
 - While Part 1 is interactive and user-driven, Part 2 offers automation for users needing quick processing of multiple files.
 
-### **Code Compare Tool**
+### 3.4.4. **Code Compare Tool**
 
 The **Code Compare Tool** enables users to evaluate and compare the original and revised versions of their code for quality and improvements.
 
 ![Code Compare Tool](https://github.com/user-attachments/assets/d37124de-b5eb-43b8-9b64-3e8aec5ddc77)
 
----
-
-#### **Steps**:
+**Steps**:
 
 1. **Upload CSV File**:
    - Users upload the CSV file created in the **Issue Extractor Tool** section. This file contains details of the original files and their issues.
