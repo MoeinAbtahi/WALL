@@ -30,7 +30,8 @@ Obtain the appropriate JDK 17 installer from [Oracle's official website](https:/
    Java(TM) SE Runtime Environment (build 17.0.8+9-LTS-211)
    Java HotSpot(TM) 64-Bit Server VM (build 17.0.8+9-LTS-211, mixed mode, sharing)
    ```
-## 5. **Node.js®**: Obtain the appropriate Node.js installer from [Node.js's official website](https://nodejs.org/en/download).
+## 5. **Node.js®**: 
+Obtain the appropriate Node.js installer from [Node.js's official website](https://nodejs.org/en/download).
    
    Download Node.js® for your operating system and follow the installation instructions provided by the installer.
  
@@ -46,7 +47,8 @@ Obtain the appropriate JDK 17 installer from [Oracle's official website](https:/
     v18.16.0
    ```
    
-## 6. **Python**: Obtain the appropriate Python installer from the [official Python website](https://www.python.org/downloads/).  
+## 6. **Python**: 
+Obtain the appropriate Python installer from the [official Python website](https://www.python.org/downloads/).  
 
    Download Python for your operating system and follow the installation instructions provided by the installer.  
     
@@ -62,7 +64,8 @@ Obtain the appropriate JDK 17 installer from [Oracle's official website](https:/
  Python 3.12.9
  ```  
 
-## 7. **Visual Studio Code (VS Code)**: Obtain the appropriate **VS Code** installer from the [official Visual Studio Code website](https://code.visualstudio.com/Download).  
+## 7. **Visual Studio Code (VS Code)**: 
+Obtain the appropriate **VS Code** installer from the [official Visual Studio Code website](https://code.visualstudio.com/Download).  
 
  Download **VS Code** for your operating system and follow the installation instructions provided by the installer.  
  
@@ -80,7 +83,8 @@ Obtain the appropriate JDK 17 installer from [Oracle's official website](https:/
  x64
  ```
     
-## 8. **Git**: Download and install Git from the [official Git website](https://git-scm.com/downloads).
+## 8. **Git**: 
+Download and install Git from the [official Git website](https://git-scm.com/downloads).
     
   After installing Git, open a terminal or command prompt and run the following command to verify the installation:   
 
@@ -94,7 +98,8 @@ Obtain the appropriate JDK 17 installer from [Oracle's official website](https:/
   git version 2.48.1.windows.1
   ```
 
-## 9. **OpenAI API Key**: To use OpenAI’s API for the **Code Issue Reviser** section in **WALL**, follow these steps: 
+## 9. **OpenAI API Key**: 
+To use OpenAI’s API for the **Code Issue Reviser** section in **WALL**, follow these steps: 
 
  Visit the [OpenAI playground website](https://platform.openai.com/playground/chat) and sign up.
  
