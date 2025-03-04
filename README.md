@@ -119,24 +119,16 @@ Before installing SonarQube, ensure your system meets the following requirements
 
     To use OpenAI’s API for applications like **WALL**, follow these steps:  
 
-    **Create an OpenAI Account:**
-    
-   - Visit the [OpenAI playground website](https://platform.openai.com/playground/chat) and sign up.  
-
-    **Purchase API Access:**
-   
-   - OpenAI's API is **not free**. You need to add a payment method and buy API credits.  
-   - Visit the [billing page](https://platform.openai.com/account/billing) to check pricing and add funds.  
-
-   **Access API Keys:**  
-   - Go to the [API Keys page](https://platform.openai.com/api-keys).  
-   - Click on **Create new secret key** to generate a new key.
+    Visit the [OpenAI playground website](https://platform.openai.com/playground/chat) and sign up.
+    OpenAI's API is **not free**. You need to add a payment method and buy API credits.
+    Visit the [billing page](https://platform.openai.com/account/billing) to check pricing and add funds.  
+    Go to the [API Keys page](https://platform.openai.com/api-keys).
+    Click on **Create new secret key** to generate a new key.
      
     ![image](https://github.com/user-attachments/assets/76c8ae49-a8c7-4fa2-8cb5-762d9f27a2a5)
 
-   **Copy and Store Your API Key:**  
-   - Once generated, copy the API key.  
-   - **Important:** Store it securely, as OpenAI won’t show it again.  
+    Once generated, copy the API key.  
+    **Important:** Store it securely, as OpenAI won’t show it again.  
  
     ---
 
