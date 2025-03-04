@@ -76,9 +76,7 @@ Before installing SonarQube, ensure your system meets the following requirements
     x64
     ```
     
-8. **Git**:
-
-     Download and install Git from the [official Git website](https://git-scm.com/downloads).
+8. **Git**: Download and install Git from the [official Git website](https://git-scm.com/downloads).
     
      After installing Git, open a terminal or command prompt and run the following command to verify the installation:   
 
@@ -92,9 +90,7 @@ Before installing SonarQube, ensure your system meets the following requirements
      git version 2.48.1.windows.1
      ```
 
-9. **OpenAI API Key**:  
- 
-    To use OpenAI’s API for the **Code Issue Reviser** section in **WALL**, follow these steps: 
+9. **OpenAI API Key**: To use OpenAI’s API for the **Code Issue Reviser** section in **WALL**, follow these steps: 
 
     Visit the [OpenAI playground website](https://platform.openai.com/playground/chat) and sign up.
     
@@ -455,37 +451,42 @@ Calculates evaluation metrics by comparing original and revised code lines.
   - Computes metrics like precision, recall, F1 score, BLEU, and ROUGE.  
   - Provides a detailed assessment of how closely the revised code matches the original.
 
-## Routes
+### **2.8. `/sonarqube` Route**  
 
-### 1. `/sonarqube`
+This route handles fetching unresolved issues from SonarQube and saving them to a CSV file.  
 
-This route handles fetching issues from SonarQube and saving them to a CSV file.
+- **Methods**: `GET`, `POST`  
+- **Functionality**:  
+  1. Displays a form for entering SonarQube details.  
+  2. Retrieves unresolved issues from SonarQube based on the provided details.  
+  3. Saves the fetched issues into a structured CSV file for further processing.  
 
-- **Methods**: GET, POST
-- **Steps**: 
-  1. Provides a form to enter SonarQube details.
-  2. Fetches unresolved issues from SonarQube based on the provided details.
-  3. Allows saving the issues in a CSV file.
+---
 
-### 2. `/Code_Issue_Reviser`
+### **2.9. `/Code_Issue_Reviser` Route**  
 
-This route handles the process of uploading a CSV file, interacting with OpenAI’s API to revise code issues, and updating the UI with results.
+This route facilitates the process of uploading a CSV file containing code issues, interacting with OpenAI’s API for revision, and updating the UI with results.  
 
-- **Methods**: GET, POST
-- **Steps**:
-  1. Upload and process a CSV file containing code issues.
-  2. Generate a prompt for the OpenAI API based on selected issues.
-  3. Send the prompt to OpenAI and retrieve the revised code.
+- **Methods**: `GET`, `POST`  
+- **Functionality**:  
+  1. Uploads and processes a CSV file containing code issues.  
+  2. Extracts relevant issues and generates a structured prompt for OpenAI’s API.  
+  3. Sends the prompt to OpenAI, retrieves the revised code, and updates the interface with improved code suggestions.  
 
-### 3. `/Code_Comparer`
+---
 
-This route compares the original and revised versions of a file, calculating and displaying differences and evaluation metrics.
+### **3. `/Code_Comparer` Route**  
 
-- **Methods**: GET, POST
-- **Steps**:
-  1. Upload a CSV file with file details.
-  2. Select files for comparison.
-  3. Highlight code differences and display comparison metrics.
+This route compares the original and revised versions of a file, providing visual differences and evaluation metrics to assess code improvements.  
+
+- **Methods**: `GET`, `POST`  
+- **Functionality**:  
+  1. Uploads a CSV file containing file details.  
+  2. Selects files for comparison and extracts their contents.  
+  3. **Highlights Differences**: Uses a color-coded HTML format to display added and removed lines.  
+  4. **Computes Evaluation Metrics**:  
+     - Calculates precision, recall, F1 score, BLEU, and ROUGE scores.  
+     - Provides a quantitative assessment of the similarity between the original and revised code versions.
 
 ## How to Use
 
