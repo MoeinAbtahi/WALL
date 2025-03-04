@@ -291,6 +291,7 @@ Logs are located in the `logs` directory of the SonarQube installation:
 ## 2.8. Supporting Documents & Resources
 
 [SonarQube Documentation](https://docs.sonarqube.org/)
+
 [SonarQube Community](https://community.sonarsource.com/)
 
 ---
