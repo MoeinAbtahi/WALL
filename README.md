@@ -123,7 +123,8 @@ Before installing SonarQube, ensure your system meets the following requirements
    Open the `sonarqube-x.x/conf` directory and edit the `sonar.properties` file using a text editor.
    
    - For example, if you downloaded **SonarQube 25.2.0.102705** and are using Windows, navigate to `sonarqube-25.2.0.102705\conf`, Open `sonar.properties` with **Notepad** or any text editor of your choice.
-   In `sonar.properties`, search for the setting:  
+   In `sonar.properties`, search for the setting:
+  
      ```
      sonar.web.port
      ```
@@ -237,10 +238,9 @@ Select a **token name** and **expiration date**, then generate a token to authen
 
 ![image](https://github.com/user-attachments/assets/48735916-10a4-4c20-bfcb-701e62e2a1c7)
 
-Click on **Maven, Gradle, .NET, or Others** (for other programming languages), then select your operating system to download the appropriate version.
-Copy the provided command and run it in the **terminal** or **command prompt**.
-Navigate to your project folder and execute the copied command.
-     - **For example, if you are using Windows:** Open a **command prompt (cmd)**, navigate to your project folder, and run a command similar to this: 
+Click on **Maven, Gradle, .NET, or Others** (for other programming languages), then select your operating system to download the appropriate version. Copy the provided command and run it in the **terminal** or **command prompt**. Navigate to your project folder and execute the copied command.
+
+   - **For example, if you are using Windows:** Open a **command prompt (cmd)**, navigate to your project folder, and run a command similar to this: 
      
    ```bash
    sonar-scanner.bat -D"sonar.projectKey=open-instruct-main" -D"sonar.sources=." -D"sonar.host.url=http://localhost:9099" -D"sonar.token=sqp_aae99670a14a47375503d78c86e1ddf933780ea6" 
