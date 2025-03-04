@@ -132,15 +132,15 @@ Before installing SonarQube, ensure your system meets the following requirements
    Uncomment this line by removing the `#` and change the port from `9000` to `9099` (as `9099` is less commonly used).  
    Before modification:
        
-     ```
+   ```
      #sonar.web.port=9000
-     ```
+   ```
      
    After modification:
       
-     ```
+   ```
      sonar.web.port=9099
-     ```
+   ```
      
    Save the changes and close the file.
      
@@ -243,8 +243,7 @@ Navigate to your project folder and execute the copied command.
      - **For example, if you are using Windows:** Open a **command prompt (cmd)**, navigate to your project folder, and run a command similar to this: 
      
    ```bash
-      sonar-scanner.bat -D"sonar.projectKey=open-instruct-main" -D"sonar.sources=." -D"sonar.host.url=http://localhost:9099" -D"sonar.token=sqp_aae99670a14a47375503d78c86e1ddf933780ea6"
-     
+   sonar-scanner.bat -D"sonar.projectKey=open-instruct-main" -D"sonar.sources=." -D"sonar.host.url=http://localhost:9099" -D"sonar.token=sqp_aae99670a14a47375503d78c86e1ddf933780ea6" 
    ```
           
 ![image](https://github.com/user-attachments/assets/ba1fb05f-a4de-485d-9033-de08e6a48c81)
