@@ -117,21 +117,17 @@ Before installing SonarQube, ensure your system meets the following requirements
    Visit the [SonarQube Download Page](https://www.sonarqube.org/downloads/) to obtain the latest Community Edition. For example, the [sonarqube-25.2.0.102705](https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-25.2.0.102705.zip) release has been successfully installed and is actively used in the WALL project.
 
 ### Step 2: Extract and Configure SonarQube  
-
-1. **Extract the SonarQube ZIP File**:  
+ 
    Unzip the downloaded SonarQube archive to your desired installation directory.  
 
-2. **Navigate to the Configuration Directory**:  
-   Open the `sonarqube-x.x/conf` directory and edit the `sonar.properties` file using a text editor.  
-   - For example, if you downloaded **SonarQube 25.2.0.102705** and are using Windows, navigate to `sonarqube-25.2.0.102705\conf`
-     Open `sonar.properties` with **Notepad** or any text editor of your choice.
-     
-3. **Modify the SonarQube Web Port**:
+   Open the `sonarqube-x.x/conf` directory and edit the `sonar.properties` file using a text editor.
    
+   - For example, if you downloaded **SonarQube 25.2.0.102705** and are using Windows, navigate to `sonarqube-25.2.0.102705\conf`, Open `sonar.properties` with **Notepad** or any text editor of your choice.
    - In `sonar.properties`, search for the setting:  
      ```
      sonar.web.port
      ```
+     
    - Locate **line 111** (or search for the line that contains `#sonar.web.port=9000`).  
    - Uncomment this line by removing the `#` and change the port from `9000` to `9099` (as `9099` is less commonly used).  
    - Before modification:
@@ -139,11 +135,13 @@ Before installing SonarQube, ensure your system meets the following requirements
      ```
      #sonar.web.port=9000
      ```
+     
    - After modification:
       
      ```
      sonar.web.port=9099
      ```
+     
    - Save the changes and close the file.
      
 ### Step 3:  Download SonarScanner CLI
@@ -152,11 +150,9 @@ Before installing SonarQube, ensure your system meets the following requirements
 
 ### Step 4: Extract and Configure SonarScanner CLI 
 
-1. **Extract the SonarScanner CLI ZIP File**:  
    Unzip the downloaded SonarQube archive to your desired installation directory.  
-
-2. **Add SonarScanner to Your System Path**:
-   For example, if you downloaded **sonar-scanner-7.0.2.4839-windows-x64** and are using Windows,
+   
+   Add SonarScanner to Your System Path: For example, if you downloaded **sonar-scanner-7.0.2.4839-windows-x64** and are using Windows,
    - Open the Start Menu and search for Environment Variables.
    - Click on Edit the system environment variables.
    - In the System Properties window, click on the Environment Variables button.
@@ -360,7 +356,7 @@ WALL/
     └── sonarqube.html
 ```
 
-2. **`app.py`**  
+**app.py**  
 
 This section explains key functions in `app.py`.  
 
@@ -504,40 +500,10 @@ After a short while, you will see a prompt indicating the local server where Fla
 
 Open this [URL](http://127.0.0.1:5000/) in your browser to access the WALL application.
 
-1. **Clone the WALL Repository**:  
+### Step 4: Pages in WALL
 
+1. **Home**
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## How to Use
-
-1. **SonarQube Integration**: Start by fetching issues from your SonarQube project via the `/sonarqube` route.
-2. **Issue Revision**: Once issues are retrieved, upload the CSV to the `/Code_Issue_Reviser` route to revise the issues using the LLM.
-3. **Code Comparison**: After revising the code, use the `/Code_Comparer` route to compare the original and revised code, and evaluate the changes.
-
-## Web Pages
-
-### **Home**
 - This page provides users with instructions on how to use WALL, including descriptions of each action and step-by-step guidance for interacting with the tools.
 
 ![Home](https://github.com/user-attachments/assets/e13cad7d-28a8-443c-834a-9217c2af5013)
@@ -588,7 +554,7 @@ The extracted data is saved as a CSV file in the following format:
    - Users can **edit the prompt** to refine the instructions before sending it to the GPT API.
 
 4. **Choose GPT Model**:
-   - Select the desired GPT model (e.g., GPT-3.5 Turbo or GPT-4o) for processing the prompt.
+   - Select the desired GPT model (e.g., GPT-3.5 Turbo or GPT-4o) to process the prompt.
 
 5. **Send Prompt**:
    - Send the customized or preset prompt to the OpenAI API for code revision.
@@ -606,19 +572,24 @@ The extracted data is saved as a CSV file in the following format:
          - **Revised Folder**: `D:\Documents\Project\WALL.Revised`
    - Place the revised files in the same relative paths as the original project structure. For example:
      - If the original file is located at:
+     - 
        ```plaintext
        D:\Documents\Project\WALL\src\app\sample.py
        ```
+       
      - The revised file should be saved as ` Revised.sample.py ` in:
 
        ```plaintext
        D:\Documents\Project\WALL.Revised\src\app\Revised.sample.py
        ```
+       
 8. **Set Up OpenAI API Key**:
    - To enable the code revision feature, insert a valid OpenAI API key by modifying **Line 484** in the script:
+
      ```python
      openai.api_key = 'your-openai-api-key'  # Insert your OpenAI API key here
      ```
+     
    - Replace `'your-openai-api-key'` with a valid key to avoid API errors.
 
 9. **Proceed to Code Compare Tool** *(Optional)*:
@@ -698,6 +669,57 @@ The **Code Compare Tool** enables users to evaluate and compare the original and
 
 5. **Prepare for Final Submission**:
    - Based on the comparison and metrics, users can validate whether the revisions meet quality standards and proceed with finalizing the updated code.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1. **SonarQube Integration**: Start by fetching issues from your SonarQube project via the `/sonarqube` route.
+2. **Issue Revision**: Once issues are retrieved, upload the CSV to the `/Code_Issue_Reviser` route to revise the issues using the LLM.
+3. **Code Comparison**: After revising the code, use the `/Code_Comparer` route to compare the original and revised code, and evaluate the changes.
+
+## Web Pages
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ---
 
