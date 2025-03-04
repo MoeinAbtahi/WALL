@@ -364,23 +364,22 @@ WALL/
     └── sonarqube.html
 ```
 
-   
-2. **`app.py`**
-   
- Here is the explanation of Key Functions in the `app.py`.
- 
-   2.1. **get_all_issues(sonar_url, api_token, project_key)**:
-   
-   This function fetches unresolved issues from a SonarQube project using the API.
-   
-   -Parameters:
-        - **sonar_url** (str): The URL of the SonarQube server.
-        - **api_token** (str): Authentication token for accessing the SonarQube API.
-        - **project_key** (str): The SonarQube project key to retrieve issues from.
+2. **`app.py`**  
 
-   - Description:
-        - Retrieves unresolved issues from SonarQube.
-        - Handles paginated responses to fetch all issues.
+This section explains key functions in `app.py`.  
+
+### 2.1. **get_all_issues(sonar_url, api_token, project_key)**  
+
+Fetches unresolved issues from a SonarQube project using the API.  
+
+- **Parameters:**  
+  - `sonar_url` (*str*): URL of the SonarQube server.  
+  - `api_token` (*str*): Authentication token for accessing the SonarQube API.  
+  - `project_key` (*str*): SonarQube project key to retrieve issues from.  
+
+- **Description:**  
+  - Retrieves unresolved issues from SonarQube.  
+  - Handles paginated responses to fetch all issues.
 
    2.2. **modify_file_path(original_path, to_remove, to_add)**
 
