@@ -123,26 +123,26 @@ Before installing SonarQube, ensure your system meets the following requirements
    Open the `sonarqube-x.x/conf` directory and edit the `sonar.properties` file using a text editor.
    
    - For example, if you downloaded **SonarQube 25.2.0.102705** and are using Windows, navigate to `sonarqube-25.2.0.102705\conf`, Open `sonar.properties` with **Notepad** or any text editor of your choice.
-   - In `sonar.properties`, search for the setting:  
+   In `sonar.properties`, search for the setting:  
      ```
      sonar.web.port
      ```
      
-   - Locate **line 111** (or search for the line that contains `#sonar.web.port=9000`).  
-   - Uncomment this line by removing the `#` and change the port from `9000` to `9099` (as `9099` is less commonly used).  
-   - Before modification:
+   Locate **line 111** (or search for the line that contains `#sonar.web.port=9000`).  
+   Uncomment this line by removing the `#` and change the port from `9000` to `9099` (as `9099` is less commonly used).  
+   Before modification:
        
      ```
      #sonar.web.port=9000
      ```
      
-   - After modification:
+   After modification:
       
      ```
      sonar.web.port=9099
      ```
      
-   - Save the changes and close the file.
+   Save the changes and close the file.
      
 ### Step 3:  Download SonarScanner CLI
 
@@ -160,16 +160,16 @@ Before installing SonarQube, ensure your system meets the following requirements
    - Click New and add the path to your SonarScanner bin directory (e.g., C:\sonar-scanner-7.0.2.4839-windows-x64\bin).
    - Click OK to save and exit the Environment Variables window.
 
-      ![image](https://github.com/user-attachments/assets/9adbd161-8d24-432d-bc10-ea20d922eb1d)
+   ![image](https://github.com/user-attachments/assets/9adbd161-8d24-432d-bc10-ea20d922eb1d)
 
-    - Open a new Command Prompt and run:
+   Open a new Command Prompt and run:
      
-     ```cmd
+   ```cmd
      sonar-scanner -v
-     ```
-     If the installation was successful, you should see an output similar to the following:
+   ```
+   If the installation was successful, you should see an output similar to the following:
 
-     ```
+    ```
         22:44:36.006 INFO  Scanner configuration file: C:\Users\100909323\Moein\SonarQube\sonar-scanner-7.0.2.4839-windows-x64\bin\..\conf\sonar-scanner.properties
         22:44:36.012 INFO  Project root configuration file: NONE
         22:44:36.026 INFO  SonarScanner CLI 7.0.2.4839
@@ -177,88 +177,84 @@ Before installing SonarQube, ensure your system meets the following requirements
         22:44:36.029 INFO  Windows 11 10.0 amd64
     ```
      
-   - For other operating systems, refer to the following guide for detailed installation instructions: [How to Install SonarScanner CLI on Windows, Linux, and macOS](https://medium.com/novai-devops-101/how-to-install-sonarscanner-cli-client-on-windows-linux-and-macos-94b033f719c4).
+   For other operating systems, refer to the following guide for detailed installation instructions: [How to Install SonarScanner CLI on Windows, Linux, and macOS](https://medium.com/novai-devops-101/how-to-install-sonarscanner-cli-client-on-windows-linux-and-macos-94b033f719c4).
 
 ### Step 5: Start SonarQube
 
-   - Open a terminal or command prompt.
-   - Navigate to the `sonarqube-x.x/bin/<OS>/` directory, replacing `<OS>` with your operating system (e.g., `windows-x86-64` or `linux-x86-64`). For example, if you downloaded **SonarQube 25.2.0.102705** and are using Windows, go to `sonarqube-25.2.0.102705\bin\windows-x86-64`.
-   - Run the startup script:
+  Open a terminal or command prompt.
+  Navigate to the `sonarqube-x.x/bin/<OS>/` directory, replacing `<OS>` with your operating system (e.g., `windows-x86-64` or `linux-x86-64`). For example, if you downloaded **SonarQube 25.2.0.102705** and are using Windows, go to `sonarqube-25.2.0.102705\bin\windows-x86-64`.
+  Run the startup script:
      On `Linux/macOS`:
      
-     ```bash
-     ./sonar.sh start
-     ```
+   ```bash
+        ./sonar.sh start
+   ```
      
-     On `Windows`:
+    On `Windows`:
      
-     ```cmd
+   ```cmd
      StartSonar.bat
-     ```
+   ```
      
-![image](https://github.com/user-attachments/assets/2bec0c01-1a56-49ad-b4f9-c8b9907d88c4)
+ ![image](https://github.com/user-attachments/assets/2bec0c01-1a56-49ad-b4f9-c8b9907d88c4)
 
-   - After seeing the **"SonarQube is operational"** message in the command prompt, verify that SonarQube has started successfully by opening the following URL in your web browser: [http://localhost:9099](http://localhost:9099). If the page loads correctly, SonarQube is running and ready for use.
+ After seeing the **"SonarQube is operational"** message in the command prompt, verify that SonarQube has started successfully by opening the following URL in your web browser: [http://localhost:9099](http://localhost:9099). If the page loads correctly, SonarQube is running and ready for use.
 
-![image](https://github.com/user-attachments/assets/0f4d5f90-e616-4d58-a083-08079e338093)
+ ![image](https://github.com/user-attachments/assets/0f4d5f90-e616-4d58-a083-08079e338093)
 
 
 ### Step 6: Using SonarQube
 
-1. **Access the Dashboard**:
-   - Open your web browser and go to [http://localhost:9099](http://localhost:9099).
-   - Login using the default credentials:
+Open your web browser and go to [http://localhost:9099](http://localhost:9099).
+Login using the default credentials:
   
    ```bash
    - Username: `admin`
    - Password: `admin`
    ```
    
-2. **Change Default Password**:
-   - After logging in for the first time, you will be prompted to change the default password.
-   - Update the password for enhanced security.
+After logging in for the first time, you will be prompted to change the default password.
+Update the password for enhanced security.
 
-3. **Add a Project**:
-   - Create a new project in SonarQube by clicking **Create a local project**.
+Create a new project in SonarQube by clicking **Create a local project**.
 
 ![image](https://github.com/user-attachments/assets/df05c532-7271-4469-b8ed-9428f6d8c1d9)
 
-   - Provide a **project display name** and **project key**.
+Provide a **project display name** and **project key**.
 
 ![image](https://github.com/user-attachments/assets/f497919c-3e0a-451b-8ee1-20c0cff602ee)
 
-   - Selet **Use the global setting** for the project baseline.
+Select **Use the global setting** for the project baseline.
 
 ![image](https://github.com/user-attachments/assets/61e0a20d-c8b1-4011-b560-2c9ea47dfe7c)
 
-   - For the analysis method, choose **Locally**.
+For the analysis method, choose **Locally**.
 
 ![image](https://github.com/user-attachments/assets/994a2d52-be68-444c-ab76-7131f380d163)
 
-   - Select a **token name** and **expiration date**, then generate a token to authenticate the analysis process.
+Select a **token name** and **expiration date**, then generate a token to authenticate the analysis process.
 
 ![image](https://github.com/user-attachments/assets/48735916-10a4-4c20-bfcb-701e62e2a1c7)
 
-   - Click on **Maven, Gradle, .NET, or Others** (for other programming languages), then select your operating system to download the appropriate version.
-   - Copy the provided command and run it in the **terminal** or **command prompt**.
-   - Navigate to your project folder and execute the copied command.
-     **For example, if you are using Windows:** Open a **command prompt (cmd)**, navigate to your project folder, and run a command similar to this: 
+Click on **Maven, Gradle, .NET, or Others** (for other programming languages), then select your operating system to download the appropriate version.
+Copy the provided command and run it in the **terminal** or **command prompt**.
+Navigate to your project folder and execute the copied command.
+     - **For example, if you are using Windows:** Open a **command prompt (cmd)**, navigate to your project folder, and run a command similar to this: 
      
      ```bash
       sonar-scanner.bat -D"sonar.projectKey=open-instruct-main" -D"sonar.sources=." -D"sonar.host.url=http://localhost:9099" -D"sonar.token=sqp_aae99670a14a47375503d78c86e1ddf933780ea6"
      
      ```
           
-1. ![image](https://github.com/user-attachments/assets/ba1fb05f-a4de-485d-9033-de08e6a48c81)
+![image](https://github.com/user-attachments/assets/ba1fb05f-a4de-485d-9033-de08e6a48c81)
 
-2. ![image](https://github.com/user-attachments/assets/2457b01e-0147-46f5-88b5-4cd022c5435c)
+![image](https://github.com/user-attachments/assets/2457b01e-0147-46f5-88b5-4cd022c5435c)
 
-3. The time required to add a project to SonarQube varies based on the number of files in the project. For example, adding the **`open-instruct-main`** project takes approximately **1 minute**.
+The time required to add a project to SonarQube varies based on the number of files in the project. For example, adding the **`open-instruct-main`** project takes approximately **1 minute**.
 
-   ![image](https://github.com/user-attachments/assets/8a3ede89-295f-4896-9aad-a11fddbd0059)
+![image](https://github.com/user-attachments/assets/8a3ede89-295f-4896-9aad-a11fddbd0059)
 
-4. **Analyze a Project**:
-   Once the analysis is complete, open [http://localhost:9090](http://localhost:9090) and:
+Once the analysis is complete, open [http://localhost:9090](http://localhost:9090) and:
    - Click on your project name.
    - Navigate through:
        - **Issues:** Shows bugs, vulnerabilities, and code smells.
@@ -269,25 +265,25 @@ Before installing SonarQube, ensure your system meets the following requirements
      
 ![image](https://github.com/user-attachments/assets/db132b2e-9041-4d24-bee5-110c01e791a1)
 
-5. **SonarQube Troubleshooting**:
+**SonarQube Troubleshooting**:
    
-    5.1. **SonarQube Fails to Start**:  
+   **SonarQube Fails to Start**:  
+   
+   Check `sonarqube-x.x/logs/sonar.log` for detailed error messages.
+   Verify that port `9099` is not blocked or used by another application.
     
-   - Check `sonarqube-x.x/logs/sonar.log` for detailed error messages.
-   - Verify that port `9099` is not blocked or used by another application.
+   **Log Files**:
     
-    5.2. **Log Files**:
-    
-    - Logs are located in the `logs` directory of the SonarQube installation:
+   Logs are located in the `logs` directory of the SonarQube installation:
       - `sonar.log`: General logs
       - `web.log`: Web server logs
       - `ce.log`: Compute Engine logs
       - `es.log`: Elasticsearch logs
 
-6. **Supporting Documents & Resources**:
+**Supporting Documents & Resources**:
 
-    - [SonarQube Documentation](https://docs.sonarqube.org/)
-    - [SonarQube Community](https://community.sonarsource.com/)
+   [SonarQube Documentation](https://docs.sonarqube.org/)
+   [SonarQube Community](https://community.sonarsource.com/)
 
 ---
 
