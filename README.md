@@ -234,12 +234,12 @@ Before installing SonarQube, ensure your system meets the following requirements
    
     **SonarQube Fails to Start**:  
     
-       - Check `sonarqube-x.x/logs/sonar.log` for detailed error messages.
-       - Ensure the database connection is properly configured.
+   - Check `sonarqube-x.x/logs/sonar.log` for detailed error messages.
+    - Ensure the database connection is properly configured.
          
     **Browser Access Issues**:  
     
-       - Verify that port `9099` is not blocked or used by another application.
+   - Verify that port `9099` is not blocked or used by another application.
     
     **Log Files**:
     
