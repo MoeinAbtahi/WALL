@@ -315,19 +315,19 @@ The application is designed to:
 
 ### Step 1:  Clone WALL and Install Required Dependencies
 
-1. **Clone the WALL Repository**: Open a terminal or command prompt, navigate to the directory where you want to clone the repository, and run:  
+Open a terminal or command prompt, navigate to the directory where you want to clone the repository, and run:  
 
    ```bash
    git clone https://github.com/MoeinAbtahi/WALL.git
    ```
 
-2. **Navigate to the Cloned Repository**: Move into the newly cloned **WALL** directory:  
+Move into the newly cloned **WALL** directory:  
 
    ```bash
    cd WALL
    ```
 
-3. **Install Required Dependencies**: Run the following command to install all necessary dependencies for the WALL application, as listed in the `requirements.txt` file:  
+Run the following command to install all necessary dependencies for the WALL application, as listed in the `requirements.txt` file:  
 
    ```bash
    pip install -r requirements.txt
@@ -335,7 +335,7 @@ The application is designed to:
  
 ### Step 2: Application Overview
 
-1. **Project Structure**:
+**Project Structure**:
 
 ```bash
 WALL/
@@ -461,8 +461,6 @@ This route handles fetching unresolved issues from SonarQube and saving them to 
   2. Retrieves unresolved issues from SonarQube based on the provided details.  
   3. Saves the fetched issues into a structured CSV file for further processing.  
 
----
-
 #### **2.9. `/Code_Issue_Reviser` Route**  
 
 This route facilitates the process of uploading a CSV file containing code issues, interacting with OpenAI’s API for revision, and updating the UI with results.  
@@ -472,8 +470,6 @@ This route facilitates the process of uploading a CSV file containing code issue
   1. Uploads and processes a CSV file containing code issues.  
   2. Extracts relevant issues and generates a structured prompt for OpenAI’s API.  
   3. Sends the prompt to OpenAI, retrieves the revised code, and updates the interface with improved code suggestions.  
-
----
 
 #### **2.10 `/Code_Comparer` Route**  
 
@@ -488,6 +484,51 @@ This route compares the original and revised versions of a file, providing visua
      - Calculates precision, recall, F1 score, BLEU, and ROUGE scores.  
      - Provides a quantitative assessment of the similarity between the original and revised code versions.
 
+### Step 3: Running WALL
+
+Navigate to the root folder of **WALL**:  
+
+Run the `app.py` file: 
+
+   ```bash
+   python app.py
+   ```
+
+After a short while, you will see a prompt indicating the local server where Flask is running, similar to:  
+
+   ```cmd
+   Running on http://127.0.0.1:5000
+   ```
+
+![image](https://github.com/user-attachments/assets/af204cd1-63cb-4bec-8ff6-a26229eadb27)
+
+Open this [URL](http://127.0.0.1:5000/) in your browser to access the WALL application.
+
+1. **Clone the WALL Repository**:  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## How to Use
 
 1. **SonarQube Integration**: Start by fetching issues from your SonarQube project via the `/sonarqube` route.
@@ -497,7 +538,7 @@ This route compares the original and revised versions of a file, providing visua
 ## Web Pages
 
 ### **Home**
-- This page provides users with instructions on how to use MASQA, including descriptions of each action and step-by-step guidance for interacting with the tools.
+- This page provides users with instructions on how to use WALL, including descriptions of each action and step-by-step guidance for interacting with the tools.
 
 ![Home](https://github.com/user-attachments/assets/e13cad7d-28a8-443c-834a-9217c2af5013)
 
