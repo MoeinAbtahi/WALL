@@ -368,7 +368,7 @@ WALL/
 
 This section explains key functions in `app.py`.  
 
-### 2.1. **get_all_issues(sonar_url, api_token, project_key)**  
+#### 2.1. **get_all_issues(sonar_url, api_token, project_key)**  
 
 Fetches unresolved issues from a SonarQube project using the API.  
 
