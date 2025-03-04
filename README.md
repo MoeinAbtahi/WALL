@@ -457,10 +457,10 @@ Calculates evaluation metrics by comparing original and revised code lines.
 This route handles fetching unresolved issues from SonarQube and saving them to a CSV file.  
 
 - **Methods**: `GET`, `POST`  
-- **Functionality**:  
-  1. Displays a form for entering SonarQube details.  
-  2. Retrieves unresolved issues from SonarQube based on the provided details.  
-  3. Saves the fetched issues into a structured CSV file for further processing.  
+- **Functionality**: 
+  - Displays a form for entering SonarQube details.  
+  - Retrieves unresolved issues from SonarQube based on the provided details.  
+  - Saves the fetched issues into a structured CSV file for further processing.  
 
 #### **`/Code_Issue_Reviser` Route**  
 
@@ -468,9 +468,9 @@ This route facilitates the process of uploading a CSV file containing code issue
 
 - **Methods**: `GET`, `POST`  
 - **Functionality**:  
-  1. Uploads and processes a CSV file containing code issues.  
-  2. Extracts relevant issues and generates a structured prompt for OpenAI’s API.  
-  3. Sends the prompt to OpenAI, retrieves the revised code, and updates the interface with improved code suggestions.  
+  - Uploads and processes a CSV file containing code issues.  
+  - Extracts relevant issues and generates a structured prompt for OpenAI’s API.  
+  - Sends the prompt to OpenAI, retrieves the revised code, and updates the interface with improved code suggestions.  
 
 #### **`/Code_Comparer` Route**  
 
@@ -478,12 +478,11 @@ This route compares the original and revised versions of a file, providing visua
 
 - **Methods**: `GET`, `POST`  
 - **Functionality**:  
-  1. Uploads a CSV file containing file details.  
-  2. Selects files for comparison and extracts their contents.  
-  3. **Highlights Differences**: Uses a color-coded HTML format to display added and removed lines.  
-  4. **Computes Evaluation Metrics**:  
-     - Calculates precision, recall, F1 score, BLEU, and ROUGE scores.  
-     - Provides a quantitative assessment of the similarity between the original and revised code versions.
+  - Upload a CSV file containing file details.  
+  - Selects files for comparison and extracts their contents.  
+  - uses a color-coded HTML format to display added and removed lines.    
+  - Calculates precision, recall, F1 score, BLEU, and ROUGE scores.  
+  - Provides a quantitative assessment of the similarity between the original and revised code versions.
 
 ## 3.3. Running WALL
 
