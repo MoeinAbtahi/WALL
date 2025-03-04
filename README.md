@@ -130,7 +130,7 @@ Before installing SonarQube, ensure your system meets the following requirements
 
    **Access API Keys:**  
    - Go to the [API Keys page](https://platform.openai.com/api-keys).  
-   - Click on **Create new secret key ** to generate a new key.
+   - Click on **Create new secret key** to generate a new key.
      
     ![image](https://github.com/user-attachments/assets/76c8ae49-a8c7-4fa2-8cb5-762d9f27a2a5)
 
@@ -328,20 +328,20 @@ Before installing SonarQube, ensure your system meets the following requirements
 ## 2. WALL
 
 ### Step 1:  Clone WALL and Install Required Dependencies
-        
-Open a terminal or command prompt, navigate to the directory where you want to clone the repository, and run:  
+
+   - Open a terminal or command prompt, navigate to the directory where you want to clone the repository, and run:  
 
    ```bash
    git clone https://github.com/MoeinAbtahi/WALL.git
    ```
-
-Move into the newly cloned **WALL** directory:  
+   
+   - Move into the newly cloned **WALL** directory:  
 
    ```bash
    cd WALL
    ```
 
-Run the following command to install all necessary dependencies for the WALL application, as listed in the `requirements.txt` file:  
+   - Run the following command to install all necessary dependencies for the WALL application, as listed in the `requirements.txt` file:  
 
    ```bash
    pip install -r requirements.txt
