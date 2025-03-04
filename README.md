@@ -245,12 +245,10 @@ Before installing SonarQube, ensure your system meets the following requirements
       - `ce.log`: Compute Engine logs
       - `es.log`: Elasticsearch logs
 
----
+6. **Supporting Documents & Resources**:
 
-## Additional Resources
-
-- [SonarQube Documentation](https://docs.sonarqube.org/)
-- [SonarQube Community](https://community.sonarsource.com/)
+    - [SonarQube Documentation](https://docs.sonarqube.org/)
+    - [SonarQube Community](https://community.sonarsource.com/)
 
 ---
 
