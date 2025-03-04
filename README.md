@@ -327,22 +327,19 @@ Before installing SonarQube, ensure your system meets the following requirements
 
 ### Step 1:  Clone WALL and Install Required Dependencies
 
-1. **Clone the WALL Repository**  
-   Open a terminal or command prompt, navigate to the directory where you want to clone the repository, and run:  
+1. **Clone the WALL Repository**: Open a terminal or command prompt, navigate to the directory where you want to clone the repository, and run:  
 
    ```bash
    git clone https://github.com/MoeinAbtahi/WALL.git
    ```
 
-2. **Navigate to the Cloned Repository**  
-   Move into the newly cloned **WALL** directory:  
+2. **Navigate to the Cloned Repository**: Move into the newly cloned **WALL** directory:  
 
    ```bash
    cd WALL
    ```
 
-3. **Install Required Dependencies**  
-   Run the following command to install all necessary dependencies for the WALL application, as listed in the `requirements.txt` file:  
+3. **Install Required Dependencies**: Run the following command to install all necessary dependencies for the WALL application, as listed in the `requirements.txt` file:  
 
    ```bash
    pip install -r requirements.txt
