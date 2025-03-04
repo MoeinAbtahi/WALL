@@ -79,7 +79,7 @@ Before installing SonarQube, ensure your system meets the following requirements
     If the installation was successful, you should see an output similar to the following:  
     
     ```
-    Python 3.11.2
+    Python 3.12.9
     ```  
 
 7. **Visual Studio Code (VS Code)**: Obtain the appropriate **VS Code** installer from the [official Visual Studio Code website](https://code.visualstudio.com/Download).  
@@ -98,8 +98,44 @@ Before installing SonarQube, ensure your system meets the following requirements
     1.97.2
     e54c774e0add60467559eb0d1e229c6452cf8447
     x64
-    ```  
+    ```
     
+8. ** Git**:
+
+     Download and install Git from the [official Git website](https://git-scm.com/downloads).  
+     After installing Git, open a terminal or command prompt and run the following command to verify the installation:   
+
+     ```bash
+     git --version
+     ```
+
+    If the installation was successful, you should see an output similar to the following: 
+
+     ```
+     git version 2.48.1.windows.1
+     ```
+
+9. **OpenAI API Key**:  
+
+    To use OpenAI’s API for applications like **WALL**, follow these steps:  
+
+    **Create an OpenAI Account:**
+    
+   - Visit the [OpenAI playground website](https://platform.openai.com/playground/chat) and sign up.  
+
+    **Purchase API Access:**
+   
+   - OpenAI's API is **not free**. You need to add a payment method and buy API credits.  
+   - Visit the [billing page](https://platform.openai.com/account/billing) to check pricing and add funds.  
+
+   **Access API Keys:**  
+   - Go to the [API Keys page](https://platform.openai.com/api-keys).  
+   - Click on **Create new secret key ** to generate a new key.  
+
+   **Copy and Store Your API Key:**  
+   - Once generated, copy the API key.  
+   - **Important:** Store it securely, as OpenAI won’t show it again.  
+ 
     ---
 
 ## SonarQube
@@ -176,17 +212,17 @@ Before installing SonarQube, ensure your system meets the following requirements
    - For other operating systems, refer to the following guide for detailed installation instructions: [How to Install SonarScanner CLI on Windows, Linux, and macOS](https://medium.com/novai-devops-101/how-to-install-sonarscanner-cli-client-on-windows-linux-and-macos-94b033f719c4).
 
 ### Step 5: Start SonarQube
-1. Open a terminal or command prompt.
-2. Navigate to the `sonarqube-x.x/bin/<OS>/` directory, replacing `<OS>` with your operating system (e.g., `windows-x86-64` or `linux-x86-64`).  
-   For example, if you downloaded **SonarQube 25.2.0.102705** and are using Windows, go to `sonarqube-25.2.0.102705\bin\windows-x86-64`.
-3. Run the startup script:
-   - On Linux/macOS:
+
+   - Open a terminal or command prompt.
+   - Navigate to the `sonarqube-x.x/bin/<OS>/` directory, replacing `<OS>` with your operating system (e.g., `windows-x86-64` or `linux-x86-64`). For example, if you downloaded **SonarQube 25.2.0.102705** and are using Windows, go to `sonarqube-25.2.0.102705\bin\windows-x86-64`.
+   - Run the startup script:
+     On `Linux/macOS`:
      
      ```bash
      ./sonar.sh start
      ```
      
-   - On Windows:
+     On `Windows`:
      
      ```cmd
      StartSonar.bat
@@ -194,7 +230,7 @@ Before installing SonarQube, ensure your system meets the following requirements
      
 ![image](https://github.com/user-attachments/assets/2bec0c01-1a56-49ad-b4f9-c8b9907d88c4)
 
-4. After seeing the **"SonarQube is operational"** message in the command prompt, verify that SonarQube has started successfully by opening the following URL in your web browser: [http://localhost:9099](http://localhost:9099). If the page loads correctly, SonarQube is running and ready for use.
+   - After seeing the **"SonarQube is operational"** message in the command prompt, verify that SonarQube has started successfully by opening the following URL in your web browser: [http://localhost:9099](http://localhost:9099). If the page loads correctly, SonarQube is running and ready for use.
 
 ![image](https://github.com/user-attachments/assets/0f4d5f90-e616-4d58-a083-08079e338093)
 
@@ -287,17 +323,33 @@ Before installing SonarQube, ensure your system meets the following requirements
 
 ---
 
-## 2. WALL Installation and Usage Guide
+## 2. WALL
 
- **Install Required Dependencies**:
+### Step 1:  Clone WALL and Install Required Dependencies
+    
+1. **Clone the Repository:**  
+    
+Open a terminal or command prompt, navigate to the directory where you want to clone the repository, and run:  
+
+   ```bash
+   git clone https://github.com/MoeinAbtahi/WALL.git
+   ```
+
+2. **Navigate to the Cloned Repository:**  
+
+   ```bash
+   cd WALL
+   ```
+
+3. **Install Required Dependencies**:
    - Navigate to the project directory and run the following command to install the required libraries:
      ```bash
      pip install -r ./requirements.txt
      ```
-   - This will install all necessary dependencies for the Wall application as listed in the `requirements.txt` file.
+     
+    **This will install all necessary dependencies for the WALL application as listed in the `requirements.txt` file.**
 
-2. **OpenAI API **:
-   - Confirm that you have a valid OpenAI API key to enable the code revision functionality.
+
 
 ### Application Overview
 
