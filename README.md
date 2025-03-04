@@ -142,7 +142,7 @@ Before installing SonarQube, ensure your system meets the following requirements
      
    - For other operating systems, refer to the following guide for detailed installation instructions: [How to Install SonarScanner CLI on Windows, Linux, and macOS](https://medium.com/novai-devops-101/how-to-install-sonarscanner-cli-client-on-windows-linux-and-macos-94b033f719c4).
 
-### Step 4: Start SonarQube
+### Step 5: Start SonarQube
 1. Open a terminal or command prompt.
 2. Navigate to the `sonarqube-x.x/bin/<OS>/` directory, replacing `<OS>` with your operating system (e.g., `windows-x86-64` or `linux-x86-64`).  
    For example, if you downloaded **SonarQube 25.2.0.102705** and are using Windows, go to `sonarqube-25.2.0.102705\bin\windows-x86-64`.
@@ -166,7 +166,7 @@ Before installing SonarQube, ensure your system meets the following requirements
 ![image](https://github.com/user-attachments/assets/0f4d5f90-e616-4d58-a083-08079e338093)
 
 
-### Step 4: Using SonarQube
+### Step 6: Using SonarQube
 
 1. **Access the Dashboard**:
    - Open your web browser and go to [http://localhost:9099](http://localhost:9099).
@@ -230,18 +230,19 @@ Once the analysis is complete, open [http://localhost:9090](http://localhost:909
    - **Duplications:** Identifies duplicate code sections.
    - Etc.
 
----
+5. **SonarQube Troubleshooting**:
+   
+**SonarQube Fails to Start**:  
 
-## Troubleshooting
-
-### Common Issues:
-1. **SonarQube Fails to Start**:  
    - Check `sonarqube-x.x/logs/sonar.log` for detailed error messages.
    - Ensure the database connection is properly configured.
-2. **Browser Access Issues**:  
+     
+**Browser Access Issues**:  
+
    - Verify that port `9099` is not blocked or used by another application.
 
-### Log Files:
+**Log Files**:
+
 - Logs are located in the `logs` directory of the SonarQube installation:
   - `sonar.log`: General logs
   - `web.log`: Web server logs
