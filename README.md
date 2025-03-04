@@ -380,80 +380,80 @@ Fetches unresolved issues from a SonarQube project using the API.
 - **Description:**  
   - Retrieves unresolved issues from SonarQube.  
   - Handles paginated responses to fetch all issues.
+  
+#### 2.2. **modify_file_path(original_path, to_remove, to_add)**  
 
-   2.2. **modify_file_path(original_path, to_remove, to_add)**
+Modifies a file path by removing a prefix and adding a new segment.  
 
-This function modifies a file path by removing a prefix and adding a new segment.
+- **Parameters:**  
+  - `original_path` (*str*): The initial file path.  
+  - `to_remove` (*str*): Prefix to be removed.  
+  - `to_add` (*str*): New prefix to be added.  
 
-Parameters:
-        - **original_path** (str): The initial file path.
-        - **to_remove** (str): A prefix to be removed.
-        - **to_add** (str): A new prefix to be added.
+- **Description:**  
+  - Ensures compatibility across platforms by using forward slashes.  
+  - Adjusts file paths for code revisions.  
 
-Description:
-        - Ensures compatibility across platforms by using forward slashes.
-        - Adjusts file paths for code revisions.
+#### 2.3. **save_csv_file(issues, file_path, to_remove, to_add)**  
 
-### 3. `save_csv_file(issues, file_path, to_remove, to_add)`
+Saves a list of code issues to a CSV file after modifying file paths.  
 
-This function saves a list of code issues to a CSV file after modifying the file paths.
+- **Parameters:**  
+  - `issues` (*list*): List of code issue details.  
+  - `file_path` (*str*): Destination path for the CSV file.  
+  - `to_remove` (*str*): Prefix to remove from file paths.  
+  - `to_add` (*str*): New prefix to add to file paths.  
 
-#### Parameters:
-- **issues** (list): A list of code issue details.
-- **file_path** (str): The destination path for the CSV file.
-- **to_remove** (str): A prefix to remove from file paths.
-- **to_add** (str): A new prefix to add to the file paths.
+- **Description:**  
+  - Organizes and saves issue data into a CSV file.  
+  - Allows for file path customization before saving.  
 
-#### Description:
-- Organizes and saves issue data into a CSV file.
-- Allows for file path customization before saving.
+#### 2.4. **read_file_contents(file_path)**  
 
-### 4. `read_file_contents(file_path)`
+Reads the contents of a file and returns them as a string, with each line numbered.  
 
-Reads the contents of a file and returns them as a string, with each line numbered.
+- **Parameters:**  
+  - `file_path` (*str*): Path to the file.  
 
-#### Parameters:
-- **file_path** (str): The path to the file.
+- **Description:**  
+  - Reads and formats the file’s contents with line numbers for easier analysis.  
 
-#### Description:
-- Reads and formats the file’s contents with line numbers for easier analysis.
+#### 2.5. **generate_prompt(file_location, bug_lines, bug_messages, bug_types)**  
 
-### 5. `generate_prompt(file_location, bug_lines, bug_messages, bug_types)`
+Generates a prompt for an AI model to fix code issues.  
 
-Generates a prompt for an AI model to fix code issues.
+- **Parameters:**  
+  - `file_location` (*str*): File containing issues.  
+  - `bug_lines` (*list of int*): Line numbers where issues occur.  
+  - `bug_messages` (*list of str*): Descriptions of the issues.  
+  - `bug_types` (*list of str*): Types of issues (e.g., Bug, Vulnerability).  
 
-#### Parameters:
-- **file_location** (str): The file with issues.
-- **bug_lines** (list of int): Line numbers where issues occur.
-- **bug_messages** (list of str): Descriptions of the issues.
-- **bug_types** (list of str): Types of issues (e.g., Bug, Vulnerability).
+- **Description:**  
+  - Combines code with bug descriptions to create a structured AI prompt.  
+  - Provides a few-shot example to guide the model’s revision.  
 
-#### Description:
-- Combines the code with bug descriptions to create a prompt for an AI model.
-- Provides a few-shot example to guide the model’s revision.
+#### 2.6. **highlight_differences(diff)**  
 
-### 6. `highlight_differences(diff)`
+Highlights the differences between two versions of a file in HTML format.  
 
-Highlights the differences between two versions of a file in HTML format.
+- **Parameters:**  
+  - `diff` (*list of str*): The diff output showing differences between file versions.  
 
-#### Parameters:
-- **diff** (list of str): The diff output, showing the differences between the two versions.
+- **Description:**  
+  - Highlights added and removed lines in the code.  
+  - Displays differences using color-coded HTML for easy comparison.  
 
-#### Description:
-- Highlights added and removed lines in the code.
-- Displays differences using color-coded HTML for easy comparison.
+#### 2.7. **calculate_all_metrics(original_lines, revised_lines)**  
 
-### 7. `calculate_all_metrics(original_lines, revised_lines)`
+Calculates evaluation metrics by comparing original and revised code lines.  
 
-Calculates various evaluation metrics comparing original and revised code lines.
+- **Parameters:**  
+  - `original_lines` (*list of str*): The original code.  
+  - `revised_lines` (*list of str*): The revised code.  
 
-#### Parameters:
-- **original_lines** (list of str): The original code.
-- **revised_lines** (list of str): The revised code.
-
-#### Description:
-- Computes metrics like precision, recall, F1 score, BLEU, and ROUGE.
-- Provides a detailed assessment of how closely the revised code matches the original.
+- **Description:**  
+  - Computes metrics like precision, recall, F1 score, BLEU, and ROUGE.  
+  - Provides a detailed assessment of how closely the revised code matches the original.
 
 ## Routes
 
