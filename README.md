@@ -334,7 +334,7 @@ Run the following command to install all necessary dependencies for the WALL app
    pip install -r requirements.txt
    ```
  
-## 3.2. Application Overview
+## 3.2. WALL Overview
 
 ### 3.2.1. Project Structure
 
