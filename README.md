@@ -486,6 +486,16 @@ This route compares the original and revised versions of a file, providing visua
 
 ## 3.3. Running WALL
 
+**To fully utilize WALL, you need to modify a few lines in `app.py` as listed below**:
+
+   - **Set Up OpenAI API Key**: To enable the code revision feature, insert a valid OpenAI API key by modifying **Line 484** in the script:
+     
+     ```python
+     openai.api_key = 'your-openai-api-key'  # Insert your OpenAI API key here
+     ```
+     
+     Replace `'your-openai-api-key'` with a valid key to avoid API errors.
+
 Navigate to the root folder of **WALL**:  
 
 Run the `app.py` file: 
@@ -534,8 +544,6 @@ The extracted data is saved as a CSV file in the following format:
 | D:/.../Dockerfile | Dockerfile | 1 | Replace `as` with upper case format `AS`. | CODE_SMELL |
 | D:/.../App.css    | App.css    | 30 | Remove this commented-out code.           | CODE_SMELL |
 
-![image](https://github.com/user-attachments/assets/3a5de9d9-9630-4525-9a0f-d556e3f054de)
-
 ### 3.4.3. **Code Issues Reviser**
 
 #### **Part 1: Interactive Revision**
@@ -574,14 +582,6 @@ This page allows users to upload the CSV file generated from the **Issue Extract
        ```plaintext
        D:\Documents\Project\WALL.Revised\src\app\Revised.sample.py
        ```
-       
-   - **Set Up OpenAI API Key**: To enable the code revision feature, insert a valid OpenAI API key by modifying **Line 484** in the script:
-     
-     ```python
-     openai.api_key = 'your-openai-api-key'  # Insert your OpenAI API key here
-     ```
-     
-     Replace `'your-openai-api-key'` with a valid key to avoid API errors.
 
    - **Proceed to Code Compare Tool** *(Optional)*: After organizing the files, proceed to the **Code Compare Tool** section to compare the original and revised versions for further validation.
 
@@ -614,7 +614,6 @@ This page allows users to upload the CSV file generated from the **Issue Extract
      ```python
      model="gpt-3.5 Turbo"
      ```
-     
    - For advanced capabilities, update this to another model listed on the OpenAI [Models Documentation](https://platform.openai.com/docs/models).
 
 4. Run the script to process and revise all files at once.
