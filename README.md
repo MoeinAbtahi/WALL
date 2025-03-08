@@ -178,11 +178,11 @@ To use OpenAI’s API for the **Code Issue Reviser** section in **WALL**, follow
    If the installation was successful, you should see an output similar to the following:
 
    ```
-        22:44:36.006 INFO  Scanner configuration file: C:\Users\100909323\Moein\SonarQube\sonar-scanner-7.0.2.4839-windows-x64\bin\..\conf\sonar-scanner.properties
-        22:44:36.012 INFO  Project root configuration file: NONE
-        22:44:36.026 INFO  SonarScanner CLI 7.0.2.4839
-        22:44:36.028 INFO  Java 17.0.13 Eclipse Adoptium (64-bit)
-        22:44:36.029 INFO  Windows 11 10.0 amd64
+     22:44:36.006 INFO  Scanner configuration file: C:\Users\100909323\Moein\SonarQube\sonar-scanner-7.0.2.4839-windows-x64\bin\..\conf\sonar-scanner.properties
+     22:44:36.012 INFO  Project root configuration file: NONE
+     22:44:36.026 INFO  SonarScanner CLI 7.0.2.4839
+     22:44:36.028 INFO  Java 17.0.13 Eclipse Adoptium (64-bit)
+     22:44:36.029 INFO  Windows 11 10.0 amd64
    ```
      
    For other operating systems, refer to the following guide for detailed installation instructions: [How to Install SonarScanner CLI on Windows, Linux, and macOS](https://medium.com/novai-devops-101/how-to-install-sonarscanner-cli-client-on-windows-linux-and-macos-94b033f719c4).
