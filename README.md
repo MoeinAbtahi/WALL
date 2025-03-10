@@ -64,7 +64,7 @@ Obtain the appropriate Python installer from the [official Python website](https
  Python 3.12.9
  ```  
 
-## 1.7. **Visual Studio Code (VS Code)** 
+## 1.7. **Visual Studio Code** 
 Obtain the appropriate **VS Code** installer from the [official Visual Studio Code website](https://code.visualstudio.com/Download).  
 
  Download **VS Code** for your operating system and follow the installation instructions provided by the installer.  
@@ -378,7 +378,7 @@ Fetches unresolved issues from a SonarQube project using the API.
   - Retrieves unresolved issues from SonarQube.  
   - Handles paginated responses to fetch all issues.
   
-#### **modify_file_path(original_path, to_remove, to_add)**  
+#### `modify_file_path(original_path, to_remove, to_add)`  
 
 Modifies a file path by removing a prefix and adding a new segment.  
 
@@ -391,7 +391,7 @@ Modifies a file path by removing a prefix and adding a new segment.
   - Ensures compatibility across platforms by using forward slashes.  
   - Adjusts file paths for code revisions.  
 
-#### **save_csv_file(issues, file_path, to_remove, to_add)**  
+#### `save_csv_file(issues, file_path, to_remove, to_add)`  
 
 Saves a list of code issues to a CSV file after modifying file paths.  
 
@@ -405,7 +405,7 @@ Saves a list of code issues to a CSV file after modifying file paths.
   - Organizes and saves issue data into a CSV file.  
   - Allows for file path customization before saving.  
 
-#### **read_file_contents(file_path)**  
+#### `read_file_contents(file_path)`  
 
 Reads the contents of a file and returns them as a string, with each line numbered.  
 
@@ -415,7 +415,7 @@ Reads the contents of a file and returns them as a string, with each line number
 - **Description:**  
   - Reads and formats the file’s contents with line numbers for easier analysis.  
 
-#### **generate_prompt(file_location, bug_lines, bug_messages, bug_types)**  
+#### `generate_prompt(file_location, bug_lines, bug_messages, bug_types)`  
 
 Generates a prompt for an AI model to fix code issues.  
 
@@ -429,7 +429,7 @@ Generates a prompt for an AI model to fix code issues.
   - Combines code with bug descriptions to create a structured AI prompt.  
   - Provides a few-shot example to guide the model’s revision.  
 
-#### **highlight_differences(diff)**  
+#### `highlight_differences(diff)`  
 
 Highlights the differences between two versions of a file in HTML format.  
 
@@ -440,7 +440,7 @@ Highlights the differences between two versions of a file in HTML format.
   - Highlights added and removed lines in the code.  
   - Displays differences using color-coded HTML for easy comparison.  
 
-#### **calculate_all_metrics(original_lines, revised_lines)**  
+#### `calculate_all_metrics(original_lines, revised_lines)`  
 
 Calculates evaluation metrics by comparing original and revised code lines.  
 
