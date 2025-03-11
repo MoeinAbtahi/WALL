@@ -575,8 +575,6 @@ To properly configure WALL, update the following settings in `app.py` by replaci
    - **`os.path.join(...)`**: This function combines the modified directory path with `revised_file_name`, resulting in the full path to the revised file.  
    - **Purpose**: This code ensures that the application accesses the revised file from the corresponding `WALL.Revised` directory instead of the original `WALL` directory.
    
-   **Example**
-   
    Example on a Windows system: If the original file is located at:  
    ```python
    original_directory = "C:\\Users\\YourUsername\\Projects\\WALL"
@@ -625,31 +623,37 @@ To properly configure WALL, update the following settings in `app.py` by replaci
    openai.api_key = 'sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
    ```
 
-Now save the updated `app.py`, navigate to the root folder of **WALL** project, and Run the `app.py` file by this command: 
+Finally, save your updated `app.py` file.
+
+## 3.4. Run WALL
+ 
+   Open a terminal and navigate to the root directory of the **WALL** project.
+
+   Execute the following command to start the application:  
 
    ```bash
    python app.py
    ```
 
-After a short while, you will see a prompt indicating the local server where Flask is running, similar to:  
+   After a short while, you should see a message indicating that the Flask server is running, similar to:  
 
    ```cmd
    Running on http://127.0.0.1:5000
    ```
 
+   Open your web browser and navigate to [http://127.0.0.1:5000](http://127.0.0.1:5000) to access the WALL application.
+   
 ![image](https://github.com/user-attachments/assets/af204cd1-63cb-4bec-8ff6-a26229eadb27)
 
-Open this [URL](http://127.0.0.1:5000/) in your browser to access the WALL application.
+## 3.5. Pages in WALL
 
-## 3.4. Pages in WALL
-
-### 3.4.1. **Home**
+### 3.5.1. **Home**
 
 ![Home](https://github.com/user-attachments/assets/e13cad7d-28a8-443c-834a-9217c2af5013)
 
 This page provides users with instructions on how to use WALL, including descriptions of each action and step-by-step guidance for interacting with the tools.
 
-### 3.4.2. **Issue Extractor Tool**
+### 3.5.2. **Issue Extractor Tool**
 
 ![Issue Extractor Tool](https://github.com/user-attachments/assets/47134e8a-8bc6-47a2-8262-b6b65c268cef)
 
@@ -671,7 +675,7 @@ The extracted data is saved as a CSV file in the following format:
 | D:/.../Dockerfile | Dockerfile | 1 | Replace `as` with upper case format `AS`. | CODE_SMELL |
 | D:/.../App.css    | App.css    | 30 | Remove this commented-out code.           | CODE_SMELL |
 
-### 3.4.3. **Code Issues Reviser**
+### 3.5.3. **Code Issues Reviser**
 
 #### **Part 1: Interactive Revision**
 
@@ -757,7 +761,7 @@ This page allows users to upload the CSV file generated from the **Issue Extract
 - For batch processing, ensure the script’s paths and model settings are correctly updated.
 - While Part 1 is interactive and user-driven, Part 2 offers automation for users needing quick processing of multiple files.
 
-### 3.4.4. **Code Compare Tool**
+### 3.5.4. **Code Compare Tool**
 
 The **Code Compare Tool** enables users to evaluate and compare the original and revised versions of their code for quality and improvements.
 
