@@ -871,58 +871,11 @@ The **Code Compare Tool** enables users to evaluate and compare the original and
    - In this version of WALL, test cases are now validated, and a human reviewer is included in the process to ensure that changes are correctly implemented.
    - Based on the comparison results and evaluation metrics, users can confirm that the revisions meet quality standards before finalizing the updated code.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ---
 
 # 4. Test Dataset and WALL Application Usage
 
 The results presented in **Table II** of the paper are based on a dataset from **Team Eagle Ltd.** ([https://www.team-eagle.ca/](https://www.team-eagle.ca/)). For testing purposes, the WALL application was executed using the publicly available **open-instruct** GitHub repository ([https://github.com/allenai/open-instruct](https://github.com/allenai/open-instruct)). Below are the step-by-step instructions to use this test dataset with the WALL application.
-
----
 
 ## 4.1. Clone the Repository
 
@@ -932,7 +885,7 @@ Clone the **open-instruct** repository by executing the following command in you
 git clone https://github.com/allenai/open-instruct.git
 ```
 
-You may clone the repository to any location. For example, you could use:
+You may clone the repository to any location. For example:
 
 ```plaintext
 C:\Users\100909323\Desktop\open-instruct-main
@@ -946,18 +899,19 @@ C:\Users\100909323\Desktop\open-instruct-main
    http://localhost:9099/
    ```
 
-### 4.2.2. **Create a Project in SonarQube**:  
-   Create a new project named **"WALL"** and add the project files by executing the command below:
+### 4.2.2. Create a Project in SonarQube
 
+   Create a new project named **"WALL"** in SonarQube and add your project files. For instance, if you have already set up the project and selected your API token, you can run a command similar to the following to add the project files under the **WALL** project:
+   
    ```bash
    sonar-scanner.bat -D"sonar.projectKey=WALL" -D"sonar.sources=." -D"sonar.host.url=http://localhost:9099" -D"sonar.token=sqp_b9bd769589a5525f4bfe6774ff71c9724b754565"
    ```
-
-   - **Project API Token**: `sqp_b9bd769589a5525f4bfe6774ff71c9724b754565`  
-   - **Project Key**: `WALL`
-
+   
+   - **Project API Token:** `sqp_b9bd769589a5525f4bfe6774ff71c9724b754565`  
+   - **Project Key:** `WALL`
+   
    ![SonarQube Screenshot](https://github.com/user-attachments/assets/78446b44-a9d7-4a91-ad07-9012b7534c28)
-
+   
    These credentials will be used later in the **Issue Extraction** section of WALL.
 
 ## 4.3. Issue Extraction in WALL
@@ -980,7 +934,7 @@ After executing the extraction process, the issues will be saved as `open-instru
 
 After extracting issues, proceed with the code revision process using WALL’s two available methods:
 
-### 4.4.1 Batch Processing
+### 4.4.1. Batch Processing
 
 To revise all files at once, use the Python script **Processing All Files.py**.
 
@@ -1006,10 +960,10 @@ To revise all files at once, use the Python script **Processing All Files.py**.
 In this mode, upload the `open-instruct.Issues.csv` file to interactively revise code issues. For instance, you might see both the original and the AI-revised versions of a `Dockerfile` using **GPT-4o**.
 
 ![Dockerfile Revision Screenshot](https://github.com/user-attachments/assets/889928c7-e49a-416c-bbb1-c4da213d8b4d)
+
 ![Revised Dockerfile Screenshot](https://github.com/user-attachments/assets/0c4d40d7-76f5-4339-a111-4dadb48d8e74)
 
 After reviewing the revisions, save the revised file manually.
-
 
 ![Batch Processing Screenshot](https://github.com/user-attachments/assets/21470398-1d66-409d-b457-9de7dd711bfd)
 
