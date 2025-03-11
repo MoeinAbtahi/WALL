@@ -225,6 +225,8 @@ Login using the default credentials:
 After logging in for the first time, you will be prompted to change the default password.
 Update the password for enhanced security.
 
+![image](https://github.com/user-attachments/assets/bf4c155d-9583-4d15-9150-98c548778670)
+
 Create a new project in SonarQube by clicking **Create a local project**.
 
 ![image](https://github.com/user-attachments/assets/df05c532-7271-4469-b8ed-9428f6d8c1d9)
