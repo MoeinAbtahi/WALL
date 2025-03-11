@@ -365,7 +365,7 @@ WALL/
 
 This section explains key functions in `app.py`.  
 
-#### **get_all_issues(sonar_url, api_token, project_key)**  
+#### `get_all_issues(sonar_url, api_token, project_key)`  
 
 Fetches unresolved issues from a SonarQube project using the API.  
 
@@ -484,21 +484,93 @@ This route compares the original and revised versions of a file, providing visua
   - Calculates precision, recall, F1 score, BLEU, and ROUGE scores.  
   - Provides a quantitative assessment of the similarity between the original and revised code versions.
 
-## 3.3. Running WALL
+## 3.3. Configuring `app.py`
 
-**To fully utilize WALL, you need to modify a few lines in `app.py` as listed below**:
+To properly configure WALL, update the following settings in `app.py` by replacing placeholder values with actual values.  
 
-   - **Set Up OpenAI API Key**: To enable the code revision feature, insert a valid OpenAI API key by modifying **Line 484** in the script:
-     
-     ```python
-     openai.api_key = 'your-openai-api-key'  # Insert your OpenAI API key here
-     ```
-     
-     Replace `'your-openai-api-key'` with a valid key to avoid API errors.
+   - **Set Up SonarQube URL**: To configure the connection to SonarQube, insert a valid SonarQube URL by modifying **Line 260** in `app.py`:  
 
-Navigate to the root folder of **WALL**:  
+   ```python
+   preset_sonar_urls = ["<Replace with your SonarQube URL>"]
+   ```
+   Replace `"<Replace with your SonarQube URL>"` with the actual SonarQube server URL to ensure proper connectivity.  
+   
+   Example:  
+   ```python
+   preset_sonar_urls = ["http://localhost:9000"]
+   ```
+      
+   - **Set Up SonarQube API Token**: To authenticate API requests, insert a valid SonarQube API token by modifying **Line 261** in `app.py`:  
 
-Run the `app.py` file: 
+   ```python
+   preset_api_tokens = ["<Replace with your SonarQube API Token>"]
+   ```
+   Replace `"<Replace with your SonarQube API Token>"` with a valid API token to enable SonarQube issue fetching.  
+   
+   Example:  
+   ```python
+   preset_api_tokens = ["your-sonarqube-api-token"]
+   ```
+   
+   - **Set Up SonarQube Project Key**: To specify the project being analyzed, insert the correct project key by modifying **Line 262** in `app.py`:  
+
+   ```python
+   preset_project_keys = ["<Replace with your SonarQube Project Key>"]
+   ```
+   Replace `"<Replace with your SonarQube Project Key>"` with the actual project key to retrieve issues related to your project.  
+   
+   Example:  
+   ```python
+   preset_project_keys = ["my_project_key"]
+   ```
+   
+   - **Set Up Project Location**: To properly analyze the project files, specify the project’s location by modifying **Line 263** in `app.py`:  
+
+   ```python
+   preset_project_locations = ["<Replace with the project location on your system>"]
+   ```
+   Replace `"<Replace with the project location on your system>"` with the absolute path of your project directory.  
+   
+   Example on a Windows system:  
+   ```python
+   preset_project_locations = ["C:\\Users\\YourUsername\\Projects\\YourProject"]
+   ```
+   
+   Example on a macOS system:  
+   ```python
+   preset_project_locations = ["/Users/YourUsername/Projects/YourProject"]
+   ```
+   
+   - **Set Up CSV Save Path**: To store the extracted issues, define a valid save path by modifying **Line 264** in `app.py`:  
+
+   ```python
+   preset_save_paths = ["<Replace with the path where you want to save the CSV file>"]
+   ```
+   Replace `"<Replace with the path where you want to save the CSV file>"` with a valid directory path to store the CSV file containing SonarQube issues.  
+   
+   Example on a Windows system:  
+   ```python
+   preset_save_paths = ["C:\\Users\\YourUsername\\Documents\\sonarqube_issues.csv"]
+   ```
+   
+   Example on a macOS system:  
+   ```python
+   preset_save_paths = ["/Users/YourUsername/Documents/sonarqube_issues.csv"]
+   ```
+  
+   - **Set Up OpenAI API Key**: To enable the AI-powered code revision feature, insert a valid OpenAI API key by modifying **Line 484** in `app.py`:  
+
+   ```python
+   openai.api_key = 'your-openai-api-key'  # Insert your OpenAI API key here
+   ```
+   Replace `'your-openai-api-key'` with a valid OpenAI API key to avoid API errors.  
+   
+   Example:  
+   ```python
+   openai.api_key = 'sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+   ```
+
+Now save the updated `app.py`, navigate to the root folder of **WALL** project, and Run the `app.py` file by this command: 
 
    ```bash
    python app.py
