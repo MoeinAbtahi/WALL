@@ -448,7 +448,7 @@ def compare_files():
                     # This assumes the "open-instruct-main" directory needs to be replaced by "open-instruct-main.Revised" for the revised code.
                     original_directory = os.path.dirname(original_file_path)
                     # Adjust this line according to your folder structure if necessary. we cahnged it based on open-instruct-main Testdata folder
-                    revised_directory = original_directory.replace("open-instruct-main", "open-instruct-main.Revised")
+                    revised_file_path = os.path.join(original_directory.replace("WALL", "WALL.Revised"), revised_file_name)
                     revised_file_name = f"Revised.{original_file_name}"
                     revised_file_path = os.path.join(revised_directory, revised_file_name)
 
