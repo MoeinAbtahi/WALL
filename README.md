@@ -245,7 +245,7 @@ Select a **token name** and **expiration date**, then generate a token to authen
 
 ![image](https://github.com/user-attachments/assets/48735916-10a4-4c20-bfcb-701e62e2a1c7)
 
-Click on **Maven, Gradle, .NET, or Others** (for other programming languages) and then select your operating system to download the appropriate version. Copy the provided command and run it in your terminal or command prompt. Navigate to your project folder and execute the command. Be sure to keep this command handy—it will be needed later in the [Set Up SonarQube API Token](#33-1-2-set-up-sonarqube-api-token) and [Set Up SonarQube Project Key](#33-1-3-set-up-sonarqube-project-key) sections.
+Click on **Maven, Gradle, .NET, or Others** (for other programming languages) and then select your operating system to download the appropriate version. Copy the provided command and run it in your terminal or command prompt. Navigate to your project folder and execute the command. Be sure to keep this command handy—it will be needed later in the [Set Up SonarQube API Token](#3312-set-up-sonarqube-api-token) and [Set Up SonarQube Project Key](#3313-set-up-sonarqube-project-key) sections.
 
    - **For example, if you are using Windows:** Open a **command prompt (cmd)**, navigate to your project folder, and run a command similar to this: 
      
