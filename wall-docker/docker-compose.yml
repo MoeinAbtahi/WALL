@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  sonarqube:
+    image: sonarqube:community
+    ports:
+      - "9099:9000"  # Map host port 9099 to container port 9000 (SonarQube default)
+    environment:
+      - SONAR_WEB_PORT=9000
+    volumes:
+      - sonarqube_data:/opt/sonarqube/data
+      - sonarqube_logs:/opt/sonarqube/logs
+      - sonarqube_extensions:/opt/sonarqube/extensions
+    networks:
+      - wall-network
+
+  wall:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"  # Map host port 5000 to container port 5000 (Flask app)
+    environment:
+      - SONAR_URL=http://sonarqube:9000  # Use service name for internal communication
+      - SONAR_API_TOKEN=sqp_aae99670a14a47375503d78c86e1ddf933780ea6  # Replace with your token
+      - SONAR_PROJECT_KEY=open-instruct-main  # Replace with your project key
+      - PROJECT_LOCATION=/app/project  # Directory for project files
+      - CSV_SAVE_PATH=/app/output/sonarqube_issues.csv  # Where to save CSV
+      - OPENAI_API_KEY=your_openai_api_key  # Replace with your OpenAI API key
+    volumes:
+      - ./project:/app/project  # Mount local project directory
+      - ./output:/app/output    # Mount output directory for CSV files
+    depends_on:
+      - sonarqube
+    networks:
+      - wall-network
+
+networks:
+  wall-network:
+    driver: bridge
+
+volumes:
+  sonarqube_data:
+  sonarqube_logs:
+  sonarqube_extensions:
