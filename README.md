@@ -488,7 +488,8 @@ This route compares the original and revised versions of a file, providing visua
 
 To properly configure WALL, update the following settings in `app.py` by replacing placeholder values with actual values.  
 
-   - **Set Up SonarQube URL**: To configure the connection to SonarQube, insert a valid SonarQube URL by modifying **Line 260** in `app.py`:  
+   ### 3.3.1. Set Up SonarQube URL
+   To configure the connection to SonarQube, insert a valid SonarQube URL by modifying **Line 260** in `app.py`:  
 
    ```python
    preset_sonar_urls = ["<Replace with your SonarQube URL>"]
@@ -509,7 +510,7 @@ To properly configure WALL, update the following settings in `app.py` by replaci
    
    Example:  
    ```python
-   preset_api_tokens = ["your-sonarqube-api-token"]
+   preset_api_tokens = ["sqp_aae99670a14a47375503d78c86e1ddf933780ea6"]
    ```
    
    - **Set Up SonarQube Project Key**: To specify the project being analyzed, insert the correct project key by modifying **Line 262** in `app.py`:  
@@ -521,7 +522,7 @@ To properly configure WALL, update the following settings in `app.py` by replaci
    
    Example:  
    ```python
-   preset_project_keys = ["my_project_key"]
+   preset_project_keys = ["open-instruct-main"]
    ```
    
    - **Set Up Project Location**: To properly analyze the project files, specify the project’s location by modifying **Line 263** in `app.py`:  
@@ -536,7 +537,7 @@ To properly configure WALL, update the following settings in `app.py` by replaci
    preset_project_locations = ["C:\\Users\\YourUsername\\Projects\\YourProject"]
    ```
    
-   Example on a macOS system:  
+   Example on a macOS and linux system:  
    ```python
    preset_project_locations = ["/Users/YourUsername/Projects/YourProject"]
    ```
@@ -553,7 +554,7 @@ To properly configure WALL, update the following settings in `app.py` by replaci
    preset_save_paths = ["C:\\Users\\YourUsername\\Documents\\sonarqube_issues.csv"]
    ```
    
-   Example on a macOS system:  
+   Example on a macOS and linux system:  
    ```python
    preset_save_paths = ["/Users/YourUsername/Documents/sonarqube_issues.csv"]
    ```
