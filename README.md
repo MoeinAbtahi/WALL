@@ -501,7 +501,8 @@ To properly configure WALL, update the following settings in `app.py` by replaci
    preset_sonar_urls = ["http://localhost:9000"]
    ```
       
-   - **Set Up SonarQube API Token**: To authenticate API requests, insert a valid SonarQube API token by modifying **Line 261** in `app.py`:  
+   ### 3.3.2. Set Up SonarQube API Token
+   To authenticate API requests, insert a valid SonarQube API token by modifying **Line 261** in `app.py`:  
 
    ```python
    preset_api_tokens = ["<Replace with your SonarQube API Token>"]
@@ -512,8 +513,9 @@ To properly configure WALL, update the following settings in `app.py` by replaci
    ```python
    preset_api_tokens = ["sqp_aae99670a14a47375503d78c86e1ddf933780ea6"]
    ```
-   
-   - **Set Up SonarQube Project Key**: To specify the project being analyzed, insert the correct project key by modifying **Line 262** in `app.py`:  
+
+   ### 3.3.3. Set Up SonarQube Project Key 
+   To specify the project being analyzed, insert the correct project key by modifying **Line 262** in `app.py`:  
 
    ```python
    preset_project_keys = ["<Replace with your SonarQube Project Key>"]
@@ -525,7 +527,8 @@ To properly configure WALL, update the following settings in `app.py` by replaci
    preset_project_keys = ["open-instruct-main"]
    ```
    
-   - **Set Up Project Location**: To properly analyze the project files, specify the project’s location by modifying **Line 263** in `app.py`:  
+   ### 3.3.4. Set Up Project Location
+   To properly analyze the project files, specify the project’s location by modifying **Line 263** in `app.py`:  
 
    ```python
    preset_project_locations = ["<Replace with the project location on your system>"]
@@ -542,7 +545,8 @@ To properly configure WALL, update the following settings in `app.py` by replaci
    preset_project_locations = ["/Users/YourUsername/Projects/YourProject"]
    ```
    
-   - **Set Up CSV Save Path**: To store the extracted issues, define a valid save path by modifying **Line 264** in `app.py`:  
+   ### 3.3.5. Set Up CSV Save Path
+   To store the extracted issues, define a valid save path by modifying **Line 264** in `app.py`:  
 
    ```python
    preset_save_paths = ["<Replace with the path where you want to save the CSV file>"]
@@ -559,7 +563,8 @@ To properly configure WALL, update the following settings in `app.py` by replaci
    preset_save_paths = ["/Users/YourUsername/Documents/sonarqube_issues.csv"]
    ```
   
-   - **Set Up OpenAI API Key**: To enable the AI-powered code revision feature, insert a valid OpenAI API key by modifying **Line 484** in `app.py`:  
+   ### 3.3.6. Set Up OpenAI API Key
+   To enable the AI-powered code revision feature, insert a valid OpenAI API key by modifying **Line 484** in `app.py`:  
 
    ```python
    openai.api_key = 'your-openai-api-key'  # Insert your OpenAI API key here
