@@ -821,19 +821,18 @@ This module enables users to revise all files listed in a CSV simultaneously usi
 
 4. **File Revision Process**
 
-   - After opening the CSV file, the application will automatically begin revising the files according to the modifications you specified in the **Code Issues Reviser Module - Processing All Files.py** script. These revisions follow the configuration changes outlined in the [Set Up OpenAI API Key](#3321-set-up-openai-api-key) section.
+   - After opening the CSV file, the application will automatically begin revising files based on the changes you configured in the Code Issues Reviser Module - Processing All Files script. For more details on these settings, please refer to the [3.3.2. Code Issues Reviser Module - Processing All Files](#332-code-issues-reviser-module---processing-all-files) section.
 
 5. **Prepare for Code Comparison:**
-Before using the **Code Compare Tool**, ensure that:
-- The **original folder** and the **revised folder** are located in the same parent directory.
-- The revised folder's name is derived from the original folder by appending `.Revised`.
+   - Before using the **Code Compare Tool**, ensure that:
+      - The **original folder** and the **revised folder** are located in the same parent directory.
+      - The revised folder's name is derived from the original folder by appending `.Revised`.
 
-**Example Paths:**
-- **Original Folder:**  
-  `D:\Documents\Project\WALL`
-- **Revised Folder:**  
-  `D:\Documents\Project\WALL.Revised`
-
+      **Example Paths:**
+      - **Original Folder:**  
+        `D:\Documents\Project\WALL`
+      - **Revised Folder:**  
+        `D:\Documents\Project\WALL.Revised`
 
 **Notes:**
 - For successful batch processing, verify that the script’s paths and model settings are correctly configured.
