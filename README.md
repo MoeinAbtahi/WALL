@@ -623,25 +623,25 @@ To properly configure WALL, update the following settings in `app.py` by replaci
    openai.api_key = 'sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
    ```
 
-Finally, save your updated `app.py` file.
+**Finally, save your updated `app.py` file.**
 
 ## 3.4. Run WALL
- 
-   Open a terminal and navigate to the root directory of the **WALL** project.
 
-   Execute the following command to start the application:  
+Open a terminal and navigate to the root directory of the **WALL** project.
 
-   ```bash
-   python app.py
-   ```
+Then, execute the following command to start the application:
 
-   After a short while, you should see a message indicating that the Flask server is running, similar to:  
+```bash
+python app.py
+```
 
-   ```cmd
-   Running on http://127.0.0.1:5000
-   ```
+After a brief moment, you should see an output similar to this, indicating that the Flask server is running:
 
-   Open your web browser and navigate to [http://127.0.0.1:5000](http://127.0.0.1:5000) to access the WALL application.
+```cmd
+Running on http://127.0.0.1:5000
+```
+
+Finally, open your web browser and go to [http://127.0.0.1:5000](http://127.0.0.1:5000) to access the WALL application.
    
 ![image](https://github.com/user-attachments/assets/af204cd1-63cb-4bec-8ff6-a26229eadb27)
 
