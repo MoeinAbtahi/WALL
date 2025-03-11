@@ -527,6 +527,11 @@ To properly configure WALL, update the following settings in `app.py` by replaci
    ```python
    preset_project_keys = ["open-instruct-main"]
    ```
+   OR
+   
+   ```python
+   preset_project_keys = ["WALL"]
+   ```
    
    #### 3.3.1.4. Set Up Project Location
    To properly analyze the project files, specify the project’s location by modifying **Line 263** in `app.py`:  
@@ -536,12 +541,12 @@ To properly configure WALL, update the following settings in `app.py` by replaci
    ```
    Replace `"<Replace with the project location on your system>"` with the absolute path of your project directory.  
    
-   Example on a Windows system:  
+   *Example (Windows):*
    ```python
    preset_project_locations = ["C:\\Users\\YourUsername\\Projects\\YourProject"]
    ```
    
-   Example on a macOS and linux system:  
+  *Example (macOS/Linux):* 
    ```python
    preset_project_locations = ["/Users/YourUsername/Projects/YourProject"]
    ```
@@ -554,12 +559,12 @@ To properly configure WALL, update the following settings in `app.py` by replaci
    ```
    Replace `"<Replace with the path where you want to save the CSV file>"` with a valid directory path to store the CSV file containing SonarQube issues.  
    
-   Example on a Windows system:  
+   *Example (Windows):*
    ```python
    preset_save_paths = ["C:\\Users\\YourUsername\\Documents\\sonarqube_issues.csv"]
    ```
    
-   Example on a macOS and linux system:  
+   *Example (macOS/Linux):*
    ```python
    preset_save_paths = ["/Users/YourUsername/Documents/sonarqube_issues.csv"]
    ```
@@ -636,8 +641,12 @@ To enable the code revision feature, insert a valid OpenAI API key by modifying 
 ```python
 openai.api_key = 'your-openai-api-key'  # Insert your OpenAI API key here
 ```
+Replace `'your-openai-api-key'` with a valid OpenAI API key to avoid API errors.  
 
-Replace `'your-openai-api-key'` with a valid key to avoid API errors.
+Example:  
+```python
+openai.api_key = 'sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+```
 
 #### 3.3.2.2. Set Up Original Project Files Path  
 Open the Python script and adjust **Line 128** by replacing the placeholder with the absolute path to your original project files:
@@ -646,14 +655,15 @@ Open the Python script and adjust **Line 128** by replacing the placeholder with
 to_remove = r"Please enter your project location here"
 ```
 
-Replace `r"Please enter your project location here"` with the correct path where your original project files are located.  
+Replace `r"Please enter your project location here"` with the correct path where your original project files are located. 
+
 *Example (Windows):*
 ```python
-to_remove = r"C:\Users\YourUsername\Projects\YourProject"
+to_remove = r"C:\Users\YourUsername\Projects\WALL"
 ```
 *Example (macOS/Linux):*
 ```python
-to_remove = r"/Users/YourUsername/Projects/YourProject"
+to_remove = r"/Users/YourUsername/Projects/WALL"
 ```
 
 #### 3.3.2.3. Set Up Revised Files Destination Path  
@@ -663,14 +673,15 @@ Adjust **Line 132** in the script by replacing the placeholder with the destinat
 to_add = r"Please specify the destination for the revised files here."
 ```
 
-Replace the placeholder with the actual destination path for your revised files.  
+Replace the placeholder with the actual destination path for your revised files. 
+
 *Example (Windows):*
 ```python
-to_add = r"C:\Users\YourUsername\Projects\YourProjectRevised"
+to_add = r"C:\Users\YourUsername\Projects\WALL.Revised"
 ```
 *Example (macOS/Linux):*
 ```python
-to_add = r"/Users/YourUsername/Projects/YourProjectRevised"
+to_add = r"/Users/YourUsername/Projects/WALL.Revised"
 ```
 
 #### 3.3.2.4. Select GPT Model  
