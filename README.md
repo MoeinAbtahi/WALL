@@ -245,7 +245,7 @@ Select a **token name** and **expiration date**, then generate a token to authen
 
 ![image](https://github.com/user-attachments/assets/48735916-10a4-4c20-bfcb-701e62e2a1c7)
 
-Click on **Maven, Gradle, .NET, or Others** (for other programming languages) and then select your operating system to download the appropriate version. Copy the provided command and run it in your terminal or command prompt. Navigate to your project folder and execute the command. Be sure to keep this command handy—it will be needed later in the [Set Up SonarQube API Token](#3312-set-up-sonarqube-api-token) and [Set Up SonarQube Project Key](#3313-set-up-sonarqube-project-key) sections.
+Click on **Maven, Gradle, .NET, or Others** (for other programming languages) and then select your operating system to download the appropriate version. Copy the provided command and run it in your terminal or command prompt. Navigate to your project folder and execute the command. **Be sure to keep this command handy—it will be needed later in the [Set Up SonarQube API Token](#3312-set-up-sonarqube-api-token) and [Set Up SonarQube Project Key](#3313-set-up-sonarqube-project-key) sections.**
 
    - **For example, if you are using Windows:** Open a **command prompt (cmd)**, navigate to your project folder, and run a command similar to this: 
      
@@ -527,12 +527,7 @@ To properly configure WALL, update the following settings in `app.py` by replaci
    ```python
    preset_project_keys = ["open-instruct-main"]
    ```
-   OR
-   
-   ```python
-   preset_project_keys = ["WALL"]
-   ```
-   
+
    #### 3.3.1.4. Set Up Project Location
    To properly analyze the project files, specify the project’s location by modifying **Line 263** in `app.py`:  
 
@@ -788,36 +783,16 @@ This page allows users to upload the CSV file generated from the **Issue Extract
 - **Purpose**: Enables users to revise all files in the CSV at once using the `Code Issues Reviser Module - Processing All Files.py` script.
 
 **Setup**:
-1. **Set Up OpenAI API Key**:
-   - To enable the code revision feature, insert a valid OpenAI API key by modifying **Line 8** in the script:
-     
-     ```python
-         openai.api_key = 'your-openai-api-key'  # Insert your OpenAI API key here
-     ```
-   - Replace `'your-openai-api-key'` with a valid key to avoid API errors.
 
-2. Open the Python script and adjust the following lines:
-   - **Line 128**: Replace the placeholder with the path to your **original project files**:
-     
-     ```python
-     to_remove = r"Please enter your project location here"
-     ```
-   
-   - **Line 132**: Replace the placeholder with the **destination path** for saving the revised files:
-     ```python
-     to_add = r"Please specify the destination for the revised files here."
-     ```
-3. **Select GPT Model**:
-   - Change the model in **Line 154**:
-     
-     ```python
-     model="gpt-3.5 Turbo"
-     ```
-   - For advanced capabilities, update this to another model listed on the OpenAI [Models Documentation](https://platform.openai.com/docs/models).
+Open a terminal and navigate to the root directory of the **WALL** project.
 
-4. Run the script to process and revise all files at once.
+Then, execute the following command to start the application:
 
-5. **Prepare for Code Comparison**:
+```python
+python Code Issues Reviser Module - Processing All Files.py
+```
+
+- **Prepare for Code Comparison**:
    - To use the **Code Compare Tool**, ensure the following:
      - The **original folder** and the **revised folder** must be in the same location.
      - The revised folder name should have `.Revised` appended to the original folder name.
